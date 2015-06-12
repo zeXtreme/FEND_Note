@@ -385,12 +385,15 @@ align-content:flex-start | flex-end | center | space-between | space-around | st
 
 #### 2D 变形
 
+<p data-height="268" data-theme-id="15197" data-slug-hash="GJEwww" data-default-tab="result" data-user="li-xinyang" class='codepen'>See the Pen <a href='http://codepen.io/li-xinyang/pen/GJEwww/'>FEND_Transform2D</a> by Li Xinyang (<a href='http://codepen.io/li-xinyang'>@li-xinyang</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
 ##### transform
 
 `transform` 中可以写一个或多个方法。
 
 ```
-trnasform: none | <transform-function>+
+transform: none | <transform-function>+
 transform: none
 <!-- 默认值为 none -->
 transform: <transform-function>+
