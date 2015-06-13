@@ -626,6 +626,8 @@ backface-visibility: hidden;
 
 #### transition
 
+[过度动画](../SampleCode/CSS/Transition.html)
+
 其为众多 `<single-transition>` 的值缩写。（当两个时间同时出现是，第一个时间为动画长度，第二个时间为动画延时）
 
 ```
