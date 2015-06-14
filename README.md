@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [知识体系内容记录](#%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E5%86%85%E5%AE%B9%E8%AE%B0%E5%BD%95)
+- [前端开发笔记本](#%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E5%86%85%E5%AE%B9%E8%AE%B0%E5%BD%95)
     - [页面制作](#%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C)
     - [Javascript 程序设计](#javascript-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
     - [DOM 编程](#dom-%E7%BC%96%E7%A8%8B)
@@ -12,7 +12,11 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# 知识体系内容记录
+# 前端开发笔记本
+
+前端笔记本的 GitHub 地址在[这里](https://github.com/li-xinyang/FEND_Note)
+
+如果你觉得这个项目不错，请点击 Star 一下，您的支持是我最大的动力。
 
 ![](img/C/career-path.jpg)
 
