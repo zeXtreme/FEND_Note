@@ -1,6 +1,6 @@
 # 前端开发笔记本
 
-点击[这里](http://li-xinyang.gitbooks.io/frontend-notebook/)开始阅读！
+点击[这里](https://www.gitbook.com/read/book/li-xinyang/frontend-notebook)开始阅读！
 
 前端开发笔记本的 GitHub 地址在[这里](https://github.com/li-xinyang/FEND_Note)。如果你觉得这个项目不错，请点击 Star 一下，您的支持是我最大的动力。
 
