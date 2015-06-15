@@ -19,11 +19,13 @@
         left: 50%;
         margin-top: 200px;
         font-size: 3rem;
-        perspective: 1000px;
+        perspective: 2000px;
         perspective-origin: 0 150px;
+        transform-style: preserve-3d;
     }
 
     .side {
+        transition-duration: 3s;
         height: 300px;
         width: 300px;
         border: 5px solid rgba(0, 0, 0, .3);
@@ -47,32 +49,55 @@
     <style type="text/css">
     .top {
         animation: placeTop 1s linear both;
-        /*animation-name: placeTop, rotateTop;
-        animation-timing-function: linear;
-        animation-duration: 2s;
-        animation-delay: 0s, 12s;
-        animation-iteration-count: 1, infinite;
-        animation-fill-mode: both;*/
+        transition-property: background-color;
     }
 
     .bottom {
         animation: placeBottom 1s 1s linear both;
+        transition-property: background-color;
     }
 
     .left {
         animation: placeLeft 1s 2s linear both;
+        transition-property: background-color;
     }
 
     .right {
         animation: placeRight 1s 3s linear both;
+        transition-property: background-color;
     }
 
     .back {
         animation: placeBack 1s 4s linear both;
+        transition-property: background-color;
     }
 
     .front {
         animation: placeFront 1s 5s linear both;
+        transition-property: background-color;
+    }
+
+    .container {
+        animation: cube 3s 6s linear infinite both;
+    }
+
+    .container:hover .top {
+      background-color: red;
+    }
+    .container:hover .bottom {
+      background-color: green;
+    }
+    .container:hover .left {
+      background-color: blue;
+    }
+    .container:hover .right {
+      background-color: yellow;
+    }
+    .container:hover .back {
+      background-color: gray;
+    }
+    .container:hover .front {
+      background-color: orange;
     }
 
     @keyframes placeTop {
@@ -108,6 +133,16 @@
     @keyframes placeFront {
         100% {
             transform: translateZ(150px);
+        }
+    }
+
+    @-webkit-keyframes cube {
+        0% {
+            perspective: 2000px;
+        }
+        100% {
+            perspective: 0px;
+            transform: rotate3d(0.5, 0.5, 0.5, 360deg);
         }
     }
     </style>
