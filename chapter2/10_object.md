@@ -3,6 +3,32 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [面向对象](#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1)
+  - [程序设计方法](#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95)
+    - [面向过程](#%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B)
+    - [面向对象](#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-1)
+      - [概念](#%E6%A6%82%E5%BF%B5)
+      - [基本特点](#%E5%9F%BA%E6%9C%AC%E7%89%B9%E7%82%B9)
+- [JavaScript 面向对象](#javascript-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1)
+  - [constructor](#constructor)
+    - [自定义构造器](#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9E%84%E9%80%A0%E5%99%A8)
+      - [创建构造器的方法（3 种）](#%E5%88%9B%E5%BB%BA%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%883-%E7%A7%8D%EF%BC%89)
+  - [this](#this)
+    - [全局环境中](#%E5%85%A8%E5%B1%80%E7%8E%AF%E5%A2%83%E4%B8%AD)
+    - [构造器中](#%E6%9E%84%E9%80%A0%E5%99%A8%E4%B8%AD)
+    - [函数中](#%E5%87%BD%E6%95%B0%E4%B8%AD)
+  - [this 实例](#this-%E5%AE%9E%E4%BE%8B)
+  - [原型继承](#%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF)
+  - [原型链](#%E5%8E%9F%E5%9E%8B%E9%93%BE)
+    - [属性查找](#%E5%B1%9E%E6%80%A7%E6%9F%A5%E6%89%BE)
+    - [属性修改](#%E5%B1%9E%E6%80%A7%E4%BF%AE%E6%94%B9)
+    - [属性删除](#%E5%B1%9E%E6%80%A7%E5%88%A0%E9%99%A4)
+    - [Object.create(proto[, propertiesObject])](#objectcreateproto-propertiesobject)
+  - [面向对象的应用](#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%BA%94%E7%94%A8)
+    - [全局变量](#%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F)
+    - [封装](#%E5%B0%81%E8%A3%85)
+    - [继承](#%E7%BB%A7%E6%89%BF)
+      - [原型继承](#%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF-1)
+      - [类继承](#%E7%B1%BB%E7%BB%A7%E6%89%BF)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
