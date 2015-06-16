@@ -210,6 +210,111 @@ point.move.call(circle, 1, 1);
 
 ### 原型继承
 
+使用原型（prototype）可以解决重复定义实例对象拥有的完全一致的属性或方法（既共享原型中的属性或方法）。
+
+```javascript
+function Boss() {
+  this.age = 0;
+  this.birthdate = null;
+  this.name = '';
+  this.tasks = [];
+  this.title = 'Boss';
+  this.gretting = function() {console.log('I am a Boss!');};
+}
+
+var X = new Boss();
+var Q = new Boss();
+
+// X 与 Q 中具有完全一致（不必唯一的属性或方法）
+// 并耗用内存的共享部分
+// this.title 与 this.gretting
+```
+
+**改造后的构造器**
+
+```javascript
+function Boss() {
+  this.age = 0;
+  this.birthdate = null;
+  this.name = '';
+  this.tasks = [];
+}
+Boss.prototype = {
+  title: 'Boss',
+  gretting: function(){console.log('I am a Boss!');}
+}
+
+var X = new Boss();
+var Q = new Boss();
+
+// X 与 Q 中具有完全一致（不必唯一的属性或方法）
+// 并耗用内存的共享部分
+// this.title 与 this.gretting
+
+var X = new Boss();
+var Q = new Boss();
+
+// X 与 Q 拥有相同的原型 Boss.prototype
+```
+
 ### 原型链
+
+使用原型继承的方法会产生原型链。JavaScript 中对于对象的查找、修改和删除都是通过原型链来完成的。
+
+**判断属性是否为对象本身**
+
+```javascript
+objectName.hasOwnProperty('propertyName');
+// 返回布尔值 true 或 false
+```
+
+#### 属性查找
+
+对象的属性查找会更随原型链依次查找，如果在当前环境中无法找到需要的属性则会继续向下一层原型中继续寻找。
+
+#### 属性修改
+
+在 JavaScript 中对于对象属性的修改永远只修改对象自身的属性（不论是来源于对象本身还是对象的原型）。当创建当前对象不存在属性时（即便原型拥有此属性），也会为此对象增加改属性。
+
+**修改原型上的属性**
+
+修改原型属性会印象所有被创建出的对象现有的属性和方法。
+
+```javascript
+ClassName.prototype.propertyName = 'new value';
+ClassName.prototype.methodName = function(){...};
+```
+
+#### 属性删除
+
+`delete objectName.propertyName` 只可删除对象自身的属性，无法删除对象的原型属性。
+
+#### Object.create(proto[, propertiesObject])
+
+其为ECMAScript 5 中提出的新建立对象的方式。在 `X` 中使用隐式的原型对象指向 `boss` 对象，并将其设为 `X` 对象的原型。
+
+```javascript
+var boss = {
+  title: 'Boss',
+  gretting: function(){console.log('Hi, I am a Boss!');}
+};
+
+var X = Object.create(boss);
+X.gretting(); // Hi, I am a Boss!
+```
+
+**低版本中实现 Object.create 功能**
+
+此种方式仍需使用 `ClassName.prototype` 的方式来实现。
+
+```javascript
+var clone = (function(){
+  var F = function(){};
+  return function(proto) {
+    F.prototype = proto;
+    return new F();
+  }
+})();
+```
 
 ### 面向对象的应用
