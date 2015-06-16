@@ -168,7 +168,9 @@
 - `:target` 被锚点选中的目标元素 IE9+
 - `:lang()` 选中语言值为某类特殊值的元素 IE7+
 
-NOTE：请在使用时查找文档
+NOTE：
+- ele:nth-of-type(n)指父元素下第n个ele元素，ele:nth-child(n)指父元素下第n个元素且元素为ele，若不是，选择失败。
+- 请在使用时查找文档。
 
 ```html
 <div>
