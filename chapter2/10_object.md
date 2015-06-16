@@ -318,3 +318,91 @@ var clone = (function(){
 ```
 
 ### 面向对象的应用
+
+#### 全局变量
+
+全局变量可在程序任意位置进行访问和修改的变量。滥用全局变量会导致，命名冲突，导致程序不稳定。
+
+**全局标量的三种定义方法：**
+
+- `var gloablVal = 'value';` 。
+- `window.gloablVal = 'value';` 附加于 `window` 对象上
+- `gloablVal = 'value';` 不使用 `var` 关键字，也附加于 `windwo` 对象
+
+NOTE：`delete` 无法删除在代码最顶端定义的全局标量 `var globale`
+
+#### 封装
+
+信息隐藏可以保证程序的稳定，将内部信息进行隐藏。其他语言中可词用访问权限来实现封装的概念，像 `private`、`public`。
+
+**JavaScript 中的封装**可使用函数的方法（闭包）。
+
+```javascript
+// 模拟 private 的属性
+function ClassName(){
+  var _property = '';
+  this.getProperty = function(){
+    return _property;
+  };
+}
+
+// 模拟 protected 属性，使用人为约束规则
+var pro = ClassName.prototype;
+pro._protectedMethod = function(){...};
+pro.publicMethod = function(){...};
+```
+
+#### 继承
+
+##### 原型继承
+
+原型继承的方式为 JavaScript 中固有的继承方式。
+
+```javascript
+var proto = {
+  action1: function(){},
+  action2: function(){}
+}
+
+var obj = Object.create(proto);
+```
+
+在不支持 EM5 中的实现方法：
+
+```javascript
+var clone = (function(){
+  var F = function(){};
+  return function(proto) {
+    F.prototype = proto;
+    return new F();
+  }
+})();
+```
+
+##### 类继承
+
+使用原型链继承的方式模拟其他语言类继承的特性。
+
+```javascript
+function ClassA() {
+  ClassA.classMethod = function(){};
+  ClassA.prototype.api = function(){};
+
+  function ClassB() {
+    ClassA.apply(this, argument);
+  }
+  ClassB.prototype = new ClassA();
+  ClassB.prototype.constructor = ClassB;
+  ClassB.prototype.api = function(){
+    ClassA.prototype.api.apply(this, arguments);
+  }
+}
+
+// ClassA 为父类
+// ClassB 为子类
+
+var b = new ClassB();
+b.api();
+```
+
+![](../img/C/class-inherence.jpg)
