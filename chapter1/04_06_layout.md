@@ -40,6 +40,8 @@
 
 Firefox 布局可视化 **Gecko Reflow Visualisation**，布局是指浏览器将元素以正确的大小摆放在正确的位置上。
 
+![](../img/G/gecko-reflow-visualisation.gif)
+
 #### display
 
 设置元素的显示方式
@@ -74,8 +76,6 @@ Firefox 布局可视化 **Gecko Reflow Visualisation**，布局是指浏览器�
 - 设置元素不显示
 
 `display:none` 与 `visibility:hidden` 的区别为 `display:none` 不显示且不占位，但 `visibility:hidden` 不显示但占位。
-
-![](../img/G/gecko-reflow-visualisation.gif)
 
 #### position
 
