@@ -17,7 +17,7 @@
 |章节|名称|进程|
 |----|----|----|
 |第一章|页面制作|![](http://progressed.io/bar/100)|
-|第二章|JavaScript 程序设计|![](http://progressed.io/bar/87)|
+|第二章|JavaScript 程序设计|![](http://progressed.io/bar/100)|
 |第三章|DOM 编程|![](http://progressed.io/bar/0)|
 |第四章|页面构架|![](http://progressed.io/bar/0)|
 |第五章|前端产品构架|![](http://progressed.io/bar/0)|
