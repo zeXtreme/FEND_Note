@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2.10" data-basepath=".." data-revision="Sun Jun 14 2015 22:14:51 GMT+0800 (SGT)">
+    <div class="book" data-level="2.10" data-basepath=".." data-revision="Wed Jun 17 2015 10:11:22 GMT+0800 (SGT)">
     
 
 <div class="book-summary">
@@ -772,10 +772,385 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <p><strong>Table of Contents</strong>  <em>generated with <a href="https://github.com/thlorenz/doctoc" target="_blank">DocToc</a></em></p>
 <ul>
-<li><a href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1">&#x9762;&#x5411;&#x5BF9;&#x8C61;</a></li>
+<li><a href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1">&#x9762;&#x5411;&#x5BF9;&#x8C61;</a><ul>
+<li><a href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95">&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x65B9;&#x6CD5;</a><ul>
+<li><a href="#%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B">&#x9762;&#x5411;&#x8FC7;&#x7A0B;</a></li>
+<li><a href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-1">&#x9762;&#x5411;&#x5BF9;&#x8C61;</a><ul>
+<li><a href="#%E6%A6%82%E5%BF%B5">&#x6982;&#x5FF5;</a></li>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E7%89%B9%E7%82%B9">&#x57FA;&#x672C;&#x7279;&#x70B9;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#javascript-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1">JavaScript &#x9762;&#x5411;&#x5BF9;&#x8C61;</a><ul>
+<li><a href="#constructor">constructor</a><ul>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9E%84%E9%80%A0%E5%99%A8">&#x81EA;&#x5B9A;&#x4E49;&#x6784;&#x9020;&#x5668;</a><ul>
+<li><a href="#%E5%88%9B%E5%BB%BA%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%883-%E7%A7%8D%EF%BC%89">&#x521B;&#x5EFA;&#x6784;&#x9020;&#x5668;&#x7684;&#x65B9;&#x6CD5;&#xFF08;3 &#x79CD;&#xFF09;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#this">this</a><ul>
+<li><a href="#%E5%85%A8%E5%B1%80%E7%8E%AF%E5%A2%83%E4%B8%AD">&#x5168;&#x5C40;&#x73AF;&#x5883;&#x4E2D;</a></li>
+<li><a href="#%E6%9E%84%E9%80%A0%E5%99%A8%E4%B8%AD">&#x6784;&#x9020;&#x5668;&#x4E2D;</a></li>
+<li><a href="#%E5%87%BD%E6%95%B0%E4%B8%AD">&#x51FD;&#x6570;&#x4E2D;</a></li>
+</ul>
+</li>
+<li><a href="#this-%E5%AE%9E%E4%BE%8B">this &#x5B9E;&#x4F8B;</a></li>
+<li><a href="#%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF">&#x539F;&#x578B;&#x7EE7;&#x627F;</a></li>
+<li><a href="#%E5%8E%9F%E5%9E%8B%E9%93%BE">&#x539F;&#x578B;&#x94FE;</a><ul>
+<li><a href="#%E5%B1%9E%E6%80%A7%E6%9F%A5%E6%89%BE">&#x5C5E;&#x6027;&#x67E5;&#x627E;</a></li>
+<li><a href="#%E5%B1%9E%E6%80%A7%E4%BF%AE%E6%94%B9">&#x5C5E;&#x6027;&#x4FEE;&#x6539;</a></li>
+<li><a href="#%E5%B1%9E%E6%80%A7%E5%88%A0%E9%99%A4">&#x5C5E;&#x6027;&#x5220;&#x9664;</a></li>
+<li><a href="#objectcreateproto-propertiesobject">Object.create(proto[, propertiesObject])</a></li>
+</ul>
+</li>
+<li><a href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%BA%94%E7%94%A8">&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x5E94;&#x7528;</a><ul>
+<li><a href="#%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F">&#x5168;&#x5C40;&#x53D8;&#x91CF;</a></li>
+<li><a href="#%E5%B0%81%E8%A3%85">&#x5C01;&#x88C5;</a></li>
+<li><a href="#%E7%BB%A7%E6%89%BF">&#x7EE7;&#x627F;</a><ul>
+<li><a href="#%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF-1">&#x539F;&#x578B;&#x7EE7;&#x627F;</a></li>
+<li><a href="#%E7%B1%BB%E7%BB%A7%E6%89%BF">&#x7C7B;&#x7EE7;&#x627F;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <h2 id="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1">&#x9762;&#x5411;&#x5BF9;&#x8C61;</h2>
+<h3 id="%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95">&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x65B9;&#x6CD5;</h3>
+<p>&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x63CF;&#x8FF0;&#x7CFB;&#x7EDF;&#x5982;&#x4F55;&#x901A;&#x8FC7;&#x7A0B;&#x5E8F;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x5176;&#x4E3A;&#x4E00;&#x79CD;&#x8BBE;&#x8BA1;&#x65B9;&#x6CD5;&#x4E0E;&#x8BED;&#x8A00;&#x5B9E;&#x73B0;&#x65E0;&#x5173;&#x3002;&#x5E38;&#x89C1;&#x7684;&#x8BBE;&#x8BA1;&#x65B9;&#x6CD5;&#x6709;&#x9762;&#x5411;&#x6D41;&#x7A0B;&#x4E0E;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x3002;</p>
+<h4 id="%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B">&#x9762;&#x5411;&#x8FC7;&#x7A0B;</h4>
+<p>&#x4EE5;&#x7A0B;&#x5E8F;&#x7684;&#x8FC7;&#x7A0B;&#x4E3A;&#x4E2D;&#x5FC3;&#xFF0C;&#x91C7;&#x7528;&#x81EA;&#x5B9A;&#x800C;&#x4E0B;&#x9010;&#x6B65;&#x7EC6;&#x5316;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x5E38;&#x89C1;&#x7684;&#x9762;&#x5411;&#x8FC7;&#x7A0B;&#x8BED;&#x8A00;&#x6709; C&#x3001;Fortran&#x3001;Pascall&#x3002;</p>
+<p><img src="../img/P/procedure_programming.png" alt=""></p>
+<h4 id="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1">&#x9762;&#x5411;&#x5BF9;&#x8C61;</h4>
+<p>&#x5C06;&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x7A0B;&#x5E8F;&#x7684;&#x57FA;&#x672C;&#x5355;&#x5143;&#xFF0C;&#x5C06;&#x7A0B;&#x5E8F;&#x5206;&#x89E3;&#x4E3A;&#x6570;&#x636E;&#x548C;&#x64CD;&#x4F5C;&#x7684;&#x96C6;&#x5408;&#x3002;&#x5E38;&#x89C1;&#x7684;&#x9762;&#x5411;&#x8FC7;&#x7A0B;&#x8BED;&#x8A00;&#x6709; smalltalk&#xFF08;&#x4E5F;&#x662F; Objective-C &#x7684;&#x7236;&#x4EB2;&#xFF09;&#x3001;Java&#x3001;C++&#x3002;</p>
+<p><img src="../img/O/object-oriented-programming.png" alt=""></p>
+<h5 id="%E6%A6%82%E5%BF%B5">&#x6982;&#x5FF5;</h5>
+<ul>
+<li>&#x7C7B;&#xFF08;Class&#xFF09;&#x3001;&#x5BF9;&#x8C61;&#xFF08;Object&#xFF09;</li>
+<li>&#x5C5E;&#x6027;&#xFF08;Property&#xFF09;&#x3001;&#x65B9;&#x6CD5;&#xFF08;Method&#xFF09;</li>
+</ul>
+<h5 id="%E5%9F%BA%E6%9C%AC%E7%89%B9%E7%82%B9">&#x57FA;&#x672C;&#x7279;&#x70B9;</h5>
+<ul>
+<li>&#x7EE7;&#x627F;&#xFF08;Inheritance&#xFF09;</li>
+<li>&#x5C01;&#x88C5;&#xFF08;Encapsulation&#xFF09;</li>
+<li>&#x591A;&#x6001;&#xFF08;Polymorphism&#xFF09;</li>
+</ul>
+<h2 id="javascript-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1">JavaScript &#x9762;&#x5411;&#x5BF9;&#x8C61;</h2>
+<h3 id="constructor">constructor</h3>
+<p>&#x5BF9;&#x8C61;&#x7684;&#x6784;&#x9020;&#x5668;&#xFF0C;&#x4E5F;&#x53EF;&#x79F0;&#x4E4B;&#x4E3A;&#x6784;&#x9020;&#x7C7B;&#x578B;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x4F7F;&#x7528; new &#x5173;&#x952E;&#x5B57;&#x521B;&#x5EFA;</span>
+<span class="hljs-keyword">var</span> o = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
+<span class="hljs-keyword">var</span> a = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>();
+<span class="hljs-keyword">var</span> d = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+    |         |
+ object    constructor
+
+<span class="hljs-comment">// &#x4F7F;&#x7528;&#x76F4;&#x63A5;&#x91CF;&#x521B;&#x5EFA;</span>
+<span class="hljs-keyword">var</span> o = {name: <span class="hljs-string">&apos;Xinyang&apos;</span>};
+<span class="hljs-keyword">var</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+</code></pre>
+<h4 id="%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9E%84%E9%80%A0%E5%99%A8">&#x81EA;&#x5B9A;&#x4E49;&#x6784;&#x9020;&#x5668;</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">// constructor</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span><span class="hljs-params">(name, age, birthdate)</span> </span>{
+  <span class="hljs-keyword">this</span>.name = name;
+  <span class="hljs-keyword">this</span>.age = age;
+  <span class="hljs-keyword">this</span>.birthdate = birthdate;
+  <span class="hljs-keyword">this</span>.changeName = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(newAge)</span> </span>{
+    <span class="hljs-keyword">this</span>.age = newAge;
+  }
+}
+
+<span class="hljs-comment">// &#x521B;&#x5EFA;&#x5BF9;&#x8C61;</span>
+<span class="hljs-keyword">var</span> X = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&apos;Stupid&apos;</span>, <span class="hljs-number">13</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">2015</span>, <span class="hljs-number">01</span>, <span class="hljs-number">01</span>));
+<span class="hljs-keyword">var</span> Q = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&apos;Q&apos;</span>, <span class="hljs-number">12</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">2015</span>, <span class="hljs-number">01</span>, <span class="hljs-number">01</span>));
+
+X.changeName(<span class="hljs-string">&apos;X&apos;</span>);
+</code></pre>
+<h5 id="%E5%88%9B%E5%BB%BA%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%883-%E7%A7%8D%EF%BC%89">&#x521B;&#x5EFA;&#x6784;&#x9020;&#x5668;&#x7684;&#x65B9;&#x6CD5;&#xFF08;3 &#x79CD;&#xFF09;</h5>
+<ul>
+<li><code>function ClassName() {...}</code></li>
+<li><code>var Class = function() {...}</code></li>
+<li><code>var Class = new Function()</code></li>
+</ul>
+<p>NOTE: &#x5E76;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x51FD;&#x6570;&#x90FD;&#x53EF;&#x4EE5;&#x88AB;&#x5F53;&#x6210;&#x6784;&#x9020;&#x5668;&#xFF0C;&#x4F8B;&#x5982; <code>var o = new Math.min()</code>&#x3002;&#x901A;&#x5E38;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x51FD;&#x6570;&#x5747;&#x53EF;&#x5F53;&#x505A;&#x6784;&#x9020;&#x5668;&#x6765;&#x4F7F;&#x7528;&#x3002;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x7684;&#x6784;&#x9020;&#x5668;&#x4E5F;&#x53EF;&#x88AB;&#x5F53;&#x505A;&#x6784;&#x9020;&#x5668;&#x3002;</p>
+<p>NOTE+&#xFF1A;&#x5982;&#x679C;&#x6784;&#x9020;&#x5668;&#x6709;&#x8FD4;&#x8FD8;&#x503C;&#x5E76;&#x4E3A;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#xFF0C;&#x5219;&#x5BF9;&#x8C61;&#x5C06;&#x88AB;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span><span class="hljs-params">(name, age, birthdate)</span> </span>{
+  <span class="hljs-keyword">this</span>.name = name;
+  <span class="hljs-keyword">this</span>.age = age;
+  <span class="hljs-keyword">this</span>.birthdate = birthdate;
+  <span class="hljs-keyword">this</span>.changeName = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(newAge)</span> </span>{
+    <span class="hljs-keyword">this</span>.age = newAge;
+  }
+  <span class="hljs-comment">// !!! &#x6CE8;&#x610F;&#x8FD9;&#x91CC;</span>
+  <span class="hljs-keyword">return</span> {};
+}
+
+<span class="hljs-keyword">var</span> X = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&apos;X&apos;</span>, <span class="hljs-number">13</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+<span class="hljs-built_in">console</span>.log(X.name); <span class="hljs-comment">// undefined;</span>
+</code></pre>
+<h3 id="this">this</h3>
+<p><code>this</code> &#x5728;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#x4E2D;&#x6307;&#x4EE3;&#x7684;&#x5BF9;&#x8C61;&#x4E0D;&#x540C;&#xFF08;<code>this</code> &#x6307;&#x4EE3;&#x7684;&#x503C;&#x53EF;&#x5728;&#x51FD;&#x6570;&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x53D1;&#x751F;&#x6539;&#x53D8;&#xFF09;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x51FA;&#x73B0;&#x573A;&#x666F;</th>
+<th>&#x6240;&#x6307;&#x4EE3;&#x503C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x5168;&#x5C40;&#x73AF;&#x5883;</td>
+<td>&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#xFF08;window &#x5728;&#x6D4F;&#x89C8;&#x5668;&#x73AF;&#x5883;&#x4E2D;&#x65F6;&#xFF09;</td>
+</tr>
+<tr>
+<td>constructor</td>
+<td>&#x521B;&#x5EFA;&#x7684;&#x65B0;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;</td>
+</tr>
+<tr>
+<td>&#x51FD;&#x6570;&#x8C03;&#x7528;</td>
+<td>&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x8005;</td>
+</tr>
+<tr>
+<td><code>new Function()</code></td>
+<td>&#x5168;&#x5C40;&#x5BF9;&#x8C61;</td>
+</tr>
+<tr>
+<td><code>eval()</code></td>
+<td>&#x8C03;&#x7528;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x7684; <code>this</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="%E5%85%A8%E5%B1%80%E7%8E%AF%E5%A2%83%E4%B8%AD">&#x5168;&#x5C40;&#x73AF;&#x5883;&#x4E2D;</h4>
+<p>&#x5168;&#x5C40;&#x73AF;&#x5883;&#x4E2D; <code>this</code> &#x6307;&#x4EE3;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#xFF0C;&#x65E2; <code>window</code> &#x5728;&#x6D4F;&#x89C8;&#x5668;&#x73AF;&#x5883;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x4EE5;&#x4E0B;&#x7684;&#x6240;&#x6709; this &#x5747;&#x6307;&#x4EE3;&#x5168;&#x5C40;&#x5BF9;&#x8C61;</span>
+<span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>;
+alert(<span class="hljs-keyword">this</span>.a);
+
+<span class="hljs-keyword">this</span>.b = <span class="hljs-number">20</span>;
+alert(b);
+
+c = <span class="hljs-number">30</span>;
+alert(<span class="hljs-keyword">this</span>.c);
+</code></pre>
+<h4 id="%E6%9E%84%E9%80%A0%E5%99%A8%E4%B8%AD">&#x6784;&#x9020;&#x5668;&#x4E2D;</h4>
+<p>&#x6784;&#x9020;&#x5668;&#x4E2D;&#x7684; <code>this</code> &#x6307;&#x4EE3;&#x7684;&#x662F;&#x5373;&#x5C06;&#x88AB;&#x521B;&#x5EFA;&#x51FA;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// constructor</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span><span class="hljs-params">(name, age, birthdate)</span> </span>{
+  <span class="hljs-comment">// &#x4E0B;&#x9762;&#x7684;&#x6307;&#x4EE3;&#x5373;&#x5C06;&#x88AB;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;</span>
+  <span class="hljs-keyword">this</span>.name = name;
+  <span class="hljs-keyword">this</span>.age = age;
+  <span class="hljs-keyword">this</span>.birthdate = birthdate;
+  <span class="hljs-keyword">this</span>.changeName = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(newAge)</span> </span>{
+    <span class="hljs-keyword">this</span>.age = newAge;
+  }
+}
+
+<span class="hljs-comment">// &#x521B;&#x5EFA;&#x5BF9;&#x8C61;</span>
+<span class="hljs-keyword">var</span> X = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&apos;Stupid&apos;</span>, <span class="hljs-number">13</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">2015</span>, <span class="hljs-number">01</span>, <span class="hljs-number">01</span>));
+<span class="hljs-keyword">var</span> Q = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&apos;Q&apos;</span>, <span class="hljs-number">12</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">2015</span>, <span class="hljs-number">01</span>, <span class="hljs-number">01</span>));
+
+X.changeName(<span class="hljs-string">&apos;X&apos;</span>);
+</code></pre>
+<h4 id="%E5%87%BD%E6%95%B0%E4%B8%AD">&#x51FD;&#x6570;&#x4E2D;</h4>
+<p>&#x51FD;&#x6570;&#x4E2D;&#x7684; <code>this</code> &#x6307;&#x4EE3;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x8005;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// constructor</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span><span class="hljs-params">(name, age, birthdate)</span> </span>{
+  <span class="hljs-comment">// &#x4E0B;&#x9762;&#x7684;&#x6307;&#x4EE3;&#x5373;&#x5C06;&#x88AB;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;</span>
+  <span class="hljs-keyword">this</span>.name = name;
+  <span class="hljs-keyword">this</span>.age = age;
+  <span class="hljs-keyword">this</span>.birthdate = birthdate;
+  <span class="hljs-keyword">this</span>.changeName = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(newAge)</span> </span>{
+    <span class="hljs-keyword">this</span>.age = newAge;
+  }
+  <span class="hljs-keyword">this</span>.gretting = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// !!! &#x4E0B;&#x9762;&#x8FD9;&#x4E2A; this &#x6307;&#x4EE3;&#x8C03;&#x7528;&#x5B83;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x65E2;&#x4E0A;&#x9762;&#x7684;</span>
+    <span class="hljs-comment">// &#x4E0A;&#x9762;&#x7684; gretting &#x5DE6;&#x8FB9;&#x7684; this&#xFF0C;&#x65E2;&#x4E3A;&#x5373;&#x5C06;&#x88AB;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;</span>
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Hi, I am &apos;</span> + <span class="hljs-keyword">this</span>.name)
+  }
+}
+
+<span class="hljs-comment">// &#x521B;&#x5EFA;&#x5BF9;&#x8C61;</span>
+<span class="hljs-keyword">var</span> X = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&apos;Stupid&apos;</span>, <span class="hljs-number">13</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">2015</span>, <span class="hljs-number">01</span>, <span class="hljs-number">01</span>));
+
+X.changeName(<span class="hljs-string">&apos;X&apos;</span>);
+X.gretting();
+</code></pre>
+<p>NOTE: <code>new Function(&apos;console.log(this)&apos;)</code> &#x4E2D;&#x7684; <code>this</code> &#x5747;&#x6307;&#x4EE3;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x3002;<code>eval(&apos;console.log(this)</code> &#x5219;&#x4E3A;&#x8C03;&#x7528;&#x4E0A;&#x4E0B;&#x6587;&#x6307;&#x4EE3;&#x7684; <code>this</code>&#x3002;</p>
+<h3 id="this-%E5%AE%9E%E4%BE%8B">this &#x5B9E;&#x4F8B;</h3>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4F7F;&#x7528; <code>apply</code> &#x4E0E; <code>call</code>&#x3002;&#x901A;&#x8FC7;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x6765;&#x5C06;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4E2D; <code>this</code> &#x6307;&#x4EE3;&#x7684;&#x76EE;&#x6807;&#x8FDB;&#x884C;&#x6539;&#x53D8;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Point</span><span class="hljs-params">(x, y)</span> </span>{
+  <span class="hljs-keyword">this</span>.x = x;
+  <span class="hljs-keyword">this</span>.y = y;
+  <span class="hljs-keyword">this</span>.move = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(x, y)</span> </span>{
+    <span class="hljs-keyword">this</span>.x += x;
+    <span class="hljs-keyword">this</span>.y += y;
+  }
+}
+
+<span class="hljs-keyword">var</span> point = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+point.move(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+
+<span class="hljs-keyword">var</span> circle = {x: <span class="hljs-number">0</span>, y: <span class="hljs-number">1</span>, r: <span class="hljs-number">1</span>};
+
+<span class="hljs-comment">// &#x6539;&#x53D8; point &#x4E2D; move &#x65B9;&#x6CD5; this &#x6307;&#x4EE3;&#x7684;&#x5BF9;&#x8C61;&#x81F3; circle</span>
+point.move.apply(circle, [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]);
+<span class="hljs-comment">// &#x540C;&#x6837;&#x53EF;&#x4EE5;&#x7528;&#x7C7B;&#x4F3C;&#x7684; call &#x65B9;&#x6CD5;&#xFF0C;&#x533A;&#x522B;&#x4E3A;&#x53C2;&#x6570;&#x9700;&#x4F9D;&#x6B21;&#x4F20;&#x5165;</span>
+point.move.call(circle, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+</code></pre>
+<p><img src="../img/T/this-sample.jpg" alt=""></p>
+<h3 id="%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF">&#x539F;&#x578B;&#x7EE7;&#x627F;</h3>
+<p>&#x4F7F;&#x7528;&#x539F;&#x578B;&#xFF08;prototype&#xFF09;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x91CD;&#x590D;&#x5B9A;&#x4E49;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x62E5;&#x6709;&#x7684;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x7684;&#x5C5E;&#x6027;&#x6216;&#x65B9;&#x6CD5;&#xFF08;&#x65E2;&#x5171;&#x4EAB;&#x539F;&#x578B;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x6216;&#x65B9;&#x6CD5;&#xFF09;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Boss</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">this</span>.age = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">this</span>.birthdate = <span class="hljs-literal">null</span>;
+  <span class="hljs-keyword">this</span>.name = <span class="hljs-string">&apos;&apos;</span>;
+  <span class="hljs-keyword">this</span>.tasks = [];
+  <span class="hljs-keyword">this</span>.title = <span class="hljs-string">&apos;Boss&apos;</span>;
+  <span class="hljs-keyword">this</span>.gretting = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;I am a Boss!&apos;</span>);};
+}
+
+<span class="hljs-keyword">var</span> X = <span class="hljs-keyword">new</span> Boss();
+<span class="hljs-keyword">var</span> Q = <span class="hljs-keyword">new</span> Boss();
+
+<span class="hljs-comment">// X &#x4E0E; Q &#x4E2D;&#x5177;&#x6709;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#xFF08;&#x4E0D;&#x5FC5;&#x552F;&#x4E00;&#x7684;&#x5C5E;&#x6027;&#x6216;&#x65B9;&#x6CD5;&#xFF09;</span>
+<span class="hljs-comment">// &#x5E76;&#x8017;&#x7528;&#x5185;&#x5B58;&#x7684;&#x5171;&#x4EAB;&#x90E8;&#x5206;</span>
+<span class="hljs-comment">// this.title &#x4E0E; this.gretting</span>
+</code></pre>
+<p><strong>&#x6539;&#x9020;&#x540E;&#x7684;&#x6784;&#x9020;&#x5668;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Boss</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">this</span>.age = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">this</span>.birthdate = <span class="hljs-literal">null</span>;
+  <span class="hljs-keyword">this</span>.name = <span class="hljs-string">&apos;&apos;</span>;
+  <span class="hljs-keyword">this</span>.tasks = [];
+}
+Boss.prototype = {
+  title: <span class="hljs-string">&apos;Boss&apos;</span>,
+  gretting: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;I am a Boss!&apos;</span>);}
+}
+
+<span class="hljs-keyword">var</span> X = <span class="hljs-keyword">new</span> Boss();
+<span class="hljs-keyword">var</span> Q = <span class="hljs-keyword">new</span> Boss();
+
+<span class="hljs-comment">// X &#x4E0E; Q &#x4E2D;&#x5177;&#x6709;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#xFF08;&#x4E0D;&#x5FC5;&#x552F;&#x4E00;&#x7684;&#x5C5E;&#x6027;&#x6216;&#x65B9;&#x6CD5;&#xFF09;</span>
+<span class="hljs-comment">// &#x5E76;&#x8017;&#x7528;&#x5185;&#x5B58;&#x7684;&#x5171;&#x4EAB;&#x90E8;&#x5206;</span>
+<span class="hljs-comment">// this.title &#x4E0E; this.gretting</span>
+
+<span class="hljs-keyword">var</span> X = <span class="hljs-keyword">new</span> Boss();
+<span class="hljs-keyword">var</span> Q = <span class="hljs-keyword">new</span> Boss();
+
+<span class="hljs-comment">// X &#x4E0E; Q &#x62E5;&#x6709;&#x76F8;&#x540C;&#x7684;&#x539F;&#x578B; Boss.prototype</span>
+</code></pre>
+<h3 id="%E5%8E%9F%E5%9E%8B%E9%93%BE">&#x539F;&#x578B;&#x94FE;</h3>
+<p>&#x4F7F;&#x7528;&#x539F;&#x578B;&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x6CD5;&#x4F1A;&#x4EA7;&#x751F;&#x539F;&#x578B;&#x94FE;&#x3002;JavaScript &#x4E2D;&#x5BF9;&#x4E8E;&#x5BF9;&#x8C61;&#x7684;&#x67E5;&#x627E;&#x3001;&#x4FEE;&#x6539;&#x548C;&#x5220;&#x9664;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x539F;&#x578B;&#x94FE;&#x6765;&#x5B8C;&#x6210;&#x7684;&#x3002;</p>
+<p><strong>&#x5224;&#x65AD;&#x5C5E;&#x6027;&#x662F;&#x5426;&#x4E3A;&#x5BF9;&#x8C61;&#x672C;&#x8EAB;</strong></p>
+<pre><code class="lang-javascript">objectName.hasOwnProperty(<span class="hljs-string">&apos;propertyName&apos;</span>);
+<span class="hljs-comment">// &#x8FD4;&#x56DE;&#x5E03;&#x5C14;&#x503C; true &#x6216; false</span>
+</code></pre>
+<h4 id="%E5%B1%9E%E6%80%A7%E6%9F%A5%E6%89%BE">&#x5C5E;&#x6027;&#x67E5;&#x627E;</h4>
+<p>&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x67E5;&#x627E;&#x4F1A;&#x66F4;&#x968F;&#x539F;&#x578B;&#x94FE;&#x4F9D;&#x6B21;&#x67E5;&#x627E;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x5F53;&#x524D;&#x73AF;&#x5883;&#x4E2D;&#x65E0;&#x6CD5;&#x627E;&#x5230;&#x9700;&#x8981;&#x7684;&#x5C5E;&#x6027;&#x5219;&#x4F1A;&#x7EE7;&#x7EED;&#x5411;&#x4E0B;&#x4E00;&#x5C42;&#x539F;&#x578B;&#x4E2D;&#x7EE7;&#x7EED;&#x5BFB;&#x627E;&#x3002;</p>
+<h4 id="%E5%B1%9E%E6%80%A7%E4%BF%AE%E6%94%B9">&#x5C5E;&#x6027;&#x4FEE;&#x6539;</h4>
+<p>&#x5728; JavaScript &#x4E2D;&#x5BF9;&#x4E8E;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x7684;&#x4FEE;&#x6539;&#x6C38;&#x8FDC;&#x53EA;&#x4FEE;&#x6539;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x4E0D;&#x8BBA;&#x662F;&#x6765;&#x6E90;&#x4E8E;&#x5BF9;&#x8C61;&#x672C;&#x8EAB;&#x8FD8;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#xFF09;&#x3002;&#x5F53;&#x521B;&#x5EFA;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x4E0D;&#x5B58;&#x5728;&#x5C5E;&#x6027;&#x65F6;&#xFF08;&#x5373;&#x4FBF;&#x539F;&#x578B;&#x62E5;&#x6709;&#x6B64;&#x5C5E;&#x6027;&#xFF09;&#xFF0C;&#x4E5F;&#x4F1A;&#x4E3A;&#x6B64;&#x5BF9;&#x8C61;&#x589E;&#x52A0;&#x6539;&#x5C5E;&#x6027;&#x3002;</p>
+<p><strong>&#x4FEE;&#x6539;&#x539F;&#x578B;&#x4E0A;&#x7684;&#x5C5E;&#x6027;</strong></p>
+<p>&#x4FEE;&#x6539;&#x539F;&#x578B;&#x5C5E;&#x6027;&#x4F1A;&#x5370;&#x8C61;&#x6240;&#x6709;&#x88AB;&#x521B;&#x5EFA;&#x51FA;&#x7684;&#x5BF9;&#x8C61;&#x73B0;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-javascript">ClassName.prototype.propertyName = <span class="hljs-string">&apos;new value&apos;</span>;
+ClassName.prototype.methodName = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{...};
+</code></pre>
+<h4 id="%E5%B1%9E%E6%80%A7%E5%88%A0%E9%99%A4">&#x5C5E;&#x6027;&#x5220;&#x9664;</h4>
+<p><code>delete objectName.propertyName</code> &#x53EA;&#x53EF;&#x5220;&#x9664;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x65E0;&#x6CD5;&#x5220;&#x9664;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x5C5E;&#x6027;&#x3002;</p>
+<h4 id="object-create-proto-propertiesobject">Object.create(proto[, propertiesObject])</h4>
+<p>&#x5176;&#x4E3A;ECMAScript 5 &#x4E2D;&#x63D0;&#x51FA;&#x7684;&#x65B0;&#x5EFA;&#x7ACB;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x5728; <code>X</code> &#x4E2D;&#x4F7F;&#x7528;&#x9690;&#x5F0F;&#x7684;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#x6307;&#x5411; <code>boss</code> &#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x8BBE;&#x4E3A; <code>X</code> &#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> boss = {
+  title: <span class="hljs-string">&apos;Boss&apos;</span>,
+  gretting: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Hi, I am a Boss!&apos;</span>);}
+};
+
+<span class="hljs-keyword">var</span> X = <span class="hljs-built_in">Object</span>.create(boss);
+X.gretting(); <span class="hljs-comment">// Hi, I am a Boss!</span>
+</code></pre>
+<p><strong>&#x4F4E;&#x7248;&#x672C;&#x4E2D;&#x5B9E;&#x73B0; Object.create &#x529F;&#x80FD;</strong></p>
+<p>&#x6B64;&#x79CD;&#x65B9;&#x5F0F;&#x4ECD;&#x9700;&#x4F7F;&#x7528; <code>ClassName.prototype</code> &#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> clone = (<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+  <span class="hljs-keyword">var</span> F = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{};
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(proto)</span> </span>{
+    F.prototype = proto;
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> F();
+  }
+})();
+</code></pre>
+<h3 id="%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%BA%94%E7%94%A8">&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x5E94;&#x7528;</h3>
+<h4 id="%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F">&#x5168;&#x5C40;&#x53D8;&#x91CF;</h4>
+<p>&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x53EF;&#x5728;&#x7A0B;&#x5E8F;&#x4EFB;&#x610F;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#x548C;&#x4FEE;&#x6539;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x6EE5;&#x7528;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4F1A;&#x5BFC;&#x81F4;&#xFF0C;&#x547D;&#x540D;&#x51B2;&#x7A81;&#xFF0C;&#x5BFC;&#x81F4;&#x7A0B;&#x5E8F;&#x4E0D;&#x7A33;&#x5B9A;&#x3002;</p>
+<p><strong>&#x5168;&#x5C40;&#x6807;&#x91CF;&#x7684;&#x4E09;&#x79CD;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#xFF1A;</strong></p>
+<ul>
+<li><code>var gloablVal = &apos;value&apos;;</code> &#x3002;</li>
+<li><code>window.gloablVal = &apos;value&apos;;</code> &#x9644;&#x52A0;&#x4E8E; <code>window</code> &#x5BF9;&#x8C61;&#x4E0A;</li>
+<li><code>gloablVal = &apos;value&apos;;</code> &#x4E0D;&#x4F7F;&#x7528; <code>var</code> &#x5173;&#x952E;&#x5B57;&#xFF0C;&#x4E5F;&#x9644;&#x52A0;&#x4E8E; <code>windwo</code> &#x5BF9;&#x8C61;</li>
+</ul>
+<p>NOTE&#xFF1A;<code>delete</code> &#x65E0;&#x6CD5;&#x5220;&#x9664;&#x5728;&#x4EE3;&#x7801;&#x6700;&#x9876;&#x7AEF;&#x5B9A;&#x4E49;&#x7684;&#x5168;&#x5C40;&#x6807;&#x91CF; <code>var globale</code></p>
+<h4 id="%E5%B0%81%E8%A3%85">&#x5C01;&#x88C5;</h4>
+<p>&#x4FE1;&#x606F;&#x9690;&#x85CF;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x7A0B;&#x5E8F;&#x7684;&#x7A33;&#x5B9A;&#xFF0C;&#x5C06;&#x5185;&#x90E8;&#x4FE1;&#x606F;&#x8FDB;&#x884C;&#x9690;&#x85CF;&#x3002;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x4E2D;&#x53EF;&#x8BCD;&#x7528;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x6765;&#x5B9E;&#x73B0;&#x5C01;&#x88C5;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x50CF; <code>private</code>&#x3001;<code>public</code>&#x3002;</p>
+<p><strong>JavaScript &#x4E2D;&#x7684;&#x5C01;&#x88C5;</strong>&#x53EF;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x6CD5;&#xFF08;&#x95ED;&#x5305;&#xFF09;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x6A21;&#x62DF; private &#x7684;&#x5C5E;&#x6027;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ClassName</span><span class="hljs-params">()</span></span>{
+  <span class="hljs-keyword">var</span> _property = <span class="hljs-string">&apos;&apos;</span>;
+  <span class="hljs-keyword">this</span>.getProperty = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">return</span> _property;
+  };
+}
+
+<span class="hljs-comment">// &#x6A21;&#x62DF; protected &#x5C5E;&#x6027;&#xFF0C;&#x4F7F;&#x7528;&#x4EBA;&#x4E3A;&#x7EA6;&#x675F;&#x89C4;&#x5219;</span>
+<span class="hljs-keyword">var</span> pro = ClassName.prototype;
+pro._protectedMethod = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{...};
+pro.publicMethod = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{...};
+</code></pre>
+<h4 id="%E7%BB%A7%E6%89%BF">&#x7EE7;&#x627F;</h4>
+<h5 id="%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF">&#x539F;&#x578B;&#x7EE7;&#x627F;</h5>
+<p>&#x539F;&#x578B;&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;&#x4E3A; JavaScript &#x4E2D;&#x56FA;&#x6709;&#x7684;&#x7EE7;&#x627F;&#x65B9;&#x5F0F;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> proto = {
+  action1: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{},
+  action2: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{}
+}
+
+<span class="hljs-keyword">var</span> obj = <span class="hljs-built_in">Object</span>.create(proto);
+</code></pre>
+<p>&#x5728;&#x4E0D;&#x652F;&#x6301; EM5 &#x4E2D;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> clone = (<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+  <span class="hljs-keyword">var</span> F = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{};
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(proto)</span> </span>{
+    F.prototype = proto;
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> F();
+  }
+})();
+</code></pre>
+<h5 id="%E7%B1%BB%E7%BB%A7%E6%89%BF">&#x7C7B;&#x7EE7;&#x627F;</h5>
+<p>&#x4F7F;&#x7528;&#x539F;&#x578B;&#x94FE;&#x7EE7;&#x627F;&#x7684;&#x65B9;&#x5F0F;&#x6A21;&#x62DF;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x7C7B;&#x7EE7;&#x627F;&#x7684;&#x7279;&#x6027;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ClassA</span><span class="hljs-params">()</span> </span>{
+  ClassA.classMethod = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{};
+  ClassA.prototype.api = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{};
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ClassB</span><span class="hljs-params">()</span> </span>{
+    ClassA.apply(<span class="hljs-keyword">this</span>, argument);
+  }
+  ClassB.prototype = <span class="hljs-keyword">new</span> ClassA();
+  ClassB.prototype.constructor = ClassB;
+  ClassB.prototype.api = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+    ClassA.prototype.api.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);
+  }
+}
+
+<span class="hljs-comment">// ClassA &#x4E3A;&#x7236;&#x7C7B;</span>
+<span class="hljs-comment">// ClassB &#x4E3A;&#x5B50;&#x7C7B;</span>
+
+<span class="hljs-keyword">var</span> b = <span class="hljs-keyword">new</span> ClassB();
+b.api();
+</code></pre>
+<p><img src="../img/C/class-inherence.jpg" alt=""></p>
 
                     
                     </section>
