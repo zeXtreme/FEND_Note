@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+  - [文档树](#%E6%96%87%E6%A1%A3%E6%A0%91)
+    - [HTML 转换 DOM 树](#html-%E8%BD%AC%E6%8D%A2-dom-%E6%A0%91)
+- [My header](#my-header)
+    - [节点遍历](#%E8%8A%82%E7%82%B9%E9%81%8D%E5%8E%86)
+    - [节点类型](#%E8%8A%82%E7%82%B9%E7%B1%BB%E5%9E%8B)
+    - [元素遍历](#%E5%85%83%E7%B4%A0%E9%81%8D%E5%8E%86)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 文档树
 
 Document Object Model (DOM) 既文档**对象**模型，其用对象的方式表示对应的文档结构及内容。
