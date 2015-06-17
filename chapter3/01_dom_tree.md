@@ -5,7 +5,127 @@ Document Object Model (DOM) 既文档**对象**模型，其用对象的方式表
 下面为一个样例 `p` 元素在文档中的对象所包含的所有属性。
 
 ```
-p#targetaccessKey: ""align: ""attributes: NamedNodeMapbaseURI: ""childElementCount: 0childNodes: NodeList[1]children: HTMLCollection[0]classList: DOMTokenList[0]className: ""clientHeight: 0clientLeft: 0clientTop: 0clientWidth: 0contentEditable: "inherit"dataset: DOMStringMapdir: ""draggable: falsefirstChild: textfirstElementChild: nullhidden: falseid: "target"innerHTML: "Hello, World!"innerText: "Hello, World!"isContentEditable: falselang: ""lastChild: textlastElementChild: nulllocalName: "p"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: nullnextSibling: nullnodeName: "P"nodeType: 1nodeValue: nulloffsetHeight: 0offsetLeft: 0offsetParent: nulloffsetTop: 0offsetWidth: 0onabort: nullonautocomplete: nullonautocompleteerror: nullonbeforecopy: nullonbeforecut: nullonbeforepaste: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextmenu: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonseeked: nullonseeking: nullonselect: nullonselectstart: nullonshow: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullonvolumechange: nullonwaiting: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwheel: nullouterHTML: "<p id="target">Hello, World!</p>"outerText: "Hello, World!"ownerDocument: documentparentElement: nullparentNode: nullprefix: nullpreviousElementSibling: nullpreviousSibling: nullscrollHeight: 0scrollLeft: 0scrollTop: 0scrollWidth: 0shadowRoot: nullspellcheck: truestyle: CSSStyleDeclarationtabIndex: -1tagName: "P"textContent: "Hello, World!"title: ""translate: truewebkitdropzone: ""__proto__: HTMLParagraphElement
+p#targetaccessKey: ""
+align: ""
+attributes: NamedNodeMapbaseURI: ""
+childElementCount: 0
+childNodes: NodeList[1]
+children: HTMLCollection[0]
+classList: DOMTokenList[0]
+className: ""
+clientHeight: 0
+clientLeft: 0
+clientTop: 0
+clientWidth: 0
+contentEditable: "inherit"
+dataset: DOM
+StringMapdir: ""
+draggable: false
+firstChild: text
+firstElementChild: null
+hidden: false
+id: "target"
+innerHTML: "Hello, World!"
+innerText: "Hello, World!"
+isContentEditable: false
+lang: ""
+lastChild: textlastElementChild: null
+localName: "p"
+namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: null
+nextSibling: null
+nodeName: "P"nodeType: 1nodeValue: null
+offsetHeight: 0offsetLeft: 0offsetParent: null
+offsetTop: 0offsetWidth: 0onabort: null
+onautocomplete: null
+onautocompleteerror: null
+onbeforecopy: null
+onbeforecut: null
+onbeforepaste: null
+onblur: null
+oncancel: null
+oncanplay: null
+oncanplaythrough: null
+onchange: null
+onclick: null
+onclose: null
+oncontextmenu: null
+oncopy: null
+oncuechange: null
+oncut: null
+ondblclick: null
+ondrag: null
+ondragend: null
+ondragenter: null
+ondragleave: null
+ondragover: null
+ondragstart: null
+ondrop: null
+ondurationchange: null
+onemptied: null
+onended: null
+onerror: null
+onfocus: null
+oninput: null
+oninvalid: null
+onkeydown: null
+onkeypress: null
+onkeyup: null
+onload: null
+onloadeddata: null
+onloadedmetadata: null
+onloadstart: null
+onmousedown: null
+onmouseenter: null
+onmouseleave: null
+onmousemove: null
+onmouseout: null
+onmouseover: null
+onmouseup: null
+onmousewheel: null
+onpaste: null
+onpause: null
+onplay: null
+onplaying: null
+onprogress: null
+onratechange: null
+onreset: null
+onresize: null
+onscroll: null
+onsearch: null
+onseeked: null
+onseeking: null
+onselect: null
+onselectstart: null
+onshow: null
+onstalled: null
+onsubmit: null
+onsuspend: null
+ontimeupdate: null
+ontoggle: null
+onvolumechange: null
+onwaiting: null
+onwebkitfullscreenchange: null
+onwebkitfullscreenerror: null
+onwheel: null
+outerHTML: "<p id="target">Hello, World!</p>"outerText: "Hello, World!"ownerDocument: documentparentElement: null
+parentNode: null
+prefix: null
+previousElementSibling: null
+previousSibling: null
+scrollHeight: 0
+scrollLeft: 0
+scrollTop: 0
+scrollWidth: 0
+shadowRoot: null
+spellcheck: true
+style: CSSStyle
+DeclarationtabIndex: -1
+tagName: "P"
+textContent: "Hello, World!"
+title: ""
+translate: true
+webkitdropzone: ""
+__proto__: HTMLParagraphElement
 ```
 
 通过使用 DOM 提供的 API (Application Program Interface) 可以动态的修改节点（node），也就是对 DOM 树的直接操作。浏览器中通过使用 JavaScript 来实现对于 DOM 树的改动。
@@ -41,9 +161,12 @@ var node = document.getElementsByTagName('h1')[0];
 
 node.parentNode; // body
 node.firstChild; // null
+
 node.lastChild;  // null
+
 node.previousBibling; // <a href="">My Link</a>
 node.nextSibling;     // null
+
 ```
 
 ### 节点类型
@@ -72,4 +195,5 @@ p.lastElementChild;  // <a href="http://li-xinyang.com">主页</a>
 
 em.nextElementSibling; // <a href="http://li-xinyang.com">主页</a>
 em.previousElementSibling; // null
+
 ```
