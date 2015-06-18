@@ -4,6 +4,7 @@
 
 - [属性操作](#%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C)
   - [HTML 属性与 DOM 属性的对应](#html-%E5%B1%9E%E6%80%A7%E4%B8%8E-dom-%E5%B1%9E%E6%80%A7%E7%9A%84%E5%AF%B9%E5%BA%94)
+  - [属性的操作方式](#%E5%B1%9E%E6%80%A7%E7%9A%84%E6%93%8D%E4%BD%9C%E6%96%B9%E5%BC%8F)
     - [Property Accessor](#property-accessor)
     - [getAttribute / setAttribute](#getattribute--setattribute)
     - [dataset](#dataset)
