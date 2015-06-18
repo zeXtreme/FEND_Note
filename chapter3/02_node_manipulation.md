@@ -1,3 +1,24 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [节点操作](#%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C)
+  - [获取节点](#%E8%8E%B7%E5%8F%96%E8%8A%82%E7%82%B9)
+    - [接口获取节点](#%E6%8E%A5%E5%8F%A3%E8%8E%B7%E5%8F%96%E8%8A%82%E7%82%B9)
+      - [getElementById](#getelementbyid)
+      - [getElementsByTagName](#getelementsbytagname)
+      - [getElementsByClassName](#getelementsbyclassname)
+      - [querySelector / querySelectorAll](#queryselector--queryselectorall)
+  - [创建节点](#%E5%88%9B%E5%BB%BA%E8%8A%82%E7%82%B9)
+  - [修改节点](#%E4%BF%AE%E6%94%B9%E8%8A%82%E7%82%B9)
+  - [插入节点](#%E6%8F%92%E5%85%A5%E8%8A%82%E7%82%B9)
+    - [appendChild](#appendchild)
+    - [insertBefore](#insertbefore)
+  - [删除节点](#%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9)
+  - [innerHTML](#innerhtml)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 节点操作
 
 通过 JavaScript 来选取操作修改节点。
