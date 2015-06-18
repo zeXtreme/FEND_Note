@@ -31,6 +31,8 @@ input.className; // 'text'
 label.htmlFor;   // 'username'
 ```
 
+### 属性的操作方式
+
 #### Property Accessor
 
 通过属性方法符得到的属性为转换过的实例对象（并非全字符串）。

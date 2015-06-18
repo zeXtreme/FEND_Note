@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Sublime 快捷键 | Frontend Notebook</title>
+        <title>DOM 编程 | Frontend Notebook</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.1.0">
@@ -25,10 +25,10 @@
         
     
     
-    <link rel="next" href="../chapter1/03_html.html" />
+    <link rel="next" href="../chapter3/01_dom_tree.html" />
     
     
-    <link rel="prev" href="../chapter1/02_dev_tools.html" />
+    <link rel="prev" href="../chapter2/10_object.html" />
     
 
         
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="1.2.1" data-basepath=".." data-revision="Thu Jun 18 2015 11:33:23 GMT+0800 (SGT)">
+    <div class="book" data-level="3" data-basepath=".." data-revision="Thu Jun 18 2015 11:33:23 GMT+0800 (SGT)">
     
 
 <div class="book-summary">
@@ -194,7 +194,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="chapter1/02_01_sublime.html">
+        <li class="chapter " data-level="1.2.1" data-path="chapter1/02_01_sublime.html">
             
                 
                     <a href="../chapter1/02_01_sublime.html">
@@ -627,7 +627,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3" data-path="chapter3/00_intro.html">
+        <li class="chapter active" data-level="3" data-path="chapter3/00_intro.html">
             
                 
                     <a href="../chapter3/00_intro.html">
@@ -831,17 +831,11 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <p><strong>Table of Contents</strong>  <em>generated with <a href="https://github.com/thlorenz/doctoc" target="_blank">DocToc</a></em></p>
 <ul>
-<li><a href="#sublime-%E5%BF%AB%E6%8D%B7%E9%94%AE">Sublime &#x5FEB;&#x6377;&#x952E;</a></li>
+<li><a href="#dom-%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF">DOM &#x7F16;&#x7A0B;&#x827A;&#x672F;</a></li>
 </ul>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<h3 id="sublime-%E5%BF%AB%E6%8D%B7%E9%94%AE">Sublime &#x5FEB;&#x6377;&#x952E;</h3>
-<p><kbd>command/control</kbd> + <kbd>P</kbd> &#x8FDB;&#x5165;&#x67E5;&#x627E;&#x547D;&#x4EE4;&#xFF08;Goto Anything&#xFF09;,&#x6B64;&#x65F6;&#x6709;&#x4E09;&#x79CD;&#x9009;&#x62E9;&#xFF1A;</p>
-<ul>
-<li><code>:</code> &#x8F93;&#x5165;&#x884C;&#x6570;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x884C; &#xFF08;<kbd>control</kbd> + <kbd>G</kbd>&#xFF09;</li>
-<li><code>@</code> &#x627E;&#x5230;&#x7279;&#x5B9A;&#x51FD;&#x6570; &#xFF08;<kbd>command/control</kbd> + <kbd>R</kbd>&#xFF09;</li>
-<li><code>#</code> &#x627E;&#x5230;&#x5BF9;&#x5E94;&#x53D8;&#x91CF;&#x4E0E;&#x5757;</li>
-</ul>
-<p>&#x5B66;&#x4F1A;&#x4F7F;&#x7528; <a href="http://emmet.io/" target="_blank">Emmet</a> &#x63D2;&#x4EF6;&#x53EF;&#x6709;&#x6548;&#x7684;&#x5E2E;&#x52A9;&#x8FDB;&#x884C;&#x524D;&#x7AEF;&#x7F16;&#x7A0B;&#x3002;</p>
+<h1 id="dom-%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF">DOM &#x7F16;&#x7A0B;&#x827A;&#x672F;</h1>
+<p>DOM &#x7F16;&#x7A0B;&#x662F;&#x4F7F;&#x7528; W3C &#x5B9A;&#x4E49;&#x7684; API &#x6765;&#x64CD;&#x4F5C; HTML &#x6587;&#x6863;&#xFF0C;&#x4F7F;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4E0E;&#x9875;&#x9762;&#x4EA4;&#x4E92;&#x3002;&#x4F60;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x8282;&#x70B9;&#x3001;&#x5C5E;&#x6027;&#x3001;&#x6837;&#x5F0F;&#x7B49;&#x57FA;&#x672C; DOM &#x64CD;&#x4F5C;&#xFF0C;DOM &#x4E8B;&#x4EF6;&#x6A21;&#x578B;&#xFF0C;&#x6570;&#x636E;&#x5B58;&#x50A8; (cookie&#x3001;storage) &#x4E0E;&#x6570;&#x636E;&#x901A;&#x4FE1; (ajax) &#xFF0C;JavaScript &#x52A8;&#x753B;&#xFF0C;&#x97F3;&#x9891;&#x3001;&#x89C6;&#x9891;&#x3001;canvas &#x7B49; HTML5 &#x7279;&#x6027;&#xFF0C;&#x8868;&#x5355;&#x3001;&#x5217;&#x8868;&#x64CD;&#x4F5C;&#x3002;</p>
 
                     
                     </section>
@@ -852,10 +846,10 @@
         </div>
 
         
-        <a href="../chapter1/02_dev_tools.html" class="navigation navigation-prev " aria-label="Previous page: 开发及调试工具"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter2/10_object.html" class="navigation navigation-prev " aria-label="Previous page: 面向对象"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter1/03_html.html" class="navigation navigation-next " aria-label="Next page: HTML"><i class="fa fa-angle-right"></i></a>
+        <a href="../chapter3/01_dom_tree.html" class="navigation navigation-next " aria-label="Next page: 文档树（DOM Tree）"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
