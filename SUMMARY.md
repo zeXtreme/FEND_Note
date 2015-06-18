@@ -37,6 +37,8 @@
   - [面向对象](chapter2/10_object.md)
 - [DOM 编程](chapter3/00_intro.md)
   - [文档树（DOM Tree）](chapter3/01_dom_tree.md)
+  - [节点操作](chapter3/02_node_manipulation.md)
+  - [属性操作](chapter3/03_attribuet.md)
 - [页面架构]()
 - [产品前端架构]()
 - [附录 A：书单](Booklist.md)
