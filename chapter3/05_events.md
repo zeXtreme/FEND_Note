@@ -24,10 +24,10 @@
       - [属性](#%E5%B1%9E%E6%80%A7)
       - [MouseEvent 顺序](#mouseevent-%E9%A1%BA%E5%BA%8F)
         - [实例：拖动元素](#%E5%AE%9E%E4%BE%8B%EF%BC%9A%E6%8B%96%E5%8A%A8%E5%85%83%E7%B4%A0)
-      - [滚轮事件](#%E6%BB%9A%E8%BD%AE%E4%BA%8B%E4%BB%B6)
-      - [FocusEvent](#focusevent)
-      - [InputEvent](#inputevent)
-      - [KeyboardEvent](#keyboardevent)
+    - [滚轮事件（Wheel）](#%E6%BB%9A%E8%BD%AE%E4%BA%8B%E4%BB%B6%EF%BC%88wheel%EF%BC%89)
+    - [FocusEvent](#focusevent)
+    - [InputEvent](#inputevent)
+    - [KeyboardEvent](#keyboardevent)
   - [事件代理](#%E4%BA%8B%E4%BB%B6%E4%BB%A3%E7%90%86)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -335,7 +335,7 @@ addEvent(elem, 'mouseup', mouseUpHandler);
 addEvent(elem, 'mousemove', mouseMoveHandler);
 ```
 
-##### 滚轮事件
+#### 滚轮事件（Wheel）
 
 |事件类型|是否冒泡|元素|默认事件|元素例子|
 |--------|--------|----|--------|--------|
@@ -348,7 +348,7 @@ addEvent(elem, 'mousemove', mouseMoveHandler);
 - deltaY
 - deltaZ
 
-##### FocusEvent
+#### FocusEvent
 
 其用于处理元素获得或失去焦点的事件。（例如输入框的可输入状态则为获得焦点，点击外部则失去焦点）
 
@@ -367,7 +367,7 @@ NOTE：`blur` 失去焦点时，`focus` 获得焦点时，`focusin` 即将获得
 
 - relatedTarget
 
-##### InputEvent
+#### InputEvent
 
 输入框输入内容则会触发输入事件。
 
@@ -380,7 +380,7 @@ NOTE：`beforeInput` 为在按键按下后即将将输入字符显示之前生�
 
 NOTE+：IE 并没有 `InputEvent` 则需使用 `onpropertychange(IE)` 来代替。
 
-##### KeyboardEvent
+#### KeyboardEvent
 
 其用于处理键盘事件。
 
