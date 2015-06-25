@@ -41,6 +41,7 @@
   - [属性操作](chapter3/03_attribuet.md)
   - [样式操作](chapter3/04_style_manipulation.md)
   - [事件](chapter3/05_events.md)
+  - [动画](chapter3/06_animation.md)
 - [页面架构]()
 - [产品前端架构]()
 - [附录 A：书单](Booklist.md)
