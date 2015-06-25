@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>HTML 标签 | Frontend Notebook</title>
+        <title>Canvas | Frontend Notebook</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.1.0">
@@ -25,10 +25,10 @@
         
     
     
-    <link rel="next" href="../chapter1/03_03_html_ascii_encoding.html" />
+    <link rel="next" href="../Booklist.html" />
     
     
-    <link rel="prev" href="../chapter1/03_02_html_sytax.html" />
+    <link rel="prev" href="../chapter3/06_animation.html" />
     
 
         
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="1.3.3" data-basepath=".." data-revision="Fri Jun 26 2015 00:30:32 GMT+0800 (SGT)">
+    <div class="book" data-level="3.8" data-basepath=".." data-revision="Fri Jun 26 2015 00:30:32 GMT+0800 (SGT)">
     
 
 <div class="book-summary">
@@ -260,7 +260,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.3" data-path="chapter1/03_05_html_tags.html">
+        <li class="chapter " data-level="1.3.3" data-path="chapter1/03_05_html_tags.html">
             
                 
                     <a href="../chapter1/03_05_html_tags.html">
@@ -748,7 +748,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.8" data-path="chapter3/07_canvas.html">
+        <li class="chapter active" data-level="3.8" data-path="chapter3/07_canvas.html">
             
                 
                     <a href="../chapter3/07_canvas.html">
@@ -902,256 +902,81 @@
                 
                     <section class="normal" id="section-">
                     
-                        <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<p><strong>Table of Contents</strong>  <em>generated with <a href="https://github.com/thlorenz/doctoc" target="_blank">DocToc</a></em></p>
-<ul>
-<li><a href="#html-%E6%A0%87%E7%AD%BE">HTML &#x6807;&#x7B7E;</a><ul>
-<li><a href="#%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE">&#x6587;&#x672C;&#x6807;&#x7B7E;</a></li>
-<li><a href="#%E7%BB%84%E5%90%88%E5%86%85%E5%AE%B9%E6%A0%87%E7%AD%BE">&#x7EC4;&#x5408;&#x5185;&#x5BB9;&#x6807;&#x7B7E;</a></li>
-<li><a href="#%E5%B5%8C%E5%85%A5">&#x5D4C;&#x5165;</a></li>
-<li><a href="#%E8%B5%84%E6%BA%90%E6%A0%87%E7%AD%BE">&#x8D44;&#x6E90;&#x6807;&#x7B7E;</a><ul>
-<li><a href="#%E5%9B%BE%E6%A0%87%E7%AD%BE">&#x56FE;&#x6807;&#x7B7E;</a></li>
-<li><a href="#%E7%83%AD%E7%82%B9%E5%8C%BA%E5%9F%9F%E6%A0%87%E7%AD%BE">&#x70ED;&#x70B9;&#x533A;&#x57DF;&#x6807;&#x7B7E;</a></li>
-</ul>
-</li>
-<li><a href="#%E8%A1%A8%E6%A0%BC">&#x8868;&#x683C;</a></li>
-<li><a href="#%E8%A1%A8%E5%8D%95">&#x8868;&#x5355;</a></li>
-<li><a href="#%E8%AF%AD%E4%B9%89%E5%8C%96">&#x8BED;&#x4E49;&#x5316;</a></li>
-</ul>
-</li>
-</ul>
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<h3 id="html-%E6%A0%87%E7%AD%BE">HTML &#x6807;&#x7B7E;</h3>
-<p><strong><a href="http://www.html5star.com/manual/html5label-meaning" target="_blank">HTML5 &#x6807;&#x7B7E;&#x96C6;&#x5408;</a></strong></p>
-<p><img src="../img/H/html-elements.jpg" alt=""></p>
-<p><strong>&#x9875;&#x9762;&#x901A;&#x5E38;&#x7ED3;&#x6784;</strong></p>
-<p><img src="../img/S/structure.gif" alt="Web Structure"></p>
-<h4 id="%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE">&#x6587;&#x672C;&#x6807;&#x7B7E;</h4>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- &#x9ED8;&#x8BA4;&#x8D85;&#x94FE;&#x63A5;  --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;http://sample-link.com&quot;</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">&quot;Sample Link&quot;</span>&gt;</span>Sample<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-comment">&lt;!-- &#x5F53;&#x524D;&#x7A97;&#x53E3;&#x663E;&#x793A; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;http://sample-link.com&quot;</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">&quot;Sample Link&quot;</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">&quot;_self&quot;</span>&gt;</span>Sample<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-comment">&lt;!-- &#x65B0;&#x7A97;&#x53E3;&#x663E;&#x793A; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;http://sample-link.com&quot;</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">&quot;Sample Link&quot;</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">&quot;_blacnk&quot;</span>&gt;</span>Sample<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-comment">&lt;!-- iframe &#x4E2D;&#x6253;&#x5F00;&#x94FE;&#x63A5; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;http://sample-link.com&quot;</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">&quot;Sample Link&quot;</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">&quot;iframe-name&quot;</span>&gt;</span>Sample<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">iframe</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;iframe-name&quot;</span> <span class="hljs-attribute">frameborder</span>=<span class="hljs-value">&quot;0&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">iframe</span>&gt;</span>
+                        <h2 id="canvas">Canvas</h2>
+<p><strong>Mozilla</strong> &#x5B98;&#x65B9; <code>&lt;canvas&gt;</code> &#x6559;&#x7A0B;&#x5728;<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial" target="_blank">&#x8FD9;&#x91CC;</a>&#x3002;</p>
+<p>&#x753B;&#x5E03; <code>&lt;canvas&gt;</code> &#x7684;&#x9ED8;&#x8BA4;&#x5BBD;&#x9AD8;&#x4E3A; 300 &#x4E0E; 150 &#xFF0C;&#x4F46;&#x662F;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; CSS &#x8BBE;&#x5B9A;&#x5BBD;&#x9AD8;&#x3002;&#x4F46;&#x56E0;&#x4E3A; CSS &#x4E0E; JavaScript &#x5728;&#x6E32;&#x67D3;&#x5DE5;&#x7A0B;&#x4E2D;&#x6709;&#x901F;&#x5EA6;&#x7684;&#x5DEE;&#x5F02;&#xFF0C;&#x6240;&#x4EE5;<strong>&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;</strong> CSS &#x5BF9; <code>&lt;canvas&gt;</code> &#x7684;&#x5BBD;&#x9AD8;&#x505A;&#x8BBE;&#x5B9A;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">canvas</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;canvasId&quot;</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">&quot;300&quot;</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">&quot;150&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">canvas</span>&gt;</span>
+</code></pre>
+<h3 id="%E6%B8%B2%E6%9F%93%E4%B8%8A%E4%B8%8B%E6%96%87%E5%AF%B9%E8%B1%A1">&#x6E32;&#x67D3;&#x4E0A;&#x4E0B;&#x6587;&#x5BF9;&#x8C61;</h3>
+<p>&#x4E0B;&#x9762;&#x7684; <code>ctx</code> &#x5373;&#x4E3A;&#x6E32;&#x67D3;&#x4E0A;&#x4E0B;&#x6587;&#x5BF9;&#x8C61;&#x3002;<code>globalCompositeOperation</code> &#x4E3A;&#x5BF9;&#x4E8E; <code>canvas</code> &#x7ED8;&#x753B;&#x65F6;&#x7684;&#x6E32;&#x67D3;&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#xFF0C;&#x5177;&#x4F53;&#x8868;&#x73B0;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x3002;</p>
+<pre><code class="lang-Javascript"><span class="hljs-keyword">var</span> canvas = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;canvasId&apos;</span>);
+<span class="hljs-keyword">var</span> ctx = canvas.getContext(<span class="hljs-string">&apos;2d&apos;</span>);
 
-<span class="hljs-comment">&lt;!-- &#x9875;&#x9762;&#x4E2D;&#x7684;&#x951A;&#x70B9; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#achor&quot;</span>&gt;</span>Achor Point<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;achor&quot;</span>&gt;</span>Achor Content<span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
 
-<span class="hljs-comment">&lt;!-- &#x90AE;&#x7BB1;&#x53CA;&#x7535;&#x8BDD;&#x9700;&#x7CFB;&#x7EDF;&#x652F;&#x6301; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;mailto:sample-address@me.com&quot;</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">&quot;Email&quot;</span>&gt;</span>Contact Us<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-comment">&lt;!-- &#x591A;&#x4E2A;&#x90AE;&#x7BB1;&#x5730;&#x5740; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;mailto:sample-address@me.com, sample-address0@me.com&quot;</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">&quot;Email&quot;</span>&gt;</span>Contact Us<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-comment">&lt;!-- &#x6DFB;&#x52A0;&#x6284;&#x9001;&#xFF0C;&#x4E3B;&#x9898;&#x548C;&#x5185;&#x5BB9; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;mailto:sample-address@me.com?cc=admin@me.com&amp;subject=Help&amp;body=sample-body-text&quot;</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">&quot;Email&quot;</span>&gt;</span>Contact Us<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-comment">// &#x7ED8;&#x753B; canvas &#x7684;&#x5C5E;&#x6027;</span>
+ctx.globalCompositeOperation = <span class="hljs-string">&apos;destination-over&apos;</span>;
+</code></pre>
+<p><img src="../img/C/canvas-global-composite.png" alt=""></p>
+<h3 id="%E7%BB%98%E5%9B%BE%E6%AD%A5%E9%AA%A4">&#x7ED8;&#x56FE;&#x6B65;&#x9AA4;</h3>
+<p><img src="../img/C/canvas-drawing-steps.png" alt=""></p>
+<p>&#x4E00;&#x4E2A;&#x5468;&#x671F;&#x5C31;&#x662F;&#x5B8C;&#x6574;&#x7684;&#x4E00;&#x5E27;&#x7684;&#x7ED8;&#x753B;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p><img src="../img/C/canvas-animation.gif" alt=""></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> sun = <span class="hljs-keyword">new</span> Image();
+<span class="hljs-keyword">var</span> moon = <span class="hljs-keyword">new</span> Image();
+<span class="hljs-keyword">var</span> earth = <span class="hljs-keyword">new</span> Image();
 
-<span class="hljs-comment">&lt;!-- &#x7535;&#x8BDD;&#x793A;&#x4F8B; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;tel:99999999&quot;</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">&quot;Phone&quot;</span>&gt;</span>Ring Us<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-</code></pre>
-<h4 id="%E7%BB%84%E5%90%88%E5%86%85%E5%AE%B9%E6%A0%87%E7%AD%BE">&#x7EC4;&#x5408;&#x5185;&#x5BB9;&#x6807;&#x7B7E;</h4>
-<ul>
-<li><code>&lt;div&gt;</code></li>
-<li><code>&lt;p&gt;</code></li>
-<li><code>&lt;ol&gt;</code></li>
-<li><code>&lt;ul&gt;</code></li>
-<li><code>&lt;dl&gt;</code></li>
-<li><code>&lt;pre&gt;</code></li>
-<li><code>&lt;blockquote&gt;</code></li>
-</ul>
-<p>NOTE: <code>&lt;dl&gt;</code> &#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x5217;&#x8868;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A; <code>&lt;dt&gt;</code> &#x53CA; &#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A; <code>&lt;dd&gt;</code>&#xFF0C;&#x5E76;&#x4E14;<code>dt</code> &#x4E0E; <code>dl</code>&#x5217;&#x8868;&#x4F1A;&#x6709;&#x7F29;&#x8FDB;&#x7684;&#x6548;&#x679C;&#x3002;<code>&lt;pre&gt;</code> &#x4F1A;&#x4FDD;&#x7559;&#x6362;&#x884C;&#x548C;&#x7A7A;&#x683C;&#xFF0C;&#x901A;&#x5E38;&#x4E0E; <code>&lt;code&gt;</code> &#x4E00;&#x540C;&#x4F7F;&#x7528;&#x3002;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">pre</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>
-    int main(void) {
-      printf(&apos;Hello, world!&apos;);
-      return 0;
-    }
-  <span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">pre</span>&gt;</span>
-</code></pre>
-<p><code>&lt;blockquote&gt;</code> &#x62E5;&#x6709; <code>cite</code> &#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x5F15;&#x7528;&#x6587;&#x672C;&#x7684;&#x51FA;&#x5904;&#xFF0C;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span> <span class="hljs-attribute">cite</span>=<span class="hljs-value">&quot;http://example.com/facts&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Sample Quote...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span>
-</code></pre>
-<h4 id="%E5%B5%8C%E5%85%A5">&#x5D4C;&#x5165;</h4>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">iframe</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">iframe</span>&gt;</span> &#x9875;&#x9762;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x4E0D;&#x5F71;&#x54CD;&#x5230;iframe&#x7684;&#x5185;&#x5BB9;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span><span class="hljs-params">()</span> </span>{
+  sun.src = <span class="hljs-string">&apos;Canvas_sun.png&apos;</span>;
+  moon.src = <span class="hljs-string">&apos;Canvas_moon.png&apos;</span>;
+  earth.src = <span class="hljs-string">&apos;Canvas_earth.png&apos;</span>;
+  <span class="hljs-built_in">window</span>.requestAnimationFrame(draw);
+}
 
-<span class="hljs-comment">&lt;!--object embed&#x901A;&#x5E38;&#x7528;&#x6765;&#x5D4C;&#x5165;&#x5916;&#x90E8;&#x8D44;&#x6E90; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">object</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;application/x-shockwave-player&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">param</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;movie&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;book.pdf&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">object</span>&gt;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span></span>{
+  <span class="hljs-keyword">var</span> ctx = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;canvas&apos;</span>).getContext(<span class="hljs-string">&apos;2d&apos;</span>);
 
-<span class="hljs-comment">&lt;!--&#x89C6;&#x9891; track&#x53EF;&#x4EE5;&#x5F15;&#x5165;&#x5B57;&#x5E55; autoplay&#x53EF;&#x4EE5;&#x4F7F;&#x89C6;&#x9891;&#x52A0;&#x8F7D;&#x540E;&#x81EA;&#x52A8;&#x64AD;&#x653E;&#xFF0C;loop&#x53EF;&#x4EE5;&#x4F7F;&#x5176;&#x5FAA;&#x73AF;&#x64AD;&#x653E; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">video</span> <span class="hljs-attribute">autoplay</span> <span class="hljs-attribute">loop</span> <span class="hljs-attribute">controls</span>=<span class="hljs-value">&quot;controls&quot;</span> <span class="hljs-attribute">poster</span>=<span class="hljs-value">&quot;poster.jpg&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;movie.mp4&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;video/mp4&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;movie.webm&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;video/webm&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;movie.ogg&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;video/ogg&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">track</span> <span class="hljs-attribute">kind</span>=<span class="hljs-value">&quot;subtitles&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;video.vtt&quot;</span> <span class="hljs-attribute">srclang</span>=<span class="hljs-value">&quot;cn&quot;</span> <span class="hljs-attribute">label</span>=<span class="hljs-value">&quot;cn&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">video</span>&gt;</span>
-</code></pre>
-<h4 id="%E8%B5%84%E6%BA%90%E6%A0%87%E7%AD%BE">&#x8D44;&#x6E90;&#x6807;&#x7B7E;</h4>
-<h5 id="%E5%9B%BE%E6%A0%87%E7%AD%BE">&#x56FE;&#x6807;&#x7B7E;</h5>
-<p><code>canvas</code> &#x57FA;&#x4E8E;&#x50CF;&#x7D20;&#xFF0C;&#x6027;&#x80FD;&#x8981;&#x6C42;&#x6BD4;&#x8F83;&#x9AD8;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x5C55;&#x793A;&#x3002;<code>svg</code> &#x4E3A;&#x77E2;&#x91CF;&#x56FE;&#x5F62;&#x56FE;&#x50CF;&#x3002;</p>
-<h5 id="%E7%83%AD%E7%82%B9%E5%8C%BA%E5%9F%9F%E6%A0%87%E7%AD%BE">&#x70ED;&#x70B9;&#x533A;&#x57DF;&#x6807;&#x7B7E;</h5>
-<p><code>img</code>&#x4E2D;&#x5957;&#x7528;<code>map</code>&#x4EE5;&#x53CA;<code>area</code>&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x70B9;&#x51FB;&#x67D0;&#x90E8;&#x5206;&#x56FE;&#x7247;&#x89E6;&#x53D1;&#x4E00;&#x4E2A;&#x94FE;&#x63A5;&#xFF0C;&#x70B9;&#x51FB;&#x53E6;&#x4E00;&#x90E8;&#x5206;&#x89E6;&#x53D1;&#x53E6;&#x4E00;&#x4E2A;&#x94FE;&#x63A5;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;mama.jpg&quot;</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">100</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">100</span> <span class="hljs-attribute">usemap</span>=<span class="hljs-value">&quot;#map&quot;</span> /&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">map</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;map&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">area</span> <span class="hljs-attribute">shap</span>=<span class="hljs-value">&quot;rect&quot;</span> <span class="hljs-attribute">coords</span>=<span class="hljs-value">&quot;0,0,50,50&quot;</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">area</span> <span class="hljs-attribute">shap</span>=<span class="hljs-value">&quot;circle&quot;</span> <span class="hljs-attribute">coords</span>=<span class="hljs-value">&quot;75,75,25&quot;</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">map</span>&gt;</span>
-</code></pre>
-<h4 id="%E8%A1%A8%E6%A0%BC">&#x8868;&#x683C;</h4>
-<p><strong>&#x8868;&#x683C;&#x4EE3;&#x7801;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">table</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">caption</span>&gt;</span>table title and/or explanatory text<span class="hljs-tag">&lt;/<span class="hljs-title">caption</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>header<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
-</code></pre>
-<p>&#x4F7F;&#x7528; <code>colspan=val</code> &#x8FDB;&#x884C;&#x8DE8;&#x5217;&#xFF0C;&#x4F7F;&#x7528; <code>rowspan=val</code> &#x8FDB;&#x884C;&#x8DE8;&#x884C;&#x3002;</p>
-<h4 id="%E8%A1%A8%E5%8D%95">&#x8868;&#x5355;</h4>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">&quot;WebCreation_submit&quot;</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">&quot;get&quot;</span> <span class="hljs-attribute">accept-charset</span>=<span class="hljs-value">&quot;utf-8&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>title or explanatory caption<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- &#x7B2C;&#x4E00;&#x79CD;&#x6DFB;&#x52A0;&#x6807;&#x7B7E;&#x7684;&#x65B9;&#x6CD5; --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/submit/hidden/button/etc&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- &#x7B2C;&#x4E8C;&#x79CD;&#x6DFB;&#x52A0;&#x6807;&#x7B7E;&#x7684;&#x65B9;&#x6CD5; --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;input-id&quot;</span>&gt;</span>Sample Label<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;input-id&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>title or explanatory caption<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- &#x53EA;&#x8BFB;&#x6587;&#x672C;&#x6846; --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">readonly</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- &#x9690;&#x85CF;&#x6587;&#x672C;&#x6846;&#xFF0C;&#x53EF;&#x63D0;&#x4EA4;&#x5F71;&#x85CF;&#x6570;&#x636E; --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;hidden-info&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;hiden-info-value&quot;</span> <span class="hljs-attribute">hidden</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;reset&quot;</span>&gt;</span>Reset<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
-</code></pre>
-<p>&#x4F7F;&#x7528;<code>fieldset</code>&#x53EF;&#x7528;&#x4E8E;&#x5BF9;&#x8868;&#x5355;&#x8FDB;&#x884C;&#x5206;&#x533A;</p>
-<p>&#x8868;&#x5355;&#x4E2D;&#x7684;&#x5176;&#x4ED6;&#x63A7;&#x4EF6;&#x7C7B;&#x578B;&#xFF1A;</p>
-<ul>
-<li><code>textarea</code> &#xFF08;&#x6587;&#x672C;&#x6846;&#xFF09;</li>
-<li><code>select</code> &#x4E0E; <code>option</code> &#xFF08;&#x4E0B;&#x62C9;&#x83DC;&#x5355;&#x53EF;&#x591A;&#x9009;&#xFF09;</li>
-</ul>
-<table>
-  <caption>input &#x7C7B;&#x578B;&#x652F;&#x6301;&#x503C;&#x5217;&#x8868;</caption>
-  <tbody>
-  <tr>
-    <th style="width:22%">Value</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>button</td>
-    <td>Defines a clickable button (mostly used with a JavaScript to activate a script)</td>
-  </tr>
-  <tr>
-    <td>checkbox</td>
-    <td>Defines a checkbox</td>
-  </tr>
-  <tr>
-  <td class="html5badge"><img src="../img/H/html5_badge20.png">color</td>
-    <td>Defines a color picker</td>
-  </tr>
-  <tr>
-  <td class="html5badge"><img src="../img/H/html5_badge20.png">date</td>
-    <td>Defines a date control (year, month and day (no time))</td>
-  </tr>
-  <tr>
-  <td class="html5badge"><img src="../img/H/html5_badge20.png">datetime</td>
-    <td>The input type datetime has been removed from the HTML standard. Use datetime-local instead.</td>
-    </tr>
-    <tr>
-    <td class="html5badge"><img src="../img/H/html5_badge20.png">datetime-local</td>
-      <td>Defines a date and time control (year, month, day, hour, minute, second, and fraction of a second (no time zone)</td>
-      </tr>
-      <tr>
-      <td class="html5badge"><img src="../img/H/html5_badge20.png">email</td>
-        <td>Defines a field for an e-mail address</td>
-      </tr>
-      <tr>
-        <td>file</td>
-        <td>Defines a file-select field and a &quot;Browse...&quot; button (for file uploads)</td>
-      </tr>
-      <tr>
-        <td>hidden</td>
-        <td>Defines a hidden input field</td>
-      </tr>
-      <tr>
-        <td>image</td>
-        <td>Defines an image as the submit button</td>
-      </tr>
-      <tr>
-      <td class="html5badge"><img src="../img/H/html5_badge20.png">month</td>
-        <td>Defines a month and year control (no time zone)</td>
-      </tr>
-      <tr>
-      <td class="html5badge"><img src="../img/H/html5_badge20.png">number</td>
-        <td>Defines a field for entering a number</td>
-      </tr>
-      <tr>
-        <td>password</td>
-        <td>Defines a password field (characters are masked)</td>
-      </tr>
-      <tr>
-        <td>radio</td>
-        <td>Defines a radio button</td>
-      </tr>
-      <tr>
-      <td class="html5badge"><img src="../img/H/html5_badge20.png">range</td>
-        <td>Defines a control for entering a number whose exact value is not important (like a slider control)</td>
-      </tr>
-      <tr>
-        <td>reset</td>
-        <td>Defines a reset button (resets all form values to default values)</td>
-      </tr>
-      <tr>
-      <td class="html5badge"><img src="../img/H/html5_badge20.png">search</td>
-        <td>Defines a text field for entering a search string</td>
-      </tr>
-      <tr>
-        <td>submit</td>
-        <td>Defines a submit button</td>
-      </tr>
-      <tr>
-      <td class="html5badge"><img src="../img/H/html5_badge20.png">tel</td>
-        <td>Defines a field for entering a telephone number</td>
-      </tr>
-      <tr>
-        <td>text</td>
-        <td>Default. Defines a single-line text field (default width is 20 characters)</td>
-      </tr>
-      <tr>
-      <td class="html5badge"><img src="../img/H/html5_badge20.png">time</td>
-        <td>Defines a control for entering a time (no time zone)</td>
-      </tr>
-      <tr>
-      <td class="html5badge"><img src="../img/H/html5_badge20.png">url</td>
-        <td>Defines a field for entering a URL</td>
-      </tr>
-      <tr>
-      <td class="html5badge"><img src="../img/H/html5_badge20.png">week</td>
-        <td>Defines a week and year control (no time zone)</td>
-      </tr>
-    </tbody>
-</table>
+  ctx.globalCompositeOperation = <span class="hljs-string">&apos;destination-over&apos;</span>;
+  <span class="hljs-comment">// &#x6E05;&#x7A7A;&#x753B;&#x5E03;&#x5185;&#x5BB9;</span>
+  ctx.clearRect(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">300</span>, <span class="hljs-number">300</span>);
 
-<h4 id="%E8%AF%AD%E4%B9%89%E5%8C%96">&#x8BED;&#x4E49;&#x5316;</h4>
-<p>&#x8BED;&#x4E49;&#x5316;&#xFF08;Semantic Tag&#xFF09;&#x662F;&#x6307;&#x7528;&#x5408;&#x9002;&#x7684;&#x6807;&#x7B7E;&#x6807;&#x8BC6;&#x9002;&#x5F53;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x8D77;&#x5230;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x4F18;&#x5316;&#xFF08;Search Engine Optimization&#xFF09;&#xFF0C;&#x63D0;&#x9AD8;&#x53EF;&#x8BBF;&#x95EE;&#x6027;&#xFF08;&#x4F8B;&#x5982;&#x76F2;&#x4EBA;&#x4F7F;&#x7528;&#x7684;&#x5C4F;&#x5E55;&#x9605;&#x8BFB;&#x5668;&#xFF09;&#xFF0C;&#x4E0E;&#x6B64;&#x540C;&#x65F6;&#x8FD8;&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#x3002;</p>
+  ctx.fillStyle = <span class="hljs-string">&apos;rgba(0, 0, 0, 0.4)&apos;</span>;
+  ctx.strokeStyle = <span class="hljs-string">&apos;rgba(0, 153, 255, 0.4)&apos;</span>;
+
+  <span class="hljs-comment">// &#x4FDD;&#x5B58;&#x753B;&#x5E03;&#x72B6;&#x6001;</span>
+  ctx.save();
+  ctx.translate(<span class="hljs-number">150</span>, <span class="hljs-number">150</span>);
+
+  <span class="hljs-comment">// &#x5F00;&#x59CB;&#x7ED8;&#x5236;&#x56FE;&#x5F62;</span>
+
+  <span class="hljs-comment">// &#x5730;&#x7403;</span>
+  <span class="hljs-keyword">var</span> time = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+  ctx.rotate(((<span class="hljs-number">2</span>*<span class="hljs-built_in">Math</span>.PI)/<span class="hljs-number">60</span>)* time.getSeconds() + ((<span class="hljs-number">2</span>*<span class="hljs-built_in">Math</span>.PI)/<span class="hljs-number">60000</span>)*time.getMilliseconds());
+  ctx.translate(<span class="hljs-number">105</span>, <span class="hljs-number">0</span>);
+  <span class="hljs-comment">// &#x9634;&#x5F71;</span>
+  ctx.fillRect(<span class="hljs-number">0</span>, -<span class="hljs-number">12</span>, <span class="hljs-number">50</span>, <span class="hljs-number">24</span>);
+  ctx.drawImage(earth, -<span class="hljs-number">12</span>, -<span class="hljs-number">12</span>);
+
+  <span class="hljs-comment">// &#x6708;&#x4EAE;</span>
+  ctx.rotate(((<span class="hljs-number">2</span>*<span class="hljs-built_in">Math</span>.PI)/<span class="hljs-number">6</span>)*time.getSeconds() + ((<span class="hljs-number">2</span>*<span class="hljs-built_in">Math</span>.PI)/<span class="hljs-number">6000</span>)*time.getMilliseconds());
+  ctx.translate(<span class="hljs-number">0</span>, <span class="hljs-number">28.5</span>);
+  ctx.drawInmage(moon, -<span class="hljs-number">3.5</span>, -<span class="hljs-number">3.5</span>);
+
+  <span class="hljs-comment">// &#x6062;&#x590D;&#x753B;&#x5E03;&#x72B6;&#x6001;</span>
+  ctx.restore();
+
+  ctx.beginPath();
+  ctx.arc(<span class="hljs-number">150</span>, <span class="hljs-number">150</span>, <span class="hljs-number">105</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">Math</span>.PI*<span class="hljs-number">2</span>, <span class="hljs-literal">false</span>);
+
+  ctx.stroke();
+
+  ctx.drawImage(sun, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">300</span>, <span class="hljs-number">300</span>);
+
+  <span class="hljs-built_in">window</span>.requestAnimationFrame(draw);
+}
+
+init();
+</code></pre>
 
                     
                     </section>
@@ -1162,10 +987,10 @@
         </div>
 
         
-        <a href="../chapter1/03_02_html_sytax.html" class="navigation navigation-prev " aria-label="Previous page: HTML 语法"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter3/06_animation.html" class="navigation navigation-prev " aria-label="Previous page: 动画"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter1/03_03_html_ascii_encoding.html" class="navigation navigation-next " aria-label="Next page: 实体字符"><i class="fa fa-angle-right"></i></a>
+        <a href="../Booklist.html" class="navigation navigation-next " aria-label="Next page: 附录 A：书单"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
