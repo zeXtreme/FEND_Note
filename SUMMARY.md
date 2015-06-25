@@ -41,6 +41,7 @@
   - [属性操作](chapter3/03_attribuet.md)
   - [样式操作](chapter3/04_style_manipulation.md)
   - [事件](chapter3/05_events.md)
+  - [多媒体（视频与音频）](chapter3/08_multimedia.md)
   - [动画](chapter3/06_animation.md)
   - [Canvas](chapter3/07_canvas.md)
 - [页面架构]()
