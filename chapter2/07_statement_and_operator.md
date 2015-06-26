@@ -5,12 +5,12 @@
 - [表达式与运算符](#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6)
   - [表达式](#%E8%A1%A8%E8%BE%BE%E5%BC%8F)
   - [运算符](#%E8%BF%90%E7%AE%97%E7%AC%A6)
-    - [===](#)
+    - [=== 全等符号](#-%E5%85%A8%E7%AD%89%E7%AC%A6%E5%8F%B7)
     - [==](#)
       - [例外规则](#%E4%BE%8B%E5%A4%96%E8%A7%84%E5%88%99)
-    - [!](#)
-    - [&&](#&&)
-    - [||](#%7C%7C)
+    - [! 取反](#-%E5%8F%96%E5%8F%8D)
+    - [&& 逻辑与](#&&-%E9%80%BB%E8%BE%91%E4%B8%8E)
+    - [|| 逻辑或](#%7C%7C-%E9%80%BB%E8%BE%91%E6%88%96)
   - [元算符优先级（Operator Precedence）](#%E5%85%83%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7%EF%BC%88operator-precedence%EF%BC%89)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->

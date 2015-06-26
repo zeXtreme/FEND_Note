@@ -2,16 +2,42 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [JavaScript 类型判断](#javascript-%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD)
-  - [typeof](#typeof)
-  - [Prototype.toString()](#prototypetostring)
-  - [constructor](#constructor)
-  - [instanceof](#instanceof)
+- [类型识别](#%E7%B1%BB%E5%9E%8B%E8%AF%86%E5%88%AB)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-# JavaScript 类型判断
+### 类型识别
+
+- `typeof`
+- `Object.prototype.toString`
+- `constructor`
+- `instanceof`
+
+**typeof**：
+- 可以是标准类型（Null 除外）
+- 不可识别具体的对象类型（Function 除外）
+
+**Object.prototype.toString**：
+- 可是识别标准类型及内置对象类型（例如，Object, Date, Array）
+- 不能识别自定义对象类型
+
+**constructor**：
+- 可以识别标准类型（Undefined/Null 除外）
+- 可识别内置对象类型
+- 可识别自定义对象类型
+
+```javascript
+function getConstructiorName(obj) {
+  return obj && obj.constructor && obj.constructor.toString().match(/function\s*([^(]*)/)[1];
+}
+getConstructiorName([]) === "Array"; // true
+```
+
+**instanceof**：
+- 不可判别原始类型
+- 可判别内置对象类型
+- 可判别自定义对象类型
 
 JavaScript的数据类型可以分为：标准类型和对象类型。
 
@@ -25,36 +51,6 @@ JavaScript的数据类型可以分为：标准类型和对象类型。
 - `Prototype.toString()`
 - `constructor`
 - `instanceof`
-
-## typeof
-
-- 可以识别标准类型（Null除外）
-
-- 不能识别对象类型（Function除外）
-
-## Prototype.toString()
-
-- 可以识别标准类型
-
-- 可以识别对象类型
-
-- 不能识别自定义对象类型
-
-## constructor
-
-- 可以识别标准类型（undefined Null除外）
-
-- 可以识别对象类型
-
-- 可以识别自定义对象类型
-
-## instanceof
-
-- 不能识别标准类型
-
-- 可以识别对象类型
-
-- 可以识别自定义对象类型
 
 **下面我们写一个HTML来检验一下：**
 

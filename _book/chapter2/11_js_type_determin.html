@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2.6" data-basepath=".." data-revision="Fri Jun 26 2015 12:45:03 GMT+0800 (SGT)">
+    <div class="book" data-level="2.6" data-basepath=".." data-revision="Fri Jun 26 2015 12:50:07 GMT+0800 (SGT)">
     
 
 <div class="book-summary">
@@ -936,16 +936,43 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <p><strong>Table of Contents</strong>  <em>generated with <a href="https://github.com/thlorenz/doctoc" target="_blank">DocToc</a></em></p>
 <ul>
-<li><a href="#javascript-%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD">JavaScript &#x7C7B;&#x578B;&#x5224;&#x65AD;</a><ul>
-<li><a href="#typeof">typeof</a></li>
-<li><a href="#prototypetostring">Prototype.toString()</a></li>
-<li><a href="#constructor">constructor</a></li>
-<li><a href="#instanceof">instanceof</a></li>
-</ul>
-</li>
+<li><a href="#%E7%B1%BB%E5%9E%8B%E8%AF%86%E5%88%AB">&#x7C7B;&#x578B;&#x8BC6;&#x522B;</a></li>
 </ul>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<h1 id="javascript-%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD">JavaScript &#x7C7B;&#x578B;&#x5224;&#x65AD;</h1>
+<h3 id="%E7%B1%BB%E5%9E%8B%E8%AF%86%E5%88%AB">&#x7C7B;&#x578B;&#x8BC6;&#x522B;</h3>
+<ul>
+<li><code>typeof</code></li>
+<li><code>Object.prototype.toString</code></li>
+<li><code>constructor</code></li>
+<li><code>instanceof</code></li>
+</ul>
+<p><strong>typeof</strong>&#xFF1A;</p>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x662F;&#x6807;&#x51C6;&#x7C7B;&#x578B;&#xFF08;Null &#x9664;&#x5916;&#xFF09;</li>
+<li>&#x4E0D;&#x53EF;&#x8BC6;&#x522B;&#x5177;&#x4F53;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#xFF08;Function &#x9664;&#x5916;&#xFF09;</li>
+</ul>
+<p><strong>Object.prototype.toString</strong>&#xFF1A;</p>
+<ul>
+<li>&#x53EF;&#x662F;&#x8BC6;&#x522B;&#x6807;&#x51C6;&#x7C7B;&#x578B;&#x53CA;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;Object, Date, Array&#xFF09;</li>
+<li>&#x4E0D;&#x80FD;&#x8BC6;&#x522B;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</li>
+</ul>
+<p><strong>constructor</strong>&#xFF1A;</p>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x6807;&#x51C6;&#x7C7B;&#x578B;&#xFF08;Undefined/Null &#x9664;&#x5916;&#xFF09;</li>
+<li>&#x53EF;&#x8BC6;&#x522B;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</li>
+<li>&#x53EF;&#x8BC6;&#x522B;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getConstructiorName</span><span class="hljs-params">(obj)</span> </span>{
+  <span class="hljs-keyword">return</span> obj &amp;&amp; obj.constructor &amp;&amp; obj.constructor.toString().match(<span class="hljs-regexp">/function\s*([^(]*)/</span>)[<span class="hljs-number">1</span>];
+}
+getConstructiorName([]) === <span class="hljs-string">&quot;Array&quot;</span>; <span class="hljs-comment">// true</span>
+</code></pre>
+<p><strong>instanceof</strong>&#xFF1A;</p>
+<ul>
+<li>&#x4E0D;&#x53EF;&#x5224;&#x522B;&#x539F;&#x59CB;&#x7C7B;&#x578B;</li>
+<li>&#x53EF;&#x5224;&#x522B;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</li>
+<li>&#x53EF;&#x5224;&#x522B;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</li>
+</ul>
 <p>JavaScript&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#xFF1A;&#x6807;&#x51C6;&#x7C7B;&#x578B;&#x548C;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x3002;</p>
 <p><code>&#x6807;&#x51C6;&#x7C7B;&#x578B;&#x6709;</code>&#xFF1A;undefined Null Boolean Date Number Object</p>
 <p><code>&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#xFF08;&#x6784;&#x9020;&#x5668;&#x7C7B;&#x578B;&#xFF09;</code>&#xFF1A;Boolean Date Number Object Array Date Error Function RegExp</p>
@@ -955,40 +982,6 @@
 <li><code>Prototype.toString()</code></li>
 <li><code>constructor</code></li>
 <li><code>instanceof</code></li>
-</ul>
-<h2 id="typeof">typeof</h2>
-<ul>
-<li><p>&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x6807;&#x51C6;&#x7C7B;&#x578B;&#xFF08;Null&#x9664;&#x5916;&#xFF09;</p>
-</li>
-<li><p>&#x4E0D;&#x80FD;&#x8BC6;&#x522B;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#xFF08;Function&#x9664;&#x5916;&#xFF09;</p>
-</li>
-</ul>
-<h2 id="prototype-tostring">Prototype.toString()</h2>
-<ul>
-<li><p>&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x6807;&#x51C6;&#x7C7B;&#x578B;</p>
-</li>
-<li><p>&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</p>
-</li>
-<li><p>&#x4E0D;&#x80FD;&#x8BC6;&#x522B;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</p>
-</li>
-</ul>
-<h2 id="constructor">constructor</h2>
-<ul>
-<li><p>&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x6807;&#x51C6;&#x7C7B;&#x578B;&#xFF08;undefined Null&#x9664;&#x5916;&#xFF09;</p>
-</li>
-<li><p>&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</p>
-</li>
-<li><p>&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</p>
-</li>
-</ul>
-<h2 id="instanceof">instanceof</h2>
-<ul>
-<li><p>&#x4E0D;&#x80FD;&#x8BC6;&#x522B;&#x6807;&#x51C6;&#x7C7B;&#x578B;</p>
-</li>
-<li><p>&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</p>
-</li>
-<li><p>&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</p>
-</li>
 </ul>
 <p><strong>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5199;&#x4E00;&#x4E2A;HTML&#x6765;&#x68C0;&#x9A8C;&#x4E00;&#x4E0B;&#xFF1A;</strong></p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
