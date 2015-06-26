@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="3.10" data-basepath=".." data-revision="Fri Jun 26 2015 16:15:05 GMT+0800 (SGT)">
+    <div class="book" data-level="3.10" data-basepath=".." data-revision="Fri Jun 26 2015 17:12:35 GMT+0800 (SGT)">
     
 
 <div class="book-summary">
@@ -977,7 +977,128 @@
                 
                     <section class="normal" id="section-">
                     
-                        
+                        <h2 id="%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8">&#x6570;&#x636E;&#x5B58;&#x50A8;</h2>
+<h3 id="cookie">Cookie</h3>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x7684; Cookie &#x662F;&#x6307;&#x5C0F;&#x578B;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x901A;&#x5E38;&#x5728; 4KB &#x5927;&#x5C0F;&#x5DE6;&#x53F3;&#x3002;&#xFF08;&#x7531;&#x952E;&#x503C;&#x5BF9;&#x6784;&#x6210;&#x7528; <code>;</code> &#x9694;&#x5F00;&#xFF09;&#x5927;&#x90E8;&#x5206;&#x65F6;&#x5019;&#x662F;&#x5728;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x5BF9; Cookie &#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#xFF0C;&#x5728;&#x5934;&#x6587;&#x4EF6;&#x4E2D; <code>Set-Cookie</code> &#x6765;&#x5BF9; Cookie &#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x3002;</p>
+<p>&#x9875;&#x9762;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5F53;&#x524D;&#x9875;&#x7684; Cookie &#x4E5F;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7236;&#x57DF;&#x7684; Cookie&#x3002;</p>
+<h4 id="%E5%B1%9E%E6%80%A7">&#x5C5E;&#x6027;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name&#xFF08;&#x5FC5;&#x586B;&#xFF09;</td>
+<td></td>
+<td>&#x540D;</td>
+</tr>
+<tr>
+<td>Value&#xFF08;&#x5FC5;&#x586B;&#xFF09;</td>
+<td></td>
+<td>&#x503C;</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>&#x5F53;&#x524D;&#x6587;&#x6863;&#x57DF;</td>
+<td>&#x4F5C;&#x7528;&#x57DF;</td>
+</tr>
+<tr>
+<td>Path</td>
+<td>&#x5F53;&#x524D;&#x6587;&#x6863;&#x8DEF;&#x5F84;</td>
+<td>&#x4F5C;&#x7528;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td>Expires&#xFF08;&#x65F6;&#x95F4;&#x6233;&#xFF09;/Max-Age&#xFF08;&#x6BEB;&#x79D2;&#x6570;&#x503C;&#xFF09;</td>
+<td>&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x8BDD;&#x65F6;&#x95F4;</td>
+<td>&#x5931;&#x6548;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td>Secure</td>
+<td>false</td>
+<td>https &#x534F;&#x8BAE;&#x65F6;&#x751F;&#x6548;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="%E4%BD%9C%E7%94%A8%E5%9F%9F">&#x4F5C;&#x7528;&#x57DF;</h4>
+<p><strong>&#x8BBE;&#x7F6E;&#x4F5C;&#x7528;&#x57DF;</strong></p>
+<p><img src="../img/C/cookie-domain.jpg" alt=""></p>
+<p><strong>&#x8BBE;&#x7F6E;&#x4F5C;&#x7528;&#x8DEF;&#x5F84;</strong></p>
+<p><img src="../img/C/cookie-path.jpg" alt=""></p>
+<h4 id="%E8%AF%BB%E5%8F%96">&#x8BFB;&#x53D6;</h4>
+<p>&#x4E0B;&#x9762;&#x8F6C;&#x6362; Cookie &#x81F3; JavaScript &#x5BF9;&#x8C61;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getcookie</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">var</span> cookie = {};
+  <span class="hljs-keyword">var</span> all = <span class="hljs-built_in">document</span>.cookie;
+  <span class="hljs-keyword">if</span> (all === <span class="hljs-string">&apos;&apos;</span>) <span class="hljs-keyword">return</span> cookie;
+  <span class="hljs-keyword">var</span> list = all.split(<span class="hljs-string">&apos;; &apos;</span>);
+  <span class="hljs-keyword">var</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>, len = list.length; i &lt; len; i++) {
+    <span class="hljs-keyword">var</span> item = list[i];
+    <span class="hljs-keyword">var</span> p = item.indexOf(<span class="hljs-string">&apos;=&apos;</span>);
+    <span class="hljs-keyword">var</span> name = item.substring(<span class="hljs-number">0</span>, p);
+    name = <span class="hljs-built_in">decodeURIComponent</span>(name);
+    <span class="hljs-keyword">var</span> value = item.substring(p + <span class="hljs-number">1</span>);
+    value = <span class="hljs-built_in">decodeURIComponent</span>(value);
+    cookie[name] = value;
+  }
+  <span class="hljs-keyword">return</span> cookie;
+}
+</code></pre>
+<h4 id="%E8%AE%BE%E7%BD%AE%E4%B8%8E%E4%BF%AE%E6%94%B9">&#x8BBE;&#x7F6E;&#x4E0E;&#x4FEE;&#x6539;</h4>
+<pre><code class="lang-javascript"><span class="hljs-built_in">document</span>.cookie = <span class="hljs-string">&apos;name=value&apos;</span>;
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x4E3A;<strong>&#x8BBE;&#x7F6E;</strong> Cookie &#x503C;&#x7684;&#x5C01;&#x88C5;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setCookie</span><span class="hljs-params">(name, value, expires, path, domain, secure)</span> </span>{
+  <span class="hljs-keyword">var</span> cookie = <span class="hljs-built_in">encodeURIComponent</span>(name) + <span class="hljs-string">&apos;=&apos;</span> + <span class="hljs-built_in">encodeURIComponent</span>(value);
+  <span class="hljs-keyword">if</span> (expires)
+    cookie += <span class="hljs-string">&apos;; expires=&apos;</span> + expires.toGMTString();
+  <span class="hljs-keyword">if</span> (path)
+    cookie += <span class="hljs-string">&apos;; path=&apos;</span> + path;
+  <span class="hljs-keyword">if</span> (domain)
+    cookie += <span class="hljs-string">&apos;; domain=&apos;</span> + domain;
+  <span class="hljs-keyword">if</span> (secure)
+    cookie += <span class="hljs-string">&apos;; secure=&apos;</span> + secure;
+  <span class="hljs-built_in">document</span>.cookie = cookie;
+}
+</code></pre>
+<p><strong>&#x4E0B;&#x9762;&#x4E3A;</strong>&#x5220;&#x9664;** Cookie &#x503C;&#x7684;&#x51FD;&#x6570;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">removeCookie</span><span class="hljs-params">(name, path, domain)</span> </span>{
+  <span class="hljs-built_in">document</span>.cookie = <span class="hljs-string">&apos;name=&apos;</span> + name + <span class="hljs-string">&apos;; path=&apos;</span> + path + <span class="hljs-string">&apos;; domain=&apos;</span> + domain + <span class="hljs-string">&apos;; max-age=0&apos;</span>;
+}
+</code></pre>
+<h4 id="cookie-%E7%BC%BA%E9%99%B7">Cookie &#x7F3A;&#x9677;</h4>
+<ul>
+<li>&#x6D41;&#x91CF;&#x4EE3;&#x4EF7;</li>
+<li>&#x5B89;&#x5168;&#x6027;&#xFF08;&#x660E;&#x6587;&#x4F20;&#x9012;&#xFF09;</li>
+<li>&#x5927;&#x5C0F;&#x9650;&#x5236;</li>
+</ul>
+<h3 id="storage">Storage</h3>
+<p>&#x56E0;&#x4E3A; Cookie &#x5F0A;&#x7AEF;&#x7684;&#x5B58;&#x5728;&#xFF0C;&#x6240;&#x4EE5;&#x5728; HTML5 &#x4E2D;&#x63D0;&#x4F9B;&#x4E86; Storage &#x7684;&#x66FF;&#x4EE3;&#x65B9;&#x6848;&#x3002;</p>
+<p>&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x4E0D;&#x540C; Storage &#x5206;&#x4E3A; Local Storage &#x548C; Session Storage&#xFF0C;&#x524D;&#x8005;&#x5728;&#x7528;&#x6237;&#x4E0D;&#x6E05;&#x7406;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x9ED8;&#x8BA4;&#x65F6;&#x95F4;&#x4E3A;&#x6C38;&#x4E45;&#xFF0C;&#x540E;&#x8005;&#x9ED8;&#x8BA4;&#x4E8B;&#x4EF6;&#x5219;&#x4E3A;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x4F1A;&#x8BDD;&#x65F6;&#x95F4;&#xFF08;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x540C;&#x7A97;&#x53E3;&#x76F4;&#x63A5;&#x4E0D;&#x5171;&#x4EAB; Session Storage&#xFF09;&#x3002;</p>
+<p><img src="../img/S/storage-scope.png" alt=""></p>
+<p>&#x4E0D;&#x540C;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x5176;&#x5B9E;&#x73B0;&#x7684;&#x4E0D;&#x540C;&#x5BFC;&#x81F4;&#x652F;&#x6301;&#x5927;&#x5C0F;&#x4E5F;&#x4E0D;&#x592A;&#xFF0C;&#x901A;&#x5E38;&#x5728; 5MB &#x4F5C;&#x7528;&#x3002;</p>
+<h4 id="%E5%AF%B9%E8%B1%A1">&#x5BF9;&#x8C61;</h4>
+<p><strong>&#x8BFB;&#x53D6;</strong></p>
+<p><code>localStorage.name</code></p>
+<p>**&#x6DFB;&#x52A0;&#x6216;&#x4FEE;&#x6539;</p>
+<p><code>localStorage.name = &apos;Value&apos;;</code></p>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x53EA;&#x652F;&#x6301;&#x5B57;&#x7B26;&#x4E32;&#x5728; Storage &#x4E2D;&#x7684;&#x5B58;&#x50A8;&#x3002;</p>
+<p><strong>&#x5220;&#x9664;</strong></p>
+<p><code>delete localStorage.name</code></p>
+<h4 id="api">API</h4>
+<p>&#x4F7F;&#x7528; API &#x64CD;&#x4F5C; Storage &#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5728;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x53EF;&#x4EE5;&#x7528; Cookie &#x6765;&#x4EE3;&#x66FF;&#x3002;</p>
+<ul>
+<li><code>localStorage.length</code> &#x83B7;&#x53D6;&#x952E;&#x503C;&#x5BF9;&#x6570;&#x91CF;</li>
+<li><code>localStorage.getItem(&apos;name&apos;)</code> &#x83B7;&#x53D6;&#x5BF9;&#x5E94;&#x503C;</li>
+<li><code>localStorage.key(i)</code> &#x5BF9;&#x5E94;&#x503C;&#x7684;&#x7D22;&#x5F15;&#x83B7;&#x53D6;</li>
+<li><code>localStorage.setItem(&apos;name&apos;, &apos;value&apos;)</code> &#x8BBE;&#x7F6E;&#x952E;&#x503C;&#x5BF9;</li>
+<li><code>localStorage.removeItem(&apos;name&apos;)</code> &#x5220;&#x9664;&#x4E00;&#x4E2A;&#x503C;</li>
+<li><code>localStorage.clear()</code> &#x5220;&#x9664;&#x6240;&#x6709;&#x6570;&#x636E;</li>
+</ul>
+
                     
                     </section>
                 
