@@ -16,6 +16,8 @@
 
 ### 条件控制语句
 
+其中expression可以使用整型，字符串，甚至表达式
+
 ```javascript
 if (expression) {statement}
 else if (expression) {statement1}
@@ -95,16 +97,39 @@ color:red
 id:benz
 ```
 
+如不需原型对象上的属性可以使用 hasOwnProperty
+
+```javascript
+for (var key in benz) {
+  if (benz.hasOwnProperty(key)) {
+    console.log(key + ':' benz[key]);
+  }
+}
+/* 输出结果
+type:black
+color:red
+id:benz */
+```
+
 ### 异常处理语句
 
 ```javascript
-try/catch/finally
-throw
+try{
+  // statements
+  throw new Error();
+catch(e){
+  // statements
+}
+finally{
+  // statements
+}
 ```
 
 ### with 语句
 
-`with` 语句是 JavaScript 中特有的语句形式，其用于缩短特定情况下必须书写的代码量。它可以暂时改变变量的作用域，将`with`语句中的对象添加至作用域链的头部。**缺点**就是导致 JavaScript 语句的可执行性下降，所以通常情况下因尽可能的避免使用。
+`with` 语句是 JavaScript 中特有的语句形式，它主要有两个作用：
+
+其一，其用于缩短特定情况下必须书写的代码量。它可以暂时改变变量的作用域。
 
 ```javascript
 // 使用 with 之前
@@ -124,6 +149,8 @@ throw
 
 ![](../img/W/with-scope.png)
 
+其二，改变变量的作用域，将`with`语句中的对象添加至作用域链的头部。
+
 ```javascript
 frame[1].document.forms[0].name.value = "";
 frame[1].document.forms[0].address.value = "";
@@ -134,5 +161,6 @@ with(frame[1].document.[0]) {
   address.value = ""
   email.value = "";
 }
-
 ```
+
+**缺点**就是导致 JavaScript 语句的可执行性下降，所以通常情况下因尽可能的避免使用。

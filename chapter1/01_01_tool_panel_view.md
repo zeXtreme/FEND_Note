@@ -8,9 +8,11 @@
 
 ### 工具, 面板, 视图
 
-在全局设置下将单位修改为像素，因其在 CSS 中运用最广。设置工作区布局为切图及图片编辑做准备（所需窗口为信息窗口，图层窗口以及历史记录窗口）。
+在全局设置下将单位修改为像素，因其在 CSS 中运用最广(Preference -> Units & Rulers -> Units)。设置工作区布局为切图及图片编辑做准备（所需窗口为信息窗口，图层窗口以及历史记录窗口）。
 
 ![](../img/P/photoshop-mainWindow.png)
+
+打开『信息窗口』、『图层窗口』、『历史纪录窗口』、『工具面板』、『选项』面板，可以通过 Window -> Workspace -> New WorkSpaces 保存工作区，以便下次打开。
 
 **切图常用工具**
 
@@ -37,3 +39,15 @@
 NOTE: 所有工具及快捷键如下。
 
 ![](../img/T/ToolsPanelOverview.png)
+
+### 常用快捷键
+
+**放大缩小画布**
+- 放大到100%大小：<kbd>Ctrl</kbd>+<kbd>数字1</kbd>
+- 放大：<kbd>ctrl</kbd> + 加号
+- 缩小：<kbd>ctrl</kbd> + 减号
+- <kbd>alt</kbd> + 滚轮
+
+**合并图层**
+- 合并图层：<kbd>ctrl</kbd>+<kbd>E</kbd>
+- 合并可见图层：<kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>E</kbd>

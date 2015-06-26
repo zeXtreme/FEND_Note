@@ -38,6 +38,85 @@
 
 通过节点直接的关系获取节点会导致代码维护性大大降低（节点之间的关系变化会直接影响到获取节点）。通过接口则可以有效的解决此问题。
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ELEMENT_NODE & TEXT_NODE</title>
+</head>
+<body>
+  <ul id="ul">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+    <li>Fourth</li>
+  </ul>
+  <p>Hello</p>
+  <script type="text/javascript">
+    var ulNode = document.getElementsByTagName("ul")[0];
+    console.log(ulNode.parentNode);             //<body></body>
+    console.log(ulNode.previousElementSibling); //null
+    console.log(ulNode.nextElementSibling);     //<p>Hello</p>
+    console.log(ulNode.firstElementChild);      //<li>First</li>
+    console.log(ulNode.lastElementChild);       //<li>Fourth</li>
+  </script>
+</body>
+</html>
+```
+
+NTOE：细心地人会发现，在节点遍历的例子中，body、ul、li、p节点之间是没有空格的，因为如果有空格，那么空格就会被当做一个TEXT节点，从而用ulNode.previousSibling获取到得就是一个空的文本节点，而不是 `<li>First</li>` 节点了。即节点遍历的几个属性会得到所有的节点类型，而元素遍历只会得到相对应的元素节点。一般情况下，用得比较多得还是元素节点的遍历属性。
+
+**实现浏览器兼容版的element.children**
+
+有一些低版本的浏览器并不支持 `element.children` 方法，但我们可以用下面的方式来实现兼容。
+
+```html
+<html lang>
+<head>
+  <meta charest="utf-8">
+  <title>Compatible Children Method</title>
+</head>
+<body id="body">
+  <div id="item">
+    <div>123</div>
+    <p>ppp</p>
+    <h1>h1</h1>
+  </div>
+  <script type="text/javascript">
+    function getElementChildren(e){
+      if(e.children){
+        return e.children;
+      }else{
+        /* compatible other browse */
+        var i, len, children = [];
+        var child = element.firstChild;
+        if(child != element.lastChild){
+          while(child != null){
+            if(child.nodeType == 1){
+              children.push(child);
+            }
+            child = child.nextSibling;
+          }
+        }else{
+          children.push(child);
+        }
+        return children;
+      }
+    }
+    /* Test method getElementChildren(e) */
+    var item = document.getElementById("item");
+    var children = getElementChildren(item);
+    for(var i =0; i < children.length; i++){
+      alert(children[i]);
+    }
+  </script>
+</body>
+</html>
+```
+
+NOTE：初稿，还未进行兼容性测试。
+
 #### 接口获取节点
 
 - `getElementById`
@@ -53,8 +132,6 @@
 |getElementsByClassName|||√|
 |querySelectorAll||||
 |querySelector||√||
-
-
 
 ##### getElementById
 

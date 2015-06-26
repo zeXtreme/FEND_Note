@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="3.4" data-basepath=".." data-revision="Fri Jun 26 2015 11:50:24 GMT+0800 (SGT)">
+    <div class="book" data-level="3.4" data-basepath=".." data-revision="Fri Jun 26 2015 12:45:03 GMT+0800 (SGT)">
     
 
 <div class="book-summary">
@@ -979,15 +979,32 @@ document.styleSheets
 // &#x5BF9;&#x5E94;&#x4E8E; element.style
 </code></pre>
 <h4 id="%E5%86%85%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8">&#x5185;&#x90E8;&#x6837;&#x5F0F;&#x8868;</h4>
-<pre><code class="lang-html">// &#x5BF9;&#x5E94;&#x6240;&#x6709;&#x6837;&#x5F0F;&#x7684;&#x5217;&#x8868;
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+  <span class="hljs-tag">body</span><span class="hljs-rules">{<span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"><span class="hljs-number">30</span></span></span>;<span class="hljs-rule">}</span></span>
+  <span class="hljs-tag">p</span><span class="hljs-rules">{<span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#aaa</span></span></span>; <span class="hljs-rule"><span class="hljs-attribute">line-height</span>:<span class="hljs-value"><span class="hljs-number">20px</span></span></span></span>}
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+
+// 1.&#x5BF9;&#x5E94;&#x6240;&#x6709;&#x6837;&#x5F0F;&#x7684;&#x5217;&#x8868;
+// body{margin:30;}
+// p{color: #aaa; line-height:20px}
 element.sheet.cssRules;
 
-element.sheet.cssRules[0].style;
-// &#x5BF9;&#x5E94;&#x6240;&#x6709;&#x6837;&#x5F0F;&#x7684;&#x952E;&#x503C;&#x5BF9;
-element.sheet.cssRules[0].stlye.color;
-// &#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x503C;
-element.sheet.cssRules[0].selectorText;
-// &#x5BF9;&#x5E94;&#x76F8;&#x5E94;&#x7684; CSS &#x9009;&#x62E9;&#x5219;&#x5668;
+// 2.&#x5BF9;&#x5E94;&#x76F8;&#x5E94;&#x7684; CSS &#x9009;&#x62E9;&#x5668;
+// p
+element.sheet.cssRules[1].selectorText;
+
+// 3.&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x6837;&#x5F0F;
+// p{color: #aaa; line-height:20px}
+element.sheet.cssRules[1]
+
+// 4.&#x5BF9;&#x5E94;&#x6240;&#x6709;&#x6837;&#x5F0F;&#x7684;&#x952E;&#x503C;&#x5BF9;
+// color: #aaa; line-height:20px
+element.sheet.cssRules[1].style;
+
+// 5.&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x503C;
+// #aaa
+element.sheet.cssRules[1].stlye.color;
+element.sheet.cssRules[1].lineHeight;
 </code></pre>
 <h4 id="%E8%A1%8C%E5%86%85%E6%A0%B7%E5%BC%8F">&#x884C;&#x5185;&#x6837;&#x5F0F;</h4>
 <p>&#x5176;&#x5BF9;&#x5E94;&#x4E8E; <code>CSSStyleDeclaration</code> &#x7684;&#x5BF9;&#x8C61;&#x3002;</p>

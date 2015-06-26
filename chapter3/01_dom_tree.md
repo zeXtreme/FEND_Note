@@ -194,6 +194,26 @@ node.nextSibling;     // null
 - COMMENT_NODE
 - DOCUMENT_TYPE_NODE
 
+
+**不同节点对应的NodeType类型**
+
+|节点编号|节点名称|
+|--------|--------|
+|1|Element|
+|2|Attribute|
+|3|Text|
+|4|CDATA Section|
+|5|Entity Reference|
+|6|Entity|
+|7|Processing Instrucion|
+|8|Comment|
+|9|Document|
+|10|Document Type|
+|11|Document Fragment|
+|12|Notation|
+
+NOTE：要清楚`节点`和`元素`的区别。我们平常说的`元素`其实指的是节点中得`元素节点`，所以说`节点`包含`元素`，节点还包括文本节点、实体节点等。
+
 ### 元素遍历
 
 元素节点符合 HTML DOM 树规则。
@@ -208,5 +228,4 @@ p.lastElementChild;  // <a href="http://li-xinyang.com">主页</a>
 
 em.nextElementSibling; // <a href="http://li-xinyang.com">主页</a>
 em.previousElementSibling; // null
-
 ```

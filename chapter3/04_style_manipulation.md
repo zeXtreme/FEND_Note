@@ -46,15 +46,32 @@ document.styleSheets
 #### 内部样式表
 
 ```html
-// 对应所有样式的列表
+<style>
+  body{margin:30;}
+  p{color: #aaa; line-height:20px}
+</style>
+
+// 1.对应所有样式的列表
+// body{margin:30;}
+// p{color: #aaa; line-height:20px}
 element.sheet.cssRules;
 
-element.sheet.cssRules[0].style;
-// 对应所有样式的键值对
-element.sheet.cssRules[0].stlye.color;
-// 对应的属性值
-element.sheet.cssRules[0].selectorText;
-// 对应相应的 CSS 选择则器
+// 2.对应相应的 CSS 选择器
+// p
+element.sheet.cssRules[1].selectorText;
+
+// 3.对应一个样式
+// p{color: #aaa; line-height:20px}
+element.sheet.cssRules[1]
+
+// 4.对应所有样式的键值对
+// color: #aaa; line-height:20px
+element.sheet.cssRules[1].style;
+
+// 5.对应的属性值
+// #aaa
+element.sheet.cssRules[1].stlye.color;
+element.sheet.cssRules[1].lineHeight;
 ```
 
 #### 行内样式

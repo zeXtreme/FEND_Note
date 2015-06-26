@@ -41,7 +41,7 @@ var c = (1.7 + a) * '3' - b
 - 逗号运算符 （`,`）
 - 对象运算符 （`new` `delete` `.` `[]` `instanceof`）
 
-#### ===
+#### === 全等符号
 
 全等运算符用于盘对左右两边的对象或值是否类型相同且值相等。
 
@@ -77,11 +77,11 @@ var aObj = new String("123");
 var bObj = new String("123");
 var cObj = aObj;
 
-a === aObj // false
-aObj === bObj // false
-aObj === cObj // true
-a === b // true
-a === c // false
+a === aObj      // false
+aObj === bObj   // false
+aObj === cObj   // true
+a === b         // true
+a === c         // false
 ```
 
 #### ==
@@ -121,7 +121,7 @@ null == false; // false
 "undefined" == undefined; // false
 ```
 
-#### !
+#### ! 取反
 
 `!x` 用于表达 x 表达式的运行结果转换成布尔值（Boolean）之后取反的结果。`!!x` 则表示取 x 表达式的运行结果的布尔值。
 
@@ -131,7 +131,7 @@ var a = !obj // false;
 var a = !!obj // true;
 ```
 
-#### &&
+#### && 逻辑与
 
 `x && y` 如果 x 表达式的运行交过转换成 Boolean 值为 false 则不运行表达式 y 而直接返回 x 表达式的运行结果。**相反**，如果 x 表达式的运行交过转换成 Boolean 值为 true 则运行表达式 y 并返回 y 表达式的运行结果。
 
@@ -153,7 +153,7 @@ var a = 0 && (function(){return 1 + 1;})(); // 0
 var b = 1 && (function(){return 1 + 1;})(); // 2
 ```
 
-#### ||
+#### || 逻辑或
 
 `x || y` 如果 x 表达式的运行结果转换为 Boolean 值为 true，则不运行 表达式 y 而直接返回表达式 x 的运算结果。（与 `&&` 方式相反）
 

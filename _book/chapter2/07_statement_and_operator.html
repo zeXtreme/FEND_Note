@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2.8" data-basepath=".." data-revision="Fri Jun 26 2015 11:50:24 GMT+0800 (SGT)">
+    <div class="book" data-level="2.8" data-basepath=".." data-revision="Fri Jun 26 2015 12:45:03 GMT+0800 (SGT)">
     
 
 <div class="book-summary">
@@ -974,7 +974,7 @@
 <li>&#x9017;&#x53F7;&#x8FD0;&#x7B97;&#x7B26; &#xFF08;<code>,</code>&#xFF09;</li>
 <li>&#x5BF9;&#x8C61;&#x8FD0;&#x7B97;&#x7B26; &#xFF08;<code>new</code> <code>delete</code> <code>.</code> <code>[]</code> <code>instanceof</code>&#xFF09;</li>
 </ul>
-<h4 id="">===</h4>
+<h4 id="-%E5%85%A8%E7%AD%89%E7%AC%A6%E5%8F%B7">=== &#x5168;&#x7B49;&#x7B26;&#x53F7;</h4>
 <p>&#x5168;&#x7B49;&#x8FD0;&#x7B97;&#x7B26;&#x7528;&#x4E8E;&#x76D8;&#x5BF9;&#x5DE6;&#x53F3;&#x4E24;&#x8FB9;&#x7684;&#x5BF9;&#x8C61;&#x6216;&#x503C;&#x662F;&#x5426;&#x7C7B;&#x578B;&#x76F8;&#x540C;&#x4E14;&#x503C;&#x76F8;&#x7B49;&#x3002;</p>
 <p><strong>&#x4F2A;&#x4EE3;&#x7801;&#x62C6;&#x89E3;</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">totalEqual</span><span class="hljs-params">(a, b)</span> </span>{
@@ -1003,11 +1003,11 @@
 <span class="hljs-keyword">var</span> bObj = <span class="hljs-keyword">new</span> <span class="hljs-built_in">String</span>(<span class="hljs-string">&quot;123&quot;</span>);
 <span class="hljs-keyword">var</span> cObj = aObj;
 
-a === aObj <span class="hljs-comment">// false</span>
-aObj === bObj <span class="hljs-comment">// false</span>
-aObj === cObj <span class="hljs-comment">// true</span>
-a === b <span class="hljs-comment">// true</span>
-a === c <span class="hljs-comment">// false</span>
+a === aObj      <span class="hljs-comment">// false</span>
+aObj === bObj   <span class="hljs-comment">// false</span>
+aObj === cObj   <span class="hljs-comment">// true</span>
+a === b         <span class="hljs-comment">// true</span>
+a === c         <span class="hljs-comment">// false</span>
 </code></pre>
 <h4 id="">==</h4>
 <p><code>==</code> &#x7528;&#x4E8E;&#x5224;&#x65AD;&#x64CD;&#x4F5C;&#x7B26;&#x4E24;&#x8FB9;&#x7684;&#x5BF9;&#x8C61;&#x6216;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;&#x3002;</p>
@@ -1036,13 +1036,13 @@ a === c <span class="hljs-comment">// false</span>
 <span class="hljs-literal">null</span> == <span class="hljs-literal">false</span>; <span class="hljs-comment">// false</span>
 <span class="hljs-string">&quot;undefined&quot;</span> == <span class="hljs-literal">undefined</span>; <span class="hljs-comment">// false</span>
 </code></pre>
-<h4 id="">!</h4>
+<h4 id="-%E5%8F%96%E5%8F%8D">! &#x53D6;&#x53CD;</h4>
 <p><code>!x</code> &#x7528;&#x4E8E;&#x8868;&#x8FBE; x &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x8F6C;&#x6362;&#x6210;&#x5E03;&#x5C14;&#x503C;&#xFF08;Boolean&#xFF09;&#x4E4B;&#x540E;&#x53D6;&#x53CD;&#x7684;&#x7ED3;&#x679C;&#x3002;<code>!!x</code> &#x5219;&#x8868;&#x793A;&#x53D6; x &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x7684;&#x5E03;&#x5C14;&#x503C;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> obj = {};
 <span class="hljs-keyword">var</span> a = !obj <span class="hljs-comment">// false;</span>
 <span class="hljs-keyword">var</span> a = !!obj <span class="hljs-comment">// true;</span>
 </code></pre>
-<h4 id="">&amp;&amp;</h4>
+<h4 id="-%E9%80%BB%E8%BE%91%E4%B8%8E">&amp;&amp; &#x903B;&#x8F91;&#x4E0E;</h4>
 <p><code>x &amp;&amp; y</code> &#x5982;&#x679C; x &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8FD0;&#x884C;&#x4EA4;&#x8FC7;&#x8F6C;&#x6362;&#x6210; Boolean &#x503C;&#x4E3A; false &#x5219;&#x4E0D;&#x8FD0;&#x884C;&#x8868;&#x8FBE;&#x5F0F; y &#x800C;&#x76F4;&#x63A5;&#x8FD4;&#x56DE; x &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x3002;<strong>&#x76F8;&#x53CD;</strong>&#xFF0C;&#x5982;&#x679C; x &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8FD0;&#x884C;&#x4EA4;&#x8FC7;&#x8F6C;&#x6362;&#x6210; Boolean &#x503C;&#x4E3A; true &#x5219;&#x8FD0;&#x884C;&#x8868;&#x8FBE;&#x5F0F; y &#x5E76;&#x8FD4;&#x56DE; y &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x3002;</p>
 <p><strong>&#x4F2A;&#x4EE3;&#x7801;&#x62C6;&#x89E3;</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ret = <span class="hljs-literal">null</span>;
@@ -1056,7 +1056,7 @@ a === c <span class="hljs-comment">// false</span>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">0</span> &amp;&amp; (<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{<span class="hljs-keyword">return</span> <span class="hljs-number">1</span> + <span class="hljs-number">1</span>;})(); <span class="hljs-comment">// 0</span>
 <span class="hljs-keyword">var</span> b = <span class="hljs-number">1</span> &amp;&amp; (<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{<span class="hljs-keyword">return</span> <span class="hljs-number">1</span> + <span class="hljs-number">1</span>;})(); <span class="hljs-comment">// 2</span>
 </code></pre>
-<h4 id="">||</h4>
+<h4 id="-%E9%80%BB%E8%BE%91%E6%88%96">|| &#x903B;&#x8F91;&#x6216;</h4>
 <p><code>x || y</code> &#x5982;&#x679C; x &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x8F6C;&#x6362;&#x4E3A; Boolean &#x503C;&#x4E3A; true&#xFF0C;&#x5219;&#x4E0D;&#x8FD0;&#x884C; &#x8868;&#x8FBE;&#x5F0F; y &#x800C;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x8868;&#x8FBE;&#x5F0F; x &#x7684;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x3002;&#xFF08;&#x4E0E; <code>&amp;&amp;</code> &#x65B9;&#x5F0F;&#x76F8;&#x53CD;&#xFF09;</p>
 <p><strong>&#x4F2A;&#x4EE3;&#x7801;&#x62C6;&#x89E3;</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ret = <span class="hljs-literal">null</span>;

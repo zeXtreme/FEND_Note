@@ -38,13 +38,14 @@
 
 ### 事件流
 
+一个 DOM 事件可以分为`捕获过程`、`触发过程`、`冒泡过程`。
 DOM 事件流为 DOM 事件的处理及执行的过程。下面以一个`<a>`元素被点击为例。
 
 ![](../img/E/event_flow.jpg)
 
-1. [红虚线]Capture Phase（事件捕获过程）从 DOM 树最顶端开始向下寻找事件来源，直到找到触发事件元素的**父元素**为止。
-2. [红绿实线]Target Phase（事件触发过程）
-3. [绿虚线]Bubble Phase（冒泡过程）从事件元素开始将事件对象一直向上冒泡到 DOM 树的最顶端
+1. [红虚线]Capture Phase（事件捕获过程）当 DOM 事件发生时，它会从window节点一路跑下去直到触发事件元素的父节点为止，去捕获触发事件的元素。
+2. [红绿实线]Target Phase（事件触发过程）当事件被捕获之后就开始执行事件绑定的代码
+3. [绿虚线]Bubble Phase（冒泡过程）当事件代码执行完毕后，浏览器会从触发事件元素的父节点开始一直冒泡到window元素（**即元素的祖先元素也会触发这个元素所触发的事件**）
 
 NOTE：低版本 IE 中并未实现捕获过程。也不是所有事件均存在这三个完整的过程（例如 `load` 没有冒泡事件）
 
@@ -60,7 +61,12 @@ NOTE+：在这三个阶段中无论将**事件捕获**和**事件处理**注册�
 eventTarget.addEventListener(type, listener[,useCapture])
 ```
 
-`useCapture` 为设定是否为捕获过程，默认事件均为冒泡过程，只有 `useCapture` 为 `true` 时才会启用捕获过程。
+- evenTarget 表示要绑定事件的DOM元素
+- type    表示要绑定的事件，如："click"
+- listener  表示要绑定的函数
+- useCapture  可选参数，表示是否捕获过程
+
+NOTE：`useCapture` 为设定是否为捕获过程，默认事件均为冒泡过程，只有 `useCapture` 为 `true` 时才会启用捕获过程。
 
 ```javascript
 // 获取元素
@@ -74,7 +80,7 @@ var clickHandler = function(event) {
 // 注册事件
 elem.addEventListener('click', clickHandler, false);
 
-// 第二种方式
+// 第二种方式，不建议使用
 elem.onclick = clickHandler;
 // 或者来弥补只可触发一个处理函数的缺陷
 elem.onclick = function(){
@@ -88,14 +94,21 @@ elem.onclick = function(){
 
 ```javascript
 eventTarget.removeEventListener(type, listener[,useCapture]);
+```
 
+- evenTarget 表示要绑定事件的DOM元素
+- type    表示要绑定的事件，如："click"
+- listener  表示要绑定的函数
+- useCapture  可选参数，表示是否捕获过程
+
+```javascript
 // 获取元素
 var elem = document.getElemenyById('id');
 
 // 取消事件
 elem.removeEventListener('click', clickHandler, false);
 
-// 第二种方式
+// 第二种方式。不建议使用
 elem.onclick = null;
 ```
 
@@ -197,11 +210,11 @@ var clickHandler = function(event) {
 
 `event.stopImmediatePropagation()` 此方法同上面的方法类似，除了阻止将事件冒泡传播值最高的 DOM 元素外，还会阻止在此事件后的事件的触发。
 
-`event.cancelBubble=true` 为 IE 中对于阻止冒泡传播的实现。
+`event.cancelBubble=true` 为 IE 低版本中中对于阻止冒泡传播的实现。
 
 ###### 阻止默认行为
 
-默认行为是指浏览器定义的默认行为，比如单击链接可以打开新窗口。
+默认行为是指浏览器定义的默认行为（点击一个链接的时候，链接默认就会打开。当我们双击文字的时候，文字就会被选中），比如单击链接可以打开新窗口。
 
 `Event.preventDefault()` 为 W3C 规范方法，在 IE 中的实现方法为 `Event.returnValue=false`。
 
@@ -383,7 +396,6 @@ NOTE+：IE 并没有 `InputEvent` 则需使用 `onpropertychange(IE)` 来代替�
 #### KeyboardEvent
 
 其用于处理键盘事件。
-
 
 |事件类型|是否冒泡|元素|默认事件|元素例子|
 |--------|--------|----|--------|--------|

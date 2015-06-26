@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2.9" data-basepath=".." data-revision="Fri Jun 26 2015 11:50:24 GMT+0800 (SGT)">
+    <div class="book" data-level="2.9" data-basepath=".." data-revision="Fri Jun 26 2015 12:45:03 GMT+0800 (SGT)">
     
 
 <div class="book-summary">
@@ -950,6 +950,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <h2 id="%E8%AF%AD%E5%8F%A5">&#x8BED;&#x53E5;</h2>
 <h3 id="%E6%9D%A1%E4%BB%B6%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5">&#x6761;&#x4EF6;&#x63A7;&#x5236;&#x8BED;&#x53E5;</h3>
+<p>&#x5176;&#x4E2D;expression&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6574;&#x578B;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x751A;&#x81F3;&#x8868;&#x8FBE;&#x5F0F;</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (expression) {statement}
 <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (expression) {statement1}
 <span class="hljs-keyword">else</span> {statement2}
@@ -1020,12 +1021,31 @@ type:black
 color:red
 id:benz
 </code></pre>
+<p>&#x5982;&#x4E0D;&#x9700;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#x4E0A;&#x7684;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; hasOwnProperty</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> key <span class="hljs-keyword">in</span> benz) {
+  <span class="hljs-keyword">if</span> (benz.hasOwnProperty(key)) {
+    <span class="hljs-built_in">console</span>.log(key + <span class="hljs-string">&apos;:&apos;</span> benz[key]);
+  }
+}
+<span class="hljs-comment">/* &#x8F93;&#x51FA;&#x7ED3;&#x679C;
+type:black
+color:red
+id:benz */</span>
+</code></pre>
 <h3 id="%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E8%AF%AD%E5%8F%A5">&#x5F02;&#x5E38;&#x5904;&#x7406;&#x8BED;&#x53E5;</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">try</span>/<span class="hljs-keyword">catch</span>/<span class="hljs-keyword">finally</span>
-<span class="hljs-keyword">throw</span>
+<pre><code class="lang-javascript"><span class="hljs-keyword">try</span>{
+  <span class="hljs-comment">// statements</span>
+  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>();
+<span class="hljs-keyword">catch</span>(e){
+  <span class="hljs-comment">// statements</span>
+}
+<span class="hljs-keyword">finally</span>{
+  <span class="hljs-comment">// statements</span>
+}
 </code></pre>
 <h3 id="with-%E8%AF%AD%E5%8F%A5">with &#x8BED;&#x53E5;</h3>
-<p><code>with</code> &#x8BED;&#x53E5;&#x662F; JavaScript &#x4E2D;&#x7279;&#x6709;&#x7684;&#x8BED;&#x53E5;&#x5F62;&#x5F0F;&#xFF0C;&#x5176;&#x7528;&#x4E8E;&#x7F29;&#x77ED;&#x7279;&#x5B9A;&#x60C5;&#x51B5;&#x4E0B;&#x5FC5;&#x987B;&#x4E66;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x91CF;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x6682;&#x65F6;&#x6539;&#x53D8;&#x53D8;&#x91CF;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x5C06;<code>with</code>&#x8BED;&#x53E5;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x81F3;&#x4F5C;&#x7528;&#x57DF;&#x94FE;&#x7684;&#x5934;&#x90E8;&#x3002;<strong>&#x7F3A;&#x70B9;</strong>&#x5C31;&#x662F;&#x5BFC;&#x81F4; JavaScript &#x8BED;&#x53E5;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6027;&#x4E0B;&#x964D;&#xFF0C;&#x6240;&#x4EE5;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x56E0;&#x5C3D;&#x53EF;&#x80FD;&#x7684;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x3002;</p>
+<p><code>with</code> &#x8BED;&#x53E5;&#x662F; JavaScript &#x4E2D;&#x7279;&#x6709;&#x7684;&#x8BED;&#x53E5;&#x5F62;&#x5F0F;&#xFF0C;&#x5B83;&#x4E3B;&#x8981;&#x6709;&#x4E24;&#x4E2A;&#x4F5C;&#x7528;&#xFF1A;</p>
+<p>&#x5176;&#x4E00;&#xFF0C;&#x5176;&#x7528;&#x4E8E;&#x7F29;&#x77ED;&#x7279;&#x5B9A;&#x60C5;&#x51B5;&#x4E0B;&#x5FC5;&#x987B;&#x4E66;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x91CF;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x6682;&#x65F6;&#x6539;&#x53D8;&#x53D8;&#x91CF;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x3002;</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// &#x4F7F;&#x7528; with &#x4E4B;&#x524D;</span>
 (<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
   <span class="hljs-keyword">var</span> x = <span class="hljs-built_in">Math</span>.cos(<span class="hljs-number">3</span> * <span class="hljs-built_in">Math</span>.PI) + <span class="hljs-built_in">Math</span>.sin(<span class="hljs-built_in">Math</span>.LN10);
@@ -1041,6 +1061,7 @@ id:benz
 })();
 </code></pre>
 <p><img src="../img/W/with-scope.png" alt=""></p>
+<p>&#x5176;&#x4E8C;&#xFF0C;&#x6539;&#x53D8;&#x53D8;&#x91CF;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x5C06;<code>with</code>&#x8BED;&#x53E5;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x81F3;&#x4F5C;&#x7528;&#x57DF;&#x94FE;&#x7684;&#x5934;&#x90E8;&#x3002;</p>
 <pre><code class="lang-javascript">frame[<span class="hljs-number">1</span>].document.forms[<span class="hljs-number">0</span>].name.value = <span class="hljs-string">&quot;&quot;</span>;
 frame[<span class="hljs-number">1</span>].document.forms[<span class="hljs-number">0</span>].address.value = <span class="hljs-string">&quot;&quot;</span>;
 frame[<span class="hljs-number">1</span>].document.forms[<span class="hljs-number">0</span>].email.value = <span class="hljs-string">&quot;&quot;</span>;
@@ -1051,6 +1072,7 @@ frame[<span class="hljs-number">1</span>].document.forms[<span class="hljs-numbe
   email.value = <span class="hljs-string">&quot;&quot;</span>;
 }
 </code></pre>
+<p><strong>&#x7F3A;&#x70B9;</strong>&#x5C31;&#x662F;&#x5BFC;&#x81F4; JavaScript &#x8BED;&#x53E5;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6027;&#x4E0B;&#x964D;&#xFF0C;&#x6240;&#x4EE5;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x56E0;&#x5C3D;&#x53EF;&#x80FD;&#x7684;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x3002;</p>
 
                     
                     </section>
