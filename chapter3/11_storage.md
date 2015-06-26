@@ -103,7 +103,7 @@ function removeCookie(name, path, domain) {
 
 `localStorage.name`
 
-**添加或修改
+**添加或修改**
 
 `localStorage.name = 'Value';`
 
