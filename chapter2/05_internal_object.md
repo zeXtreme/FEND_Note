@@ -83,6 +83,7 @@ p.move(2,2);
 
 ### 标准内置对象
 
+
 **构造器对象**
 
 - Object
@@ -100,6 +101,22 @@ p.move(2,2);
 - Math
 - JSON
 - 全局对象
+
+内置对象，其实也叫内置构造器，它们可以通过 `new` 的方式创建一个新的实例对象。内置对象所属的类型就叫内置对象类型。其声明方式如下：
+
+```javascript
+var i = new String("str");          // String Object
+var h = new Number(1);              // Number Object
+var g = new Boolean(true);          // Boolean Object
+var j = new Object({name : "Tom"}); // Object Object
+var k = new Array([1, 2, 3, 4]);    // Array Object
+var l = new Date();                 // Date Object
+var m = new Error();
+var n = new Function();
+var o = new RegExp("\\d");
+```
+
+注意：虽然标准类型中有`Boolean` `String` `Number` `Object`，内置对象类型中也有`Boolean` `String` `Number` `Object`，但它们其实是通过不同的声明方式来进行区别的。标准类型通过直接赋值，而对象类型则是通过构造器实现初始化。
 
 ### Object
 
@@ -331,7 +348,7 @@ function logArray(value, index, arrayObject) {
   console.log(value);
   console.log(value === array[index]);
 }
-[2, 5,  , 9].forEach(logArray);
+[2, 5, 6, 9].forEach(logArray);
 ```
 
 ### Function
@@ -365,6 +382,8 @@ var f3 = function(i, j){return i + j;};
 - caller
 
 #### 自定义对象构造器
+
+下面的代码声明一个 Point 增加了一个move方法，最后创建了一个 Point 的实例对象。
 
 ```javascript
 function Point(x, y) {

@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>变形 | Frontend Notebook</title>
+        <title>常见布局样例 | Frontend Notebook</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.1.0">
@@ -25,10 +25,10 @@
         
     
     
-    <link rel="next" href="../chapter1/04_08_animation.html" />
+    <link rel="next" href="../chapter2/00_intro.html" />
     
     
-    <link rel="prev" href="../chapter1/04_06_layout.html" />
+    <link rel="prev" href="../chapter1/04_08_animation.html" />
     
 
         
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="1.4.7" data-basepath=".." data-revision="Fri Jun 26 2015 11:47:34 GMT+0800 (SGT)">
+    <div class="book" data-level="1.4.9" data-basepath=".." data-revision="Fri Jun 26 2015 11:47:34 GMT+0800 (SGT)">
     
 
 <div class="book-summary">
@@ -416,7 +416,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.7" data-path="chapter1/04_07_transform.html">
+        <li class="chapter " data-level="1.4.7" data-path="chapter1/04_07_transform.html">
             
                 
                     <a href="../chapter1/04_07_transform.html">
@@ -446,7 +446,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.9" data-path="chapter1/04_09_layout_demo.html">
+        <li class="chapter active" data-level="1.4.9" data-path="chapter1/04_09_layout_demo.html">
             
                 
                     <a href="../chapter1/04_09_layout_demo.html">
@@ -932,193 +932,110 @@
                 
                     <section class="normal" id="section-">
                     
-                        <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<p><strong>Table of Contents</strong>  <em>generated with <a href="https://github.com/thlorenz/doctoc" target="_blank">DocToc</a></em></p>
+                        <h3 id="%E5%B8%B8%E8%A7%81%E5%B8%83%E5%B1%80%E6%A0%B7%E4%BE%8B">&#x5E38;&#x89C1;&#x5E03;&#x5C40;&#x6837;&#x4F8B;</h3>
+<h4 id="%E8%87%AA%E5%8A%A8%E5%B1%85%E4%B8%AD%E4%B8%80%E5%88%97%E5%B8%83%E5%B1%80">&#x81EA;&#x52A8;&#x5C45;&#x4E2D;&#x4E00;&#x5217;&#x5E03;&#x5C40;</h4>
+<p>&#x6240;&#x9700;&#x77E5;&#x8BC6;&#xFF1A;</p>
 <ul>
-<li><a href="#%E5%8F%98%E5%BD%A2">&#x53D8;&#x5F62;</a><ul>
-<li><a href="#2d-%E5%8F%98%E5%BD%A2">2D &#x53D8;&#x5F62;</a><ul>
-<li><a href="#transform">transform</a><ul>
-<li><a href="#rotate">rotate()</a></li>
-<li><a href="#transform-origin">transform-origin</a></li>
-<li><a href="#translate">translate()</a></li>
-<li><a href="#scale">scale()</a></li>
-<li><a href="#skew">skew()</a></li>
+<li>&#x6807;&#x51C6;&#x6587;&#x6863;&#x6D41;</li>
+<li>&#x5757;&#x7EA7;&#x5143;&#x7D20;</li>
+<li>margin &#x5916;&#x8FB9;&#x8DDD;&#x5C5E;&#x6027;</li>
 </ul>
-</li>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">style</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/css&quot;</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">&quot;screen&quot;</span>&gt;</span><span class="css">
+  <span class="hljs-tag">article</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">800px</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0</span> auto</span></span>;
+  <span class="hljs-rule">}</span></span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">article</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A natus repellendus, modi culpa, dolor ducimus debitis, facere dolorum cum aspernatur, soluta molestias est illo vel iusto esse ex ullam amet!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">article</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</code></pre>
+<p>NOTE&#xFF1A;&#x8BBE;&#x7F6E; auto &#x4F1A;&#x6839;&#x636E;&#x6D4F;&#x89C8;&#x5668;&#x5BBD;&#x5EA6;&#x81EA;&#x52A8;&#x8BBE;&#x7F6E;&#x5916;&#x8FB9;&#x8DDD;&#x5C3A;&#x5BF8;&#x3002;&#x5728;&#x8BBE;&#x7F6E;&#x6D6E;&#x52A8;&#x6216;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x5219;&#x4F1A;&#x4F7F;&#x81EA;&#x52A8;&#x5C45;&#x4E2D;&#x5931;&#x6548;&#xFF0C;&#x56E0;&#x4E3A;&#x5176;&#x4F1A;&#x8131;&#x79BB;&#x6587;&#x6863;&#x6D41;&#x3002;</p>
+<p><code>(&#x6D4F;&#x89C8;&#x5668;&#x5BBD;&#x5EA6; - &#x5916;&#x5305;&#x542B;&#x5C42;&#x7684;&#x5BBD;&#x5EA6;)/ 2 = &#x5916;&#x8FB9;&#x8DDD;</code>&#x3002;</p>
+<h4 id="%E6%A8%AA%E5%90%91%E4%B8%A4%E5%88%97%E5%B8%83%E5%B1%80">&#x6A2A;&#x5411;&#x4E24;&#x5217;&#x5E03;&#x5C40;</h4>
+<p>&#x6B64;&#x65B9;&#x6CD5;&#x4E5F;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x6A2A;&#x5411;&#x591A;&#x5217;&#x5E03;&#x5C40;&#xFF08;&#x539F;&#x7406;&#x4E0E;&#x4E24;&#x5217;&#x5E03;&#x5C40;&#x76F8;&#x540C;&#xFF09;&#x3002;</p>
+<p>&#x6240;&#x9700;&#x77E5;&#x8BC6;&#xFF1A;</p>
+<ul>
+<li>float &#x5C5E;&#x6027;&#xFF0C;&#x4F7F;&#x7EB5;&#x5411;&#x6392;&#x5217;&#x7684;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#xFF0C;&#x6A2A;&#x5411;&#x6392;&#x5217;</li>
+<li>margin &#x5C5E;&#x6027;&#xFF0C;&#x8BBE;&#x7F6E;&#x5217;&#x76F4;&#x63A5;&#x7684;&#x95F4;&#x8DDD;</li>
 </ul>
-</li>
-<li><a href="#3d-%E5%8F%98%E5%BD%A2">3D &#x53D8;&#x5F62;</a><ul>
-<li><a href="#rotatey">rotateY()</a></li>
-<li><a href="#perspective">perspective</a></li>
-<li><a href="#perspective-origin">perspective-origin</a></li>
-<li><a href="#translate3d">translate3d()</a></li>
-<li><a href="#scale3d">scale3d()</a></li>
-<li><a href="#rotate3d">rotate3d()</a></li>
-<li><a href="#transform-style">transform-style</a></li>
-<li><a href="#backface-visibility">backface-visibility</a></li>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">style</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/css&quot;</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">&quot;screen&quot;</span>&gt;</span><span class="css">
+  <span class="hljs-class">.clearfix</span><span class="hljs-pseudo">:after</span> <span class="hljs-rules">{
+     <span class="hljs-rule"><span class="hljs-attribute">content</span>:<span class="hljs-value"> <span class="hljs-string">&quot;.&quot;</span></span></span>; <span class="hljs-comment">/* Older browser do not support empty content */</span>
+     <span class="hljs-rule"><span class="hljs-attribute">visibility</span>:<span class="hljs-value"> hidden</span></span>;
+     <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> block</span></span>;
+     <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+     <span class="hljs-rule"><span class="hljs-attribute">clear</span>:<span class="hljs-value"> both</span></span>;
+  <span class="hljs-rule">}</span></span>
+  <span class="hljs-class">.clearfix</span> <span class="hljs-rules">{<span class="hljs-rule"><span class="hljs-attribute">zoom</span>:<span class="hljs-value"> <span class="hljs-number">1</span></span></span>;<span class="hljs-rule">}</span></span> <span class="hljs-comment">/* &#x9488;&#x5BF9; IE &#x4E0D;&#x652F;&#x6301; :after */</span>
+  <span class="hljs-tag">body</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">930px</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0</span> auto</span></span>; <span class="hljs-comment">/* &#x6A2A;&#x5411;&#x5C45;&#x4E2D; */</span>
+  <span class="hljs-rule">}</span></span>
+  <span class="hljs-tag">article</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">800px</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">float</span>:<span class="hljs-value"> left</span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> <span class="hljs-number">10px</span></span></span>;
+  <span class="hljs-rule">}</span></span>
+  <span class="hljs-tag">aside</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">120px</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">float</span>:<span class="hljs-value"> right</span></span>;
+  <span class="hljs-rule">}</span></span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;clearfix&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">article</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quam, fugit. Accusamus voluptates nesciunt in, autem ipsa assumenda a iusto, reiciendis earum repudiandae, nulla natus blanditiis, aliquam asperiores commodi qui.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">article</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">aside</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Aside Title<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, molestiae!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">aside</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</code></pre>
+<h4 id="%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E7%9A%84%E6%A8%AA%E5%90%91%E4%B8%A4%E5%88%97%E5%B8%83%E5%B1%80">&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x7684;&#x6A2A;&#x5411;&#x4E24;&#x5217;&#x5E03;&#x5C40;</h4>
+<p>&#x5E94;&#x7528;&#x573A;&#x5408;&#x8F83;&#x5C11;&#xFF0C;&#x5E38;&#x7528;&#x4E0E;&#x4E00;&#x5217;&#x5B9A;&#x5BBD;&#xFF0C;&#x53E6;&#x4E00;&#x5217;&#x81EA;&#x9002;&#x5E94;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x77E5;&#x8BC6;&#xFF1A;</p>
+<ul>
+<li>relative positon &#x7236;&#x5143;&#x7D20;&#x76F8;&#x5BF9;&#x5B9A;&#x4F4D;</li>
+<li>absolute &#x81EA;&#x9002;&#x5E94;&#x5BBD;&#x5EA6;&#x5143;&#x7D20;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<h3 id="%E5%8F%98%E5%BD%A2">&#x53D8;&#x5F62;</h3>
-<h4 id="2d-%E5%8F%98%E5%BD%A2">2D &#x53D8;&#x5F62;</h4>
-<p><a href="../SampleCode/CSS/Transform2D.html">2D &#x53D8;&#x5F62;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</a></p>
-<h5 id="transform">transform</h5>
-<p><code>transform</code> &#x4E2D;&#x53EF;&#x4EE5;&#x5199;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;</p>
-<pre><code>transform: none | &lt;transform-function&gt;+
-transform: none
-&lt;!-- &#x9ED8;&#x8BA4;&#x503C;&#x4E3A; none --&gt;
-transform: &lt;transform-function&gt;+
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x56FA;&#x5B9A;&#x5BBD;&#x5EA6;&#x5217;&#x7684;&#x9AD8;&#x5EA6;&#x9700;&#x5927;&#x4E8E;&#x81EA;&#x9002;&#x5E94;&#x7684;&#x5217;&#xFF08;&#x539F;&#x56E0;&#x662F;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x4F1A;&#x8131;&#x79BB;&#x6587;&#x6863;&#x6D41;&#xFF0C;&#x4E0D;&#x80FD;&#x6491;&#x5F00;&#x7236;&#x5143;&#x7D20;&#xFF09;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">style</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/css&quot;</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">&quot;screen&quot;</span>&gt;</span><span class="css">
+  <span class="hljs-tag">body</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+  <span class="hljs-rule">}</span></span>
 
-transform: translate(50%) rotate(45deg);
-transform: rotate(45deg) transform(50%)
-&lt;!-- &#x53D8;&#x5F62;&#x51FD;&#x6570;&#x987A;&#x5E8F;&#x666E;&#x901A;&#x7ED3;&#x679C;&#x4E0D;&#x540C;&#xFF0C;&#x539F;&#x56E0;&#x662F;&#x5750;&#x6807;&#x4F4D;&#x7F6E;&#x53D1;&#x751F;&#x4E86;&#x6539;&#x53D8; --&gt;
-</code></pre><p><img src="../img/T/transform-transform-function.png" alt=""></p>
-<h6 id="rotate">rotate()</h6>
-<pre><code>rotate(&lt;angle&gt;)
+  <span class="hljs-tag">article</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">right</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">800px</span></span></span>;
+  <span class="hljs-rule">}</span></span>
+  <span class="hljs-tag">aside</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">right</span>:<span class="hljs-value"><span class="hljs-number">800px</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule">}</span></span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
 
-rotate(45deg);
-&lt;!-- &#x53F3;&#x8FB9;&#x65CB;&#x8F6C;&#xFF0C;&#x987A;&#x65F6;&#x9488; --&gt;
-rotate(-60deg);
-&lt;!-- &#x5DE6;&#x8FB9;&#x65CB;&#x8F6C;&#xFF0C;&#x9006;&#x65F6;&#x9488; --&gt;
-</code></pre><p><img src="../img/T/transform-rotate.png" alt=""></p>
-<h6 id="transform-origin">transform-origin</h6>
-<p>&#x5176;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x539F;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#xFF08;&#x9ED8;&#x8BA4;&#x4F4D;&#x7F6E;&#x4E3A;&#x5143;&#x7D20;&#x4E2D;&#x5FC3;&#xFF09;&#x7B2C;&#x4E00;&#x503C;&#x4E3A; X &#x65B9;&#x5411;&#xFF0C;&#x7B2C;&#x4E8C;&#x503C;&#x4E3A; Y &#x65B9;&#x5411;&#xFF0C; &#x7B2C;&#x4E09;&#x503C;&#x4E3A; Z &#x65B9;&#x5411;&#x3002;&#xFF08;&#x5F53;&#x503C;&#x7A7A;&#x51FA;&#x672A;&#x5199;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x9ED8;&#x8BA4;&#x4E3A; 50%&#xFF09;</p>
-<pre><code>transform-origin: [ &lt;percentage&gt; | &lt;length&gt; | left | center | right | top | bottom] | [ [ &lt;percentage&gt; | &lt;length&gt; | left | center | right ] &amp;&amp; [ &lt;percentage&gt; | &lt;length&gt; | top | center | bottom ] ] &lt;length&gt;?
-
-&lt;!-- &#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 50% 50% --&gt;
-
-transform-origin: 50% 50%;
-transform-origin: 0 0;
-transform-origin: right 50px 20px;
-transform-origin: top right 20px;
-</code></pre><p><img src="../img/T/transform-origin.png" alt=""></p>
-<h6 id="translate">translate()</h6>
-<p>&#x79FB;&#x52A8;&#x65B9;&#x6CD5;&#xFF0C;&#x53C2;&#x6570;&#x5206;&#x522B;&#x4EE3;&#x8868; X &#x4E0E; Y &#x8F74;&#x7684;&#x79FB;&#x52A8;&#xFF08;&#x504F;&#x79FB;&#x503C;&#x5747;&#x53EF;&#x4E3A;&#x8D1F;&#x503C;&#xFF09;&#x3002;</p>
-<pre><code>translate(&lt;translation-value&gt;[, &lt;translation-value&gt;]?)
-
-&lt;!-- &#x4E5F;&#x53EF;&#x5355;&#x72EC;&#x8BBE;&#x7F6E; X &#x4E0E; Y &#x8F74;&#x7684;&#x504F;&#x79FB; --&gt;
-translationX(&lt;translation-value&gt;)
-translationY(&lt;translation-value&gt;)
-
-transform: translate(50px);
-transform: translate(50px, 20%);
-&lt;!-- Y &#x8F74;&#x504F;&#x79FB;&#x4E3A;&#x504F;&#x79FB;&#x5BF9;&#x8C61;&#x7684;&#x9AD8;&#x5EA6;&#xFF0C;X &#x8F74;&#x4E3A;&#x5BBD;&#x5EA6; --&gt;
-transform: translate(-50px);
-transform: translate(20%);
-</code></pre><p><img src="../img/T/transform-traslate.png" alt=""></p>
-<h6 id="scale">scale()</h6>
-<p>&#x7F29;&#x653E;&#x65B9;&#x6CD5;&#xFF0C;&#x53C2;&#x6570;&#x5206;&#x522B;&#x4EE3;&#x8868; X &#x4E0E; Y &#x8F74;&#x7684;&#x7F29;&#x653E;&#xFF08;&#x7F29;&#x653E;&#x503C;&#x5747;&#x53EF;&#x4E3A;&#x5C0F;&#x6570;&#xFF09;&#x3002;&#x5F53;&#x7B2C;&#x4E8C;&#x503C;&#x5FFD;&#x7565;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x4E3A;&#x7B49;&#x540C;&#x7B2C;&#x4E00;&#x503C;&#x3002;</p>
-<pre><code>scale(&lt;number&gt; [, &lt;number&gt;]?)
-
-scaleX(&lt;number&gt;)
-scaleY(&lt;number&gt;)
-
-&lt;!-- &#x6574;&#x4F53;&#x653E;&#x5927; 1.2 &#x500D; --&gt;
-transform: scale(1.2);
-&lt;!-- &#x9AD8;&#x5EA6;&#x62C9;&#x4F38; --&gt;
-transform: scale(1, 1.2);
-&lt;!-- &#x5BBD;&#x5EA6;&#x62C9;&#x4F38; --&gt;
-transform: scaleX(1.2);
-&lt;!-- &#x9AD8;&#x5EA6;&#x62C9;&#x4F38; --&gt;
-transform: scaleY(1.2);
-</code></pre><p><img src="../img/T/transform-scale.png" alt=""></p>
-<h6 id="skew">skew()</h6>
-<p>&#x5176;&#x4E3A;&#x503E;&#x659C;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x7B2C;&#x4E00;&#x503C;&#x4E3A; Y &#x8F74;&#x5F80; X &#x65B9;&#x5411;&#x503E;&#x659C;&#xFF08;&#x9006;&#x65F6;&#x9488;&#xFF09;&#xFF0C;&#x7B2C;&#x4E8C;&#x503C;&#x4E3A; X &#x8F74;&#x5F80; Y &#x65B9;&#x5411;&#x503E;&#x659C;&#xFF08;&#x987A;&#x65F6;&#x9488;&#xFF09;&#x3002;&#xFF08;&#x503E;&#x659C;&#x503C;&#x53EF;&#x4E3A;&#x8D1F;&#x503C;&#xFF09;</p>
-<pre><code>skew(&lt;angle&gt;[, &lt;angle&gt;]?)
-
-skewX(&lt;angle&gt;)
-skewY(&lt;angle&gt;)
-
-transform: skew(30deg);
-transform: skew(30deg, 30deg);
-transform: skewX(30deg);
-transform: skewY(30deg);
-</code></pre><p><img src="../img/T/transform-skew.png" alt=""></p>
-<h4 id="3d-%E5%8F%98%E5%BD%A2">3D &#x53D8;&#x5F62;</h4>
-<p><a href="../SampleCode/CSS/Transform3D.html">3D &#x53D8;&#x5F62;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</a></p>
-<h5 id="rotatey">rotateY()</h5>
-<p>3D &#x7A7A;&#x95F4;&#x65CB;&#x8F6C;&#x3002;</p>
-<pre><code>transform: rotateY(&lt;angle&gt;)
-</code></pre><h5 id="perspective">perspective</h5>
-<p>&#x5176;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x56FE;&#x7247; Y &#x8F74;&#x65CB;&#x8F6C;&#x540E;&#x7684;&#x900F;&#x89C6;&#x6548;&#x679C;&#x3002;<code>&lt;length&gt;</code> &#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x4EBA;&#x773C;&#x4E0E;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x8D8A;&#x7D27;&#x5219;&#x6548;&#x679C;&#x8D8A;&#x660E;&#x663E;&#x3002;</p>
-<pre><code>perspective: none | &lt;length&gt;
-
-perspective: none;
-perspective: 2000px;
-perspective: 500px;
-</code></pre><p><img src="../img/T/transform-perspective.png" alt=""></p>
-<h5 id="perspective-origin">perspective-origin</h5>
-<p>&#x5176;&#x4E3A;&#x8BBE;&#x5B9A;&#x900F;&#x89C6;&#x7684;&#x89D2;&#x5EA6;&#xFF08;&#x900F;&#x89C6;&#x4F4D;&#x7F6E;&#x5747;&#x53EF;&#x8BBE;&#x5B9A;&#x4E3A;&#x8D1F;&#x503C;&#xFF09;&#x3002;</p>
-<pre><code>perspective-origin: [ &lt;percentage&gt; | &lt;length&gt; | left | center | right | top | bottom] | [ [ &lt;percentage&gt; | &lt;length&gt; | left | center | right ] &amp;&amp; [ &lt;percentage&gt; | &lt;length&gt; | top | center | bottom ] ]
-
-perspective-origin: 50% 50%
-&lt;!-- &#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 50% 50% &#x6B63;&#x4E2D;&#x95F4;&#x7684;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x900F;&#x89C6;--&gt;
-perspective-origin: left bottom;
-perspective-origin: 50% -800px;
-perspective-origin: right;
-</code></pre><p><img src="../img/T/transform-perspective-origin.png" alt=""></p>
-<h5 id="translate3d">translate3d()</h5>
-<pre><code>translate3d(&lt;translate-value&gt;, &lt;translate-value&gt;, &lt;length&gt;)
-
-translateX(&lt;translate-value&gt;)
-translateY(&lt;translate-value&gt;)
-translateZ(&lt;length&gt;)
-
-transform: translate3d(10px, 20%, 50px);
-&lt;!-- %&#x7684;&#x53C2;&#x7167;&#x7269;&#x4E3A;&#x81EA;&#x8EAB;&#x5143;&#x7D20; --&gt;
-transform: translateX(10px);
-transform: translateY(20%);
-transform: translateZ(-100px);
-</code></pre><p><img src="../img/T/transform-translate3d.png" alt=""></p>
-<h5 id="scale3d">scale3d()</h5>
-<pre><code>scale3d(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;)
-
-scaleX(&lt;number&gt;)
-scaleY(&lt;number&gt;)
-scaleZ(&lt;number&gt;)
-
-transform: scale3d(1.2, 1.2, 1);
-transform: scale3d(1, 1.2, 1);
-transform: scale3d(1.2, 1, 1);
-transform: scaleZ(5);
-&lt;!-- Z &#x8F74;&#x7684;&#x7F29;&#x653E;&#x6269;&#x5927;&#x5E76;&#x4E0D;&#x5F71;&#x54CD;&#x76D2;&#x5B50;&#x5927;&#x5C0F; --&gt;
-</code></pre><p><img src="../img/T/transform-scale3d.png" alt=""></p>
-<h5 id="rotate3d">rotate3d()</h5>
-<p>&#x53D6; X Y Z &#x4E09;&#x8F74;&#x4E0A;&#x7684;&#x4E00;&#x70B9;&#x5E76;&#x4E8E;&#x5750;&#x6807;&#x539F;&#x70B9;&#x8FDE;&#x7EBF;&#xFF0C;&#x4EE5;&#x8FDE;&#x7EBF;&#x4E3A;&#x8F74;&#x8FDB;&#x884C;&#x65CB;&#x8F6C;&#xFF08;&#x9006;&#x65F6;&#x9488;&#xFF09;&#x3002;</p>
-<pre><code>rotate3d(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;angle&gt;)
-
-rotateX(&lt;angle&gt;)
-rotateY(&lt;angle&gt;)
-rotateZ(&lt;angle&gt;)
-
-transform: rotate3d(1, 0, 0, 45deg);
-&lt;!-- &#x4E0A;&#x9762;&#x7B49;&#x540C;&#x4E8E; X &#x8F74;&#x65CB;&#x8F6C; --&gt;
-transform: rotate3d(0, 1, 0, 45deg);
-&lt;!-- &#x4E0A;&#x9762;&#x7B49;&#x540C;&#x4E8E; Y &#x8F74;&#x65CB;&#x8F6C; --&gt;
-transform: rotate3d(0, 0, 1, 45deg);
-&lt;!-- &#x4E0A;&#x9762;&#x7B49;&#x540C;&#x4E8E; 2D &#x65CB;&#x8F6C; --&gt;
-transform: rotate3d(1, 1, 1, 45deg);
-</code></pre><p><img src="../img/T/transform-rotate3d.png" alt=""></p>
-<h5 id="transform-style">transform-style</h5>
-<p>&#x5176;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x4FDD;&#x7559;&#x5185;&#x90E8;&#x7684; 3D &#x7A7A;&#x95F4;&#xFF0C;&#x539F;&#x56E0;&#x662F;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C;<code>transform</code>&#x4E4B;&#x540E;&#x5185;&#x90E8;&#x9ED8;&#x8BA4;&#x4E3A;<code>flat</code>&#x3002;</p>
-<pre><code>transform-style: flat | perserve-3d
-
-&lt;!-- &#x9ED8;&#x8BA4;&#x4E3A; flat --&gt;
-
-transform-style: flat;
-transform-style: preserve-3d;
-</code></pre><p><img src="../img/T/transform-transform-style.png" alt=""></p>
-<h5 id="backface-visibility">backface-visibility</h5>
-<p>&#x5176;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x80CC;&#x9762;&#x4E0D;&#x53EF;&#x89C1;&#x3002;</p>
-<pre><code>backface-visibility: visible | hidden
-
-backface-visibility: visible;
-backface-visibility: hidden;
-</code></pre><p><img src="../img/T/transform-backface-visibility.png" alt=""></p>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">article</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error obcaecati sint minima totam fuga, tempora, id quia soluta officia iure eligendi sequi non dicta, doloribus accusamus odit fugiat quam quibusdam.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">article</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">aside</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Aside Title<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, doloremque.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">aside</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</code></pre>
 
                     
                     </section>
@@ -1129,10 +1046,10 @@ backface-visibility: hidden;
         </div>
 
         
-        <a href="../chapter1/04_06_layout.html" class="navigation navigation-prev " aria-label="Previous page: 布局"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter1/04_08_animation.html" class="navigation navigation-prev " aria-label="Previous page: 动画"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter1/04_08_animation.html" class="navigation navigation-next " aria-label="Next page: 动画"><i class="fa fa-angle-right"></i></a>
+        <a href="../chapter2/00_intro.html" class="navigation navigation-next " aria-label="Next page: JavaScript 程序设计"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

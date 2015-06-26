@@ -22,6 +22,20 @@
 
 ### 盒模型
 
+盒子模型是网页布局的基石。它有**边框**、**外边距**、**内边距**、**内容**组成。
+
+**盒子 3D 模型**
+
+![](../img/B/box-model-3d.png)
+
+盒子由上到下依次分为五层，它们自上而下的顺序是。
+
+1. border 边框
+2. content + padding 内容与内边距
+3. background-image 背景图片
+4. background-color 背景颜色
+4. margin 外边距
+
 <p data-height="268" data-theme-id="15197" data-slug-hash="qdmPEE" data-default-tab="result" data-user="li-xinyang" class='codepen'>See the Pen <a href='http://codepen.io/li-xinyang/pen/qdmPEE/'>FEND_003_BoxModel</a> by Li Xinyang (<a href='http://codepen.io/li-xinyang'>@li-xinyang</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 

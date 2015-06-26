@@ -38,7 +38,15 @@
 
 ### 布局
 
-Firefox 布局可视化 **Gecko Reflow Visualisation**，布局是指浏览器将元素以正确的大小摆放在正确的位置上。
+学习布局前须知道 CSS 中的定位机制。
+
+- 标准文档流（Normal Flow）
+- 浮动（Float）
+- 绝对定位（Absolute Positioning)
+
+**标准文档流**，从上到下，从左到右的输出文档内容。它由*块级*（block）元素和*行级*元素组成，且它们都是盒子模型。
+
+下面为 Firefox 布局可视化 **Gecko Reflow Visualisation**，布局是指浏览器将元素以正确的大小摆放在正确的位置上。
 
 ![](../img/G/gecko-reflow-visualisation.gif)
 
@@ -81,10 +89,15 @@ Firefox 布局可视化 **Gecko Reflow Visualisation**，布局是指浏览器�
 
 `position` 用于设置定位的方式与`top` `right` `bottom` `left` `z-index` 则用于设置参照物位置（必须配合定位一同使用）。
 
+**三种定位形式**
+
+- 静态定位（static）
+- 相对定位（relative）
+- 绝对定位（absolute、fixed）
+
 ```
 position: static | relative | absolute | fixed
 /* 默认值为 static */
-
 ```
 
 ##### position:relative
@@ -98,9 +111,11 @@ NOTE：最常用的目的为改变元素层级和设置为绝对定位的参照�
 
 ##### position:absolute
 
+建立以包含块为基准的定位，其随即拥有偏移属性和 `z-index` 属性。
+
 - 默认宽度为内容宽度
 - 脱离文档流
-- 参照物为第一个定位祖先或根元素（HTML 元素）
+- 参照物为第一个定位祖先或根元素（`<html>` 元素）
 
 ![](../img/P/position-absolute.png)
 
@@ -134,7 +149,7 @@ NOTE：宽高的100%的参照依然为视窗（例：网页遮罩效果）
 
 #### float
 
-其可实现块级元素同行显示并存在于文档流之中。
+CSS 中规定的定位机制，其可实现块级元素同行显示并存在于文档流之中。浮动仅仅影响文档流中下一个紧邻的元素。
 
 ```
 float: left | right | none | inherit
@@ -150,7 +165,7 @@ float: left | right | none | inherit
 
 ![](../img/F/float-right-all.jpg)
 
-**float 元素是半脱离文档流的**，对元素是脱离文档流，但对于内容则是在文档流之中的（既元素重叠但内容不重叠）。
+注意：**float 元素是半脱离文档流的**，对元素是脱离文档流，但对于内容则是在文档流之中的（既元素重叠但内容不重叠）。
 
 ![](../img/F/float-half-off.png)
 
@@ -165,8 +180,12 @@ clear: both | left | right | none | inherit
 
 **使用方法**：
 
-1. 浮动后续空白元素 `.emptyDiv {clear: both}`
+优先级自上而下
+
 1. clearfix 于父元素
+1. 浮动后续空白元素 `.emptyDiv {clear: both}`
+1. 为受到影响的元素设置 `width: 100% overflow: hidden` 也可
+1. 块级元素可以使用 `<br>` 不建议使用，影响 HTML 结构
 
 ```
 /* clearfix */

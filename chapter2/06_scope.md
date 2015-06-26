@@ -18,8 +18,6 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
-
 ## 变量作用域
 
 变量的作用域值的是变量的生命周期和作用范围（全局与局部作用域的区别）。
