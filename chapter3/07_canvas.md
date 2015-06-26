@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Canvas](#canvas)
+  - [渲染上下文对象](#%E6%B8%B2%E6%9F%93%E4%B8%8A%E4%B8%8B%E6%96%87%E5%AF%B9%E8%B1%A1)
+  - [绘图步骤](#%E7%BB%98%E5%9B%BE%E6%AD%A5%E9%AA%A4)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Canvas
 
 **Mozilla** 官方 `<canvas>` 教程在[这里](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial)。

@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [JavaScript 动画](#javascript-%E5%8A%A8%E7%94%BB)
+  - [实现方式](#%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F)
+  - [JavaScript 动画三要素](#javascript-%E5%8A%A8%E7%94%BB%E4%B8%89%E8%A6%81%E7%B4%A0)
+  - [定时器](#%E5%AE%9A%E6%97%B6%E5%99%A8)
+  - [常见动画](#%E5%B8%B8%E8%A7%81%E5%8A%A8%E7%94%BB)
+  - [动画函数](#%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## JavaScript 动画
 
 **帧**，为动画的最小单位，一个静态的图像。**帧频**，每秒播放的帧的数量。一个动画是由很多帧组成的，因为人眼的暂留特性，当图片交替的速度大于每秒 30 帧以上既有动画的感觉。

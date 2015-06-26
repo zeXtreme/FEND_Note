@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [多媒体](#%E5%A4%9A%E5%AA%92%E4%BD%93)
+  - [基本用法](#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95)
+  - [多媒体支持类型](#%E5%A4%9A%E5%AA%92%E4%BD%93%E6%94%AF%E6%8C%81%E7%B1%BB%E5%9E%8B)
+  - [多媒体格式兼容](#%E5%A4%9A%E5%AA%92%E4%BD%93%E6%A0%BC%E5%BC%8F%E5%85%BC%E5%AE%B9)
+  - [HTML 属性](#html-%E5%B1%9E%E6%80%A7)
+  - [控制多媒体](#%E6%8E%A7%E5%88%B6%E5%A4%9A%E5%AA%92%E4%BD%93)
+  - [多媒体相关事件](#%E5%A4%9A%E5%AA%92%E4%BD%93%E7%9B%B8%E5%85%B3%E4%BA%8B%E4%BB%B6)
+  - [Web Audio API](#web-audio-api)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 多媒体
 
 HTML5 前的多媒体需要借助第三方插件，例如 Flash，但是 HTML5 将网页中的多媒体带入了新的一章。
