@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>基础语法 | Frontend Notebook</title>
+        <title>BOM | Frontend Notebook</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.1.0">
@@ -25,10 +25,10 @@
         
     
     
-    <link rel="next" href="../chapter2/04_data_type.html" />
+    <link rel="next" href="../Booklist.html" />
     
     
-    <link rel="prev" href="../chapter2/02_dev_tools.html" />
+    <link rel="prev" href="../chapter3/11_storage.html" />
     
 
         
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2.3" data-basepath=".." data-revision="Fri Jun 26 2015 16:15:05 GMT+0800 (SGT)">
+    <div class="book" data-level="3.11" data-basepath=".." data-revision="Fri Jun 26 2015 16:15:05 GMT+0800 (SGT)">
     
 
 <div class="book-summary">
@@ -517,7 +517,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3" data-path="chapter2/03_basic_syntax.html">
+        <li class="chapter " data-level="2.3" data-path="chapter2/03_basic_syntax.html">
             
                 
                     <a href="../chapter2/03_basic_syntax.html">
@@ -823,7 +823,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.11" data-path="chapter3/10_bom.html">
+        <li class="chapter active" data-level="3.11" data-path="chapter3/10_bom.html">
             
                 
                     <a href="../chapter3/10_bom.html">
@@ -977,65 +977,137 @@
                 
                     <section class="normal" id="section-">
                     
-                        <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<p><strong>Table of Contents</strong>  <em>generated with <a href="https://github.com/thlorenz/doctoc" target="_blank">DocToc</a></em></p>
+                        <h2 id="bom">BOM</h2>
+<p><img src="../img/B/bom-intro.jpg" alt=""></p>
+<p>BOM &#x4E3A;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x7EC4; API&#x3002;</p>
+<p><strong>BOM &#x7ED3;&#x6784;&#x56FE;</strong></p>
+<p><img src="../img/B/bom-structure.jpg" alt=""></p>
+<h3 id="%E5%B1%9E%E6%80%A7">&#x5C5E;&#x6027;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;&#x540D;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>navigator</td>
+<td>&#x6D4F;&#x89C8;&#x5668;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>location</td>
+<td>&#x6D4F;&#x89C8;&#x5668;&#x5B9A;&#x4F4D;&#x548C;&#x5BFC;&#x822A;</td>
+</tr>
+<tr>
+<td>history</td>
+<td>&#x7A97;&#x53E3;&#x6D4F;&#x89C8;&#x5668;&#x5386;&#x53F2;</td>
+</tr>
+<tr>
+<td>screen</td>
+<td>&#x5C4F;&#x5E55;&#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="navigator">navigator</h4>
+<p><code>navigator.userAgent</code></p>
 <ul>
-<li><a href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95">&#x57FA;&#x672C;&#x8BED;&#x6CD5;</a><ul>
-<li><a href="#%E5%8F%98%E9%87%8F%E6%A0%87%E7%A4%BA%E7%AC%A6">&#x53D8;&#x91CF;&#x6807;&#x793A;&#x7B26;</a></li>
-<li><a href="#%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E4%BF%9D%E7%95%99%E5%AD%97">&#x5173;&#x952E;&#x5B57;&#x4E0E;&#x4FDD;&#x7559;&#x5B57;</a></li>
-<li><a href="#%E5%AD%97%E7%AC%A6%E6%95%8F%E6%84%9F">&#x5B57;&#x7B26;&#x654F;&#x611F;</a></li>
-<li><a href="#%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F">&#x4E25;&#x683C;&#x6A21;&#x5F0F;</a></li>
-<li><a href="#%E6%B3%A8%E9%87%8A">&#x6CE8;&#x91CA;</a></li>
+<li>Chrome, Mozilla/5.0(Windows NT 6.1; WOW64) Apple WebKit/37.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36</li>
+<li>Firefox, Mozilla/5.0(Windows NT 6.1; WOW64; rv:36.0) Gecko/20100101 Firefox/36.0</li>
+<li>IE, Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3; rv:11.0) like Gecko</li>
 </ul>
-</li>
-</ul>
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<h2 id="%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95">&#x57FA;&#x672C;&#x8BED;&#x6CD5;</h2>
-<h3 id="%E5%8F%98%E9%87%8F%E6%A0%87%E7%A4%BA%E7%AC%A6">&#x53D8;&#x91CF;&#x6807;&#x793A;&#x7B26;</h3>
-<p><strong>&#x53D8;&#x91CF;</strong>&#x7684;&#x547D;&#x540D;</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> _name = <span class="hljs-literal">null</span>;
-<span class="hljs-keyword">var</span> $name = <span class="hljs-literal">null</span>;
-<span class="hljs-keyword">var</span> name0 = <span class="hljs-literal">null</span>;
+<pre><code class="lang-html">appCodeName: &quot;Mozilla&quot;appName: &quot;Netscape&quot;appVersion: &quot;5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36&quot;cookieEnabled: truedoNotTrack: &quot;1&quot;geolocation: GeolocationhardwareConcurrency: 8language: &quot;en-US&quot;languages: Array[4]maxTouchPoints: 0mimeTypes: MimeTypeArrayonLine: truepermissions: Permissionsplatform: &quot;MacIntel&quot;plugins: PluginArrayproduct: &quot;Gecko&quot;productSub: &quot;20030107&quot;serviceWorker: ServiceWorkerContaineruserAgent: &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36&quot;vendor: &quot;Google Inc.&quot;vendorSub: &quot;&quot;webkitPersistentStorage: DeprecatedStorageQuotawebkitTemporaryStorage: DeprecatedStorageQuota__proto__: Navigator
 </code></pre>
-<h3 id="%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E4%BF%9D%E7%95%99%E5%AD%97">&#x5173;&#x952E;&#x5B57;&#x4E0E;&#x4FDD;&#x7559;&#x5B57;</h3>
-<p>JavaScript &#x5728;&#x8BED;&#x8A00;&#x5B9A;&#x4E49;&#x4E2D;&#x4FDD;&#x7559;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x8FD9;&#x4E9B;&#x5B57;&#x6BB5;&#x5728;&#x8BED;&#x8A00;&#x4F7F;&#x7528;&#x4E2D;&#x5B58;&#x5728;&#x7279;&#x6B8A;&#x610F;&#x4E49;&#x6216;&#x529F;&#x80FD;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x7F16;&#x5199;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x53EF;&#x4EE5;&#x5F53;&#x505A;&#x53D8;&#x91CF;&#x6216;&#x51FD;&#x6570;&#x540D;&#x79F0;&#x4F7F;&#x7528;&#x3002;&#x65E0;&#x9700;&#x8BB0;&#x5FC6;&#xFF0C;&#x62A5;&#x9519;&#x4FEE;&#x6539;&#x5373;&#x53EF;&#x3002;</p>
-<h3 id="%E5%AD%97%E7%AC%A6%E6%95%8F%E6%84%9F">&#x5B57;&#x7B26;&#x654F;&#x611F;</h3>
-<p>&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5927;&#x5C0F;&#x5199;&#x662F;&#x6709;&#x6240;&#x533A;&#x5206;&#x7684;&#xFF0C;&#x4E0D;&#x540C;&#x5B57;&#x7B26;&#x6307;&#x4EE3;&#x4E0D;&#x540C;&#x7684;&#x53D8;&#x91CF;&#x3002;</p>
-<h3 id="%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F">&#x4E25;&#x683C;&#x6A21;&#x5F0F;</h3>
-<p><strong>&#x589E;&#x76CA;</strong></p>
+<p>NOTE&#xFF1A;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>userAgent</code> &#x5224;&#x65AD;&#x6D4F;&#x89C8;&#x5668;&#x3002;</p>
+<h4 id="location">location</h4>
+<p>&#x4EE3;&#x8868;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5B9A;&#x4F4D;&#x548C;&#x5BFC;&#x822A;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>location</code> &#x6765;&#x64CD;&#x4F5C; URL &#x4E2D;&#x7684;&#x5404;&#x4E2A;&#x90E8;&#x5206;&#x3002;&#x6700;&#x5E38;&#x7528;&#x7684;&#x6709; <code>href</code> &#x5C5E;&#x6027;&#xFF0C;&#x5F53;&#x524D;&#x8BBF;&#x95EE;&#x8D44;&#x6E90;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#x3002;</p>
+<pre><code class="lang-html">http://www.github.com:8080/index.html?user=li-xinyang&amp;lang=zh-CN#home
+  |          |          |       |                  |              |
+protocol     |          |       |                  |              |
+          hostname     port     |                  |              |
+              \        /    pathname             search          hash
+                 host
+</code></pre>
+<h5 id="%E6%96%B9%E6%B3%95">&#x65B9;&#x6CD5;</h5>
 <ul>
-<li>&#x6D88;&#x9664;&#x8BED;&#x6CD5;&#x4E2D;&#x4E0D;&#x5408;&#x7406;&#x4E0E;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4FDD;&#x8BC1;&#x4EE3;&#x7801;&#x6B63;&#x5E38;&#x8FD0;&#x884C;</li>
-<li>&#x63D0;&#x9AD8;&#x7F16;&#x8BD1;&#x6548;&#x7387;&#xFF0C;&#x589E;&#x52A0;&#x8FD0;&#x884C;&#x901F;&#x5EA6;</li>
+<li><code>assign(url)</code> &#x8F7D;&#x5165;&#x65B0;&#x7684; url&#xFF0C;&#x8BB0;&#x5F55;&#x6D4F;&#x89C8;&#x8BB0;&#x5F55;</li>
+<li><code>replace(url)</code> &#x8F7D;&#x5165;&#x65B0;&#x7684; url &#x4E0D;&#x8BB0;&#x5F55;&#x6D4F;&#x89C8;&#x8BB0;&#x5F55;</li>
+<li><code>reload()</code> &#x91CD;&#x65B0;&#x8F7D;&#x5165;&#x5F53;&#x524D;&#x9875;</li>
 </ul>
-<p><strong>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</strong></p>
-<pre><code class="lang-javascript">&lt;!-- &#x5168;&#x5C40;&#x4F7F;&#x7528; &#x4E25;&#x683C; &#x6A21;&#x5F0F; --&gt;
-<span class="hljs-pi">&quot;use strict&quot;</span>;
-(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&gt;&gt;&gt; Hello, world!&apos;</span>);
-})()
+<h4 id="history">history</h4>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x7684;&#x6D4F;&#x89C8;&#x5386;&#x53F2;&#x3002;</p>
+<pre><code class="lang-html">length: 9state: null __proto__: History
+</code></pre>
+<h5 id="%E6%96%B9%E6%B3%95">&#x65B9;&#x6CD5;</h5>
+<ul>
+<li><code>back(int)</code> &#x540E;&#x9000;</li>
+<li><code>forward(int)</code> &#x524D;&#x8FDB;</li>
+<li><code>go(int)</code> &#x6B63;&#x6570;&#x5411;&#x524D;&#xFF0C;&#x9644;&#x5C5E;&#x5411;&#x540E;</li>
+</ul>
+<h4 id="screen">screen</h4>
+<p>&#x5176;&#x4E2D;&#x5305;&#x542B;&#x5C4F;&#x5E55;&#x4FE1;&#x606F;&#x3002;&#x5176;&#x4E2D; <code>avil-</code> &#x5F00;&#x5934;&#x7684;&#x5C5E;&#x6027;&#x4E3A;&#x53EF;&#x7528;&#x5C5E;&#x6027;&#xFF0C;&#x5176;&#x4F59;&#x5219;&#x4E3A;&#x663E;&#x793A;&#x5668;&#x8BBE;&#x5907;&#x5C5E;&#x6027;&#x3002;</p>
+<h3 id="window-%E6%96%B9%E6%B3%95">Window &#x65B9;&#x6CD5;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alert()</code>, <code>confirm()</code> &#x8FD4;&#x56DE;&#x771F;&#x5047;, <code>prompt()</code> &#x8FD4;&#x56DE;&#x7528;&#x6237;&#x8F93;&#x5165;&#x503C;</td>
+<td>&#x4E09;&#x79CD;&#x5BF9;&#x8BDD;&#x6846;</td>
+</tr>
+<tr>
+<td><code>setTimeout()</code>, <code>setInterval()</code></td>
+<td>&#x8BA1;&#x65F6;&#x5668;</td>
+</tr>
+<tr>
+<td><code>open()</code>, <code>close()</code></td>
+<td>&#x5F00;&#x542F;&#x7A97;&#x53E3;&#xFF0C;&#x5173;&#x95ED;&#x7A97;&#x53E3;</td>
+</tr>
+</tbody>
+</table>
+<p>NOTE&#xFF1A;&#x5BF9;&#x8BDD;&#x6846;&#x4F1A;&#x963B;&#x585E;&#x7EBF;&#x7A0B;&#x3002;</p>
+<p><strong>&#x6253;&#x5F00;&#x6216;&#x5173;&#x95ED;&#x7A97;&#x53E3;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> w = <span class="hljs-built_in">window</span>.open(<span class="hljs-string">&apos;subwindow.html&apos;</span>, <span class="hljs-string">&apos;subwin&apos;</span>, <span class="hljs-string">&apos;width=300, height=300, status=yes, resizable=yes&apos;</span>);
 
-&lt;!-- &#x6216;&#x8005;&#x5728;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x58F0;&#x660E;&#x4F7F;&#x7528; &#x4E25;&#x683C; &#x6A21;&#x5F0F; --&gt;
-(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
-<span class="hljs-pi">  &quot;use strict&quot;</span>;
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&gt;&gt;&gt; Hello, world!&apos;</span>);
-})()
+<span class="hljs-comment">// &#x65E2;&#x53EF;&#x5173;&#x95ED;&#x7A97;&#x53E3;</span>
+w.close();
 </code></pre>
-<p>&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0E;&#x6807;&#x51C6;&#x6A21;&#x5F0F;&#x7684;&#x533A;&#x522B;&#xFF1A;</p>
-<ul>
-<li>&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#x9690;&#x5F0F;&#x58F0;&#x660E;&#x6216;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#x88AB;&#x9759;&#x6B62;</li>
-<li>&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#x5BF9;&#x8C61;&#x91CD;&#x540D;&#x7684;&#x5C5E;&#x6027;&#x5728;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#x88AB;&#x9759;&#x6B62;</li>
-<li>&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B; <code>arguments.callee()</code> &#x88AB;&#x7981;&#x7528;</li>
-<li>&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B; <code>with()</code> &#x8BED;&#x53E5;</li>
-<li>&#x66F4;&#x591A;&#x9650;&#x5236;</li>
-</ul>
-<h3 id="%E6%B3%A8%E9%87%8A">&#x6CE8;&#x91CA;</h3>
-<pre><code class="lang-javascript"><span class="hljs-comment">/*
-  &#x591A;&#x884C;&#x6CE8;&#x91CA;&#xFF0C;&#x4E0D;&#x53EF;&#x5D4C;&#x5957;
- */</span>
-
-<span class="hljs-comment">// &#x5355;&#x884C;&#x6CE8;&#x91CA;</span>
-</code></pre>
+<p>NOTE&#xFF1A;&#x65E0;&#x9700;&#x8BB0;&#x5FC6;&#xFF0C;&#x66F4;&#x591A;&#x5C5E;&#x6027;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#x67E5;&#x8BE2;&#x6587;&#x6863;&#x3002;</p>
+<h3 id="window-%E4%BA%8B%E4%BB%B6">Window &#x4E8B;&#x4EF6;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x4E8B;&#x4EF6;&#x540D;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>load</td>
+<td>&#x6587;&#x6863;&#x548C;&#x6240;&#x6709;&#x56FE;&#x7247;&#x5B8C;&#x6210;&#x52A0;&#x8F7D;&#x65F6;</td>
+</tr>
+<tr>
+<td>unload</td>
+<td>&#x79BB;&#x5F00;&#x5F53;&#x524D;&#x6587;&#x6863;&#x65F6;</td>
+</tr>
+<tr>
+<td>breforeunload</td>
+<td>&#x548C; unload &#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x63D0;&#x4F9B;&#x8BE2;&#x95EE;&#x7528;&#x6237;&#x662F;&#x5426;&#x786E;&#x8BA4;&#x79BB;&#x5F00;&#x7684;&#x673A;&#x4F1A;</td>
+</tr>
+<tr>
+<td>resize</td>
+<td>&#x62D6;&#x52A8;&#x6539;&#x53D8;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#x5927;&#x5C0F;&#x65F6;</td>
+</tr>
+<tr>
+<td>scroll</td>
+<td>&#x62D6;&#x52A8;&#x6D4F;&#x89C8;&#x5668;&#x65F6;</td>
+</tr>
+</tbody>
+</table>
 
                     
                     </section>
@@ -1046,10 +1118,10 @@
         </div>
 
         
-        <a href="../chapter2/02_dev_tools.html" class="navigation navigation-prev " aria-label="Previous page: 调试器"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter3/11_storage.html" class="navigation navigation-prev " aria-label="Previous page: 数据存储"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter2/04_data_type.html" class="navigation navigation-next " aria-label="Next page: 类型系统"><i class="fa fa-angle-right"></i></a>
+        <a href="../Booklist.html" class="navigation navigation-next " aria-label="Next page: 附录 A：书单"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

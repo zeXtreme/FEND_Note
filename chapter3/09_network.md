@@ -245,5 +245,3 @@ var script = document.createElement('script');
 script.src = 'http://localhost:3000/json?callback=handleResponse';
 document.body.insertBefore(script, document.body.firstChild);
 ```
-
-

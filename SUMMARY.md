@@ -47,6 +47,8 @@
   - [多媒体（视频与音频）](chapter3/08_multimedia.md)
   - [Canvas](chapter3/07_canvas.md)
   - [数据通信](chapter3/09_network.md)
+  - [数据存储](chapter3/11_storage.md)
+  - [BOM](chapter3/10_bom.md)
 - [页面架构]()
 - [产品前端架构]()
 - [附录 A：书单](Booklist.md)
