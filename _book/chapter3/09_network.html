@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>背景 | Frontend Notebook</title>
+        <title>数据通信 | Frontend Notebook</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.1.0">
@@ -25,10 +25,10 @@
         
     
     
-    <link rel="next" href="../chapter1/04_06_layout.html" />
+    <link rel="next" href="../Booklist.html" />
     
     
-    <link rel="prev" href="../chapter1/04_04_box_model.html" />
+    <link rel="prev" href="../chapter3/07_canvas.html" />
     
 
         
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="1.4.5" data-basepath=".." data-revision="Fri Jun 26 2015 15:23:38 GMT+0800 (SGT)">
+    <div class="book" data-level="3.9" data-basepath=".." data-revision="Fri Jun 26 2015 15:23:38 GMT+0800 (SGT)">
     
 
 <div class="book-summary">
@@ -386,7 +386,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.5" data-path="chapter1/04_05_background.html">
+        <li class="chapter " data-level="1.4.5" data-path="chapter1/04_05_background.html">
             
                 
                     <a href="../chapter1/04_05_background.html">
@@ -793,7 +793,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.9" data-path="chapter3/09_network.html">
+        <li class="chapter active" data-level="3.9" data-path="chapter3/09_network.html">
             
                 
                     <a href="../chapter3/09_network.html">
@@ -947,174 +947,264 @@
                 
                     <section class="normal" id="section-">
                     
-                        <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<p><strong>Table of Contents</strong>  <em>generated with <a href="https://github.com/thlorenz/doctoc" target="_blank">DocToc</a></em></p>
-<ul>
-<li><a href="#%E8%83%8C%E6%99%AF">&#x80CC;&#x666F;</a><ul>
-<li><a href="#background-color">background-color</a></li>
-<li><a href="#background-image">background-image</a></li>
-<li><a href="#background-repeat">background-repeat</a></li>
-<li><a href="#background-attachment">background-attachment</a></li>
-<li><a href="#background-position">background-position</a><ul>
-<li><a href="#sprite-%E7%9A%84%E4%BD%BF%E7%94%A8">Sprite &#x7684;&#x4F7F;&#x7528;</a></li>
-</ul>
-</li>
-<li><a href="#linear-gradient">linear-gradient</a></li>
-<li><a href="#radial-gradient">radial-gradient</a></li>
-<li><a href="#repeat--gradient">repeat-*-gradient</a></li>
-<li><a href="#background-origin">background-origin</a></li>
-<li><a href="#background-clip">background-clip</a></li>
-<li><a href="#background-size">background-size</a></li>
-<li><a href="#background-shorthand">background shorthand</a></li>
-</ul>
-</li>
-</ul>
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<h3 id="%E8%83%8C%E6%99%AF">&#x80CC;&#x666F;</h3>
-<h4 id="background-color">background-color</h4>
-<pre><code>background-color: &lt;color&gt;
-background-color: #f00;
-background-color: rgba(255, 0, 0, 0.5);
-background-color: transparent; /* &#x9ED8;&#x8BA4;&#x503C; */
-</code></pre><h4 id="background-image">background-image</h4>
-<pre><code>background-image: &lt;bg-image&gt;[, &lt;bg-image&gt;]*
-/* &lt;bg-image&gt; = &lt;image&gt; | none */
-background-image: url(&quot;../image/pic.png&quot;);
-background-image: url(&quot;../image/pic.png0&quot;), url(&quot;../image/pic1.png&quot;);
-/* &#x591A;&#x5F20;&#x80CC;&#x666F;&#x56FE;&#x65F6;&#xFF0C;&#x5148;&#x5F15;&#x5165;&#x7684;&#x56FE;&#x7247;&#x5728;&#x4E0A;&#x4E00;&#x5C42;&#x540E;&#x5F15;&#x5165;&#x5219;&#x5728;&#x4E0B;&#x4E00;&#x5C42; */
-</code></pre><p>NOTE&#xFF1A;&#x5F53;<code>background-color</code> &#x4E0E; <code>background-image</code> &#x5171;&#x5B58;&#x65F6;&#xFF0C;&#x80CC;&#x666F;&#x989C;&#x8272;&#x6C38;&#x8FDC;&#x5728;&#x6700;&#x5E95;&#x5C42;&#xFF08;&#x4E8E;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x4E4B;&#x4E0B;&#xFF09;&#x3002;</p>
-<h4 id="background-repeat">background-repeat</h4>
-<p><code>background-repeat</code> &#x9700;&#x4E0E;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x6570;&#x91CF;&#x4E00;&#x81F4;&#x3002;</p>
-<pre><code>background-repeat: &lt;repeat-style&gt;[, &lt;repeat-style]*
-&lt;repeat-style&gt; = repeat-x | repeat-y | [repeat | space | round | no-repeat]{1,2}
-
-/*                   X &#x8F74;     Y &#x8F74; */
-background-repeat: no-repeat repeat;
-</code></pre><ul>
-<li><code>space</code> &#x5E73;&#x94FA;&#x5E76;&#x5728;&#x6C34;&#x5E73;&#x548C;&#x5782;&#x76F4;&#x7559;&#x6709;&#x7A7A;&#x9699;&#xFF0C;&#x7A7A;&#x9699;&#x7684;&#x5927;&#x5C0F;&#x4E3A;&#x56FE;&#x7247;&#x5747;&#x5300;&#x5206;&#x5E03;&#x540E;&#x5B8C;&#x6574;&#x8986;&#x76D6;&#x663E;&#x793A;&#x533A;&#x57DF;&#x7684;&#x5BBD;&#x9AD8;</li>
-<li><code>round</code> &#x4E0D;&#x7559;&#x7A7A;&#x9699;&#x5E73;&#x94FA;&#x4E14;&#x8986;&#x76D6;&#x663E;&#x793A;&#x533A;&#x57DF;&#xFF0C;&#x56FE;&#x6807;&#x4F1A;&#x88AB;&#x7F29;&#x653E;&#x4EE5;&#x8FBE;&#x5230;&#x8986;&#x76D6;&#x6548;&#x679C;&#xFF08;&#x7F29;&#x653E;&#x4E0D;&#x4E00;&#x5B9A;&#x7B49;&#x6BD4;&#xFF09;</li>
-</ul>
-<h4 id="background-attachment">background-attachment</h4>
-<p>&#x5F53;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x8D85;&#x8FC7;&#x663E;&#x793A;&#x533A;&#x57DF;&#x65F6;&#xFF0C;&#x4F7F;&#x7528; <code>local</code> &#x4F7F;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x540C;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x4E00;&#x540C;&#x6EDA;&#x52A8;&#x3002;</p>
-<pre><code>background-attachment: &lt;attachment&gt;[, &lt;attachment&gt;]*
-&lt;attachment&gt; = scroll | fixed | local
-</code></pre><h4 id="background-position">background-position</h4>
-<pre><code>background-position: &lt;position&gt;[, &lt;position&gt;]*
-&lt;position&gt; = [left|center|right|top|bottom|&lt;percentage&gt;|&lt;length&gt;]|[left|center|right|top|bottom|&lt;percentage&gt;|&lt;length&gt;] [left|center|right|top|bottom|&lt;percentage&gt;|&lt;length&gt;] | [center |[left|right][&lt;percentage&gt;|&lt;length&gt;]?]&amp;&amp;[center |[left|right][&lt;percentage&gt;|&lt;length&gt;]?]
-
-/* &#x9ED8;&#x8BA4;&#x4F4D;&#x7F6E;&#x4E3A; */
-background-position: 0 0;
-
-/* percentage &#x662F;&#x5BB9;&#x5668;&#x4E0E;&#x56FE;&#x7247;&#x7684;&#x767E;&#x5206;&#x6BD4;&#x91CD;&#x5408;&#x4E4B;&#x5904;*/
-background-position: 20% 50%;
-
-/* &#x7B49;&#x540C;&#x6548;&#x679C; */
-background-position: 50% 50%;
-background-position: center center;
-
-background-position: 0 0;
-background-position: left top;
-
-background-position: 100% 100%;
-background-position: right bottom;
-
-/* &#x56DB;&#x4E2A;&#x503C;&#x65F6;&#x65B9;&#x5411;&#x53EA;&#x4E3A;&#x53C2;&#x7167;&#x7269; */
-background-position: right 10px top 20px;
-</code></pre><p><img src="../img/B/background-position.jpg" alt=""></p>
-<h5 id="sprite-%E7%9A%84%E4%BD%BF%E7%94%A8">Sprite &#x7684;&#x4F7F;&#x7528;</h5>
-<pre><code class="lang-html">background-image: url(sprite.png)
-background-repeat: no-repeat;
-background-positon: 0 -100px
+                        <h2 id="%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1">&#x6570;&#x636E;&#x901A;&#x4FE1;</h2>
+<h3 id="http">HTTP</h3>
+<h4 id="http-%E4%BA%8B%E5%8A%A1">HTTP &#x4E8B;&#x52A1;</h4>
+<p><img src="../img/H/http-process.png" alt=""></p>
+<h5 id="http-%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87">HTTP &#x8BF7;&#x6C42;&#x62A5;&#x6587;</h5>
+<p><img src="../img/H/http-request.jpg" alt=""></p>
+<p>&#x5176;&#x4E2D;&#x5305;&#x62EC;&#x4E3B;&#x673A;&#x5730;&#x5740;&#xFF0C;HTTP &#x534F;&#x8BAE;&#x7248;&#x672C;&#x53F7;&#x3002;&#x5934;&#x90E8;&#x7531;&#x952E;&#x503C;&#x5BF9;&#x7EC4;&#x6210;&#x3002;&#x56E0;&#x4E3A;&#x6B64;&#x8BF7;&#x6C42;&#x4E3A; GET &#x65B9;&#x6CD5;&#x6240;&#x4EE5;&#x8BF7;&#x6C42;&#x4F53;&#x4E3A;&#x7A7A;&#x3002;</p>
+<h5 id="http-%E5%9B%9E%E5%A4%8D%E6%8A%A5%E6%96%87">HTTP &#x56DE;&#x590D;&#x62A5;&#x6587;</h5>
+<p><img src="../img/H/http-response.png" alt=""></p>
+<p>&#x5176;&#x4E2D;&#x5305;&#x62EC; HTTP &#x7248;&#x672C;&#x53F7;&#xFF0C;&#x72B6;&#x6001;&#x7801;&#x53CA;&#x72B6;&#x6001;&#x7801;&#x63CF;&#x8FF0;&#x3002;&#x5934;&#x90E8;&#x4F9D;&#x7136;&#x4E3A;&#x952E;&#x503C;&#x5BF9;&#x7EC4;&#x6210;&#x3002;&#x4E3B;&#x4F53;&#x5219;&#x4E3A; HTML &#x6587;&#x4EF6;&#x3002;</p>
+<h4 id="%E5%B8%B8%E7%94%A8-http-%E6%96%B9%E6%B3%95">&#x5E38;&#x7528; HTTP &#x65B9;&#x6CD5;</h4>
+<p><strong>&#x5E38;&#x7528;&#x65B9;&#x6CD5;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x63CF;&#x8FF0;</th>
+<th>&#x662F;&#x5426;&#x5305;&#x542B;&#x4E3B;&#x9898;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x83B7;&#x53D6;&#x4E00;&#x4EFD;&#x6587;&#x6863;</td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x9700;&#x8981;&#x5904;&#x7406;&#x7684;&#x6570;&#x636E;</td>
+<td>&#x662F;</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>&#x5C06;&#x8BF7;&#x6C42;&#x7684;&#x4E3B;&#x9898;&#x90E8;&#x5206;&#x50A8;&#x5B58;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;</td>
+<td>&#x662F;</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x5220;&#x9664;&#x4E00;&#x4EFD;&#x6587;&#x6863;</td>
+<td>&#x5426;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x4E0D;&#x5E38;&#x7528;&#x65B9;&#x6CD5;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x63CF;&#x8FF0;</th>
+<th>&#x662F;&#x5426;&#x5305;&#x542B;&#x4E3B;&#x9898;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HEAD</td>
+<td>&#x53EA;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x83B7;&#x53D6;&#x5934;&#x6587;&#x6863;&#x7684;&#x9996;&#x90E8;</td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td>TRACE</td>
+<td>&#x5BF9;&#x53EF;&#x80FD;&#x7ECF;&#x8FC7;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x4F20;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x62A5;&#x6587;&#x8FDB;&#x884C;&#x8FFD;&#x8E2A;</td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td>OPTIONS</td>
+<td>&#x51B3;&#x5B9A;&#x53EF;&#x4EE5;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x6267;&#x884C;&#x7684;&#x65B9;&#x6CD5;</td>
+<td>&#x5426;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="url-%E6%9E%84%E6%88%90">URL &#x6784;&#x6210;</h4>
+<pre><code class="lang-html">http://www.github.com:8080/index.html?user=li-xinyang&amp;lang=zh-CN#home
+  |          |          |       |                  |              |
+protocol     |          |       |                  |              |
+          hostname     port     |                  |              |
+              \        /    pathname             search          hash
+                 host
 </code></pre>
-<p>&#x4F7F;&#x7528;&#x4F4D;&#x7F6E;&#x4E3A;&#x8D1F;&#x503C;&#x5C06;&#x56FE;&#x7247;&#x504F;&#x79FB;&#x4F7F;&#x9700;&#x8981;&#x7684;&#x56FE;&#x7247;&#x4F4D;&#x7F6E;&#x4E0A;&#x79FB;&#x5E76;&#x663E;&#x793A;&#x6B63;&#x786E;&#x7684;&#x56FE;&#x6848;&#x3002;</p>
-<h4 id="linear-gradient">linear-gradient</h4>
-<pre><code>linear-gradient()
-[[&lt;angle&gt; | to &lt;side-or-corner],]? &lt;color-step&gt;[, &lt;color-stop&gt;]+
-&lt;side-or-corner&gt; = [left | right] || [top | bottom]
-&lt;color-stop&gt; = &lt;color&gt; [&lt;percentage&gt; | &lt;length&gt;]?
+<p><strong>&#x53EF;&#x9009;&#x90E8;&#x5206;&#x5305;&#x62EC;</strong>&#xFF1A;</p>
+<ul>
+<li>port</li>
+<li>pathname</li>
+<li>search</li>
+<li>hash</li>
+</ul>
+<p>NOTE&#xFF1A;&#x4E0A;&#x9762;&#x63D0;&#x4F9B;&#x7684; URL &#x5730;&#x5740;&#x4EC5;&#x4E3A;&#x53C2;&#x8003;&#x6240;&#x7528;&#x3002;</p>
+<h4 id="http-%E7%89%88%E6%9C%AC">HTTP &#x7248;&#x672C;</h4>
+<ul>
+<li>HTTP/0.9 1991&#x5E74; HTTP &#x539F;&#x578B;&#xFF0C;&#x5B58;&#x5728;&#x8BBE;&#x8BA1;&#x7F3A;&#x9677;</li>
+<li>HTTP/1.0 &#x7B2C;&#x4E00;&#x4E2A;&#x5E7F;&#x6CDB;&#x5E94;&#x7528;&#x7248;&#x672C;</li>
+<li>HTTP/1.0+ &#x6DFB;&#x52A0;&#x6301;&#x4E45;&#x7684; keep-alive &#x94FE;&#x63A5;&#xFF0C;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x652F;&#x6301;&#xFF0C;&#x4EE3;&#x7406;&#x8FDE;&#x63A5;&#x652F;&#x6301;&#xFF0C;&#x6210;&#x4E3A;&#x975E;&#x5B98;&#x65B9;&#x7684;&#x4E8B;&#x5B9E;&#x7248;&#x672C;</li>
+<li>HTTP/1.1 &#x6821;&#x6B63;&#x7ED3;&#x6784;&#x6027;&#x7F3A;&#x9677;&#xFF0C;&#x660E;&#x786E;&#x8BED;&#x4E49;&#xFF0C;&#x5F15;&#x5165;&#x91CD;&#x8981;&#x7684;&#x65B0;&#x80FD;&#x4F18;&#x5316;&#x63AA;&#x65BD;&#xFF0C;&#x5220;&#x9664;&#x4E0D;&#x597D;&#x7684;&#x7279;&#x6027;&#xFF08;<strong>&#x5F53;&#x524D;&#x4F7F;&#x7528;&#x7248;&#x672C;</strong>&#xFF09;</li>
+</ul>
+<p>NOTE&#xFF1A;&#x6B64;&#x6587;&#x5199;&#x4E8E;2015&#x5E74;6&#x6708;&#x3002;</p>
+<h4 id="%E5%B8%B8%E8%A7%81-http-%E7%8A%B6%E6%80%81%E7%A0%81">&#x5E38;&#x89C1; HTTP &#x72B6;&#x6001;&#x7801;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x72B6;&#x6001;&#x7801;</th>
+<th>&#x63CF;&#x8FF0;</th>
+<th>&#x4EE3;&#x7801;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>&#x8BF7;&#x6C42;&#x6210;&#x529F;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E; GET &#x548C; POST &#x65B9;&#x6CD5;</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>301</td>
+<td>&#x8D44;&#x6E90;&#x79FB;&#x52A8;&#x3002;&#x6240;&#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#x81EA;&#x52A8;&#x5230;&#x65B0;&#x7684; URL&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x81EA;&#x52A8;&#x8DF3;&#x8F6C;&#x81F3;&#x65B0;&#x7684; URL</td>
+<td>Moved Permanently</td>
+</tr>
+<tr>
+<td>304</td>
+<td>&#x672A;&#x4FEE;&#x6539;&#x3002;&#x6240;&#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#x672A;&#x4FEE;&#x6539;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x8BFB;&#x53D6;&#x7F13;&#x5B58;&#x6570;&#x636E;</td>
+<td>Not Modified</td>
+</tr>
+<tr>
+<td>400</td>
+<td>&#x8BF7;&#x6C42;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x89E3;&#x6790;</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td>404</td>
+<td>&#x672A;&#x627E;&#x5230;&#x8D44;&#x6E90;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E2A;&#x6027;&#x201C;404&#x9875;&#x9762;&#x201D;</td>
+<td>Not Found</td>
+</tr>
+<tr>
+<td>500</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x5185;&#x90E8;&#x9519;&#x8BEF;</td>
+<td>Internal Server Error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ajax">AJAX</h3>
+<p>AJAX&#xFF08;Asynchronous JavaScript and HTML&#xFF09;&#x5F02;&#x6B65;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x7531; Jesse James Garrett &#x5728;2005&#x5E74;&#x63D0;&#x51FA;&#x3002;</p>
+<p><strong>AJAX &#x8BF7;&#x6C42;&#x5168;&#x8FC7;&#x7A0B;</strong></p>
+<p><img src="../img/A/ajax-process.jpg" alt=""></p>
+<h4 id="ajax-%E8%B0%83%E7%94%A8">AJAX &#x8C03;&#x7528;</h4>
+<p>&#x4E09;&#x90E8;&#x5B8C;&#x6210; AJAX &#x8C03;&#x7528;</p>
+<ol>
+<li>&#x521B;&#x5EFA; XHR &#x5BF9;&#x8C61;</li>
+<li>&#x5904;&#x7406;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x53CA;&#x9519;&#x8BEF;&#x5904;&#x7406;</li>
+<li>&#x53D1;&#x9001;&#x8BF7;&#x6C42;</li>
+</ol>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> xhr = <span class="hljs-keyword">new</span> XMLHttpRequest();
 
-background-image: linear-gradient(red, blue);
-background-image: linear-gradient(to top, red, blue);
-background-image: linear-gradient(to right bottom, red, blue);
-background-image: linear-gradient(0deg, red, blue);
-background-image: linear-gradient(45deg, red, blue);
-background-image: linear-gradient(red, green, blue);
-background-image: linear-gradient(red, green 20%, blue);
-</code></pre><p><img src="../img/L/linear-gradient.jpg" alt=""></p>
-<h4 id="radial-gradient">radial-gradient</h4>
-<pre><code>radial-gradient(   [ circle || &lt;length&gt; ] [ at &lt;position&gt; ]? , | [ ellipse || [&lt;length&gt; | &lt;percentage&gt; ]{2}] [ at &lt;position&gt; ]? , | [ [ circle | ellipse ] || &lt;extent-keyword&gt; ] [ at &lt;position&gt; ]? , | at &lt;position&gt; , &lt;color-stop&gt; [ , &lt;color-stop&gt; ]+ )
+xhr.onreadystatechange = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(callback)</span> </span>{
+  <span class="hljs-keyword">if</span> (xhr.readyState === <span class="hljs-number">4</span>) {
+    <span class="hljs-keyword">if</span> ((xhr.status &gt;== <span class="hljs-number">200</span> &amp;&amp; xhr.status &lt; <span class="hljs-number">300</span>) || xhr.status === <span class="hljs-number">304</span>) {
+      callback(xhr.responseText);
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;Request was unsuccessful: &apos;</span> + xhr.status);
+    }
+  }
+}
 
-&lt;extent-keyword&gt; = closest-corner | closest-side | farthest-corner | farthest-side
-&lt;color-stop&gt; = &lt;color&gt; [ &lt;percentage&gt; | &lt;length&gt; ]?
+xhr.open(<span class="hljs-string">&apos;get&apos;</span>, <span class="hljs-string">&apos;exmaple.json&apos;</span>, <span class="hljs-literal">true</span>);
+xhr.setRequestHeader(<span class="hljs-string">&apos;myHeader&apos;</span>, <span class="hljs-string">&apos;myValue&apos;</span>);
+xhr.send(<span class="hljs-literal">null</span>);
+</code></pre>
+<p>NOTE&#xFF1A;<code>xhr.onload</code> &#x53EA;&#x9488;&#x5BF9;&#x5F53; <code>readyState === 4</code> &#x548C; <code>status === 200</code> &#x65F6;&#x7684;&#x4E8B;&#x4EF6;&#x3002;</p>
+<h5 id="open">open</h5>
+<pre><code class="lang-javascript">xhr.open(method, url[, async = <span class="hljs-literal">true</span>]);
+</code></pre>
+<ul>
+<li><code>method</code> &#x4E3A;&#x4E0A;&#x9762;&#x8BF4;&#x8FC7;&#x7684; HTTP &#x65B9;&#x6CD5;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;GET&#x3001;POST&#xFF09;</li>
+<li><code>url</code> &#x4E3A;&#x8D44;&#x6E90;&#x5730;&#x5740;</li>
+<li><code>async</code> &#x9ED8;&#x8BA4;&#x4E3A;&#x771F;&#xFF0C;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;</li>
+</ul>
+<h5 id="setrequestheader">setRequestHeader</h5>
+<pre><code class="lang-javascript">xhr.setRequestHeader(<span class="hljs-string">&apos;myHeader&apos;</span>, <span class="hljs-string">&apos;myValue&apos;</span>);
 
-background-image: radial-gradient(cloest-side, red, blue);
-background-image: radial-gradient(circle, red, blue);
-background-image: radial-gradient(circle 100px, red, blue);
-background-image: radial-gradient(red, blue);
-background-image: radial-gradient(100px 50px, red, blue);
-background-image: radial-gradient(100px 50px at 0 0, red, blue);
-background-image: radial-gradient(red, green 20%, blue);
-</code></pre><p><img src="../img/R/radial-gradient.jpg" alt=""></p>
-<h4 id="repeat-gradient">repeat-*-gradient</h4>
-<pre><code>background-image: repeating-linear-gradient(red, blue 20px, red 40px);
-background-image: repeating-radial-gradient(red, blue 20px, red 40px);
-</code></pre><p><img src="../img/R/repeating-gradient.jpg" alt=""></p>
-<h4 id="background-origin">background-origin</h4>
-<p><strong>&#x6848;&#x4F8B;&#x6A21;&#x578B;</strong></p>
-<p><img src="../img/B/background-box-model.png" alt=""></p>
-<p>&#x51B3;&#x5B9A;&#x80CC;&#x666F; (0,0) &#x5750;&#x6807;&#x4E0E; 100% &#x5750;&#x6807;&#x7684;&#x533A;&#x57DF;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>padding-box</code>&#x3002;</p>
-<pre><code>&lt;box&gt;[, &lt;box&gt;]*
-&lt;box&gt; = border-box | padding-box | content-box
+xhr.setRequestHeader(<span class="hljs-string">&apos;Content-Type&apos;</span>, <span class="hljs-string">&apos;application/x-www-form-urlencoded&apos;</span>);
+</code></pre>
+<p>&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x5934;&#x90E8;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x3002;</p>
+<h5 id="send">send</h5>
+<pre><code class="lang-javascript">xhr.send([data=<span class="hljs-literal">null</span>]);
 
-background-image: url(red.png);
-background-repeat: no-repeat;
+xhr.send()
+</code></pre>
+<p>&#x6570;&#x636E;&#x53EF;&#x5305;&#x542B;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x8868;&#x5355;&#x6570;&#x63A7;&#xFF0C;&#x4F46;&#x9700;&#x8981;&#x63D0;&#x524D;&#x4E3A; RequestHeader &#x505A;&#x8BBE;&#x7F6E;&#x3002;</p>
+<h4 id="%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E5%BA%8F%E5%88%97%E5%8C%96">&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x5E8F;&#x5217;&#x5316;</h4>
+<p>&#x5C06;&#x67E5;&#x8BE2;&#x53C2;&#x6570;&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8DDF;&#x5165;&#x8D44;&#x6E90;&#x5730;&#x5740;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-javascript">xhr.open(<span class="hljs-string">&apos;get&apos;</span>, <span class="hljs-string">&apos;example.json?&apos;</span> + <span class="hljs-string">&apos;name=value&amp;age=value&apos;</span>, <span class="hljs-literal">true</span>);
+</code></pre>
+<p><strong>&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x51FD;&#x6570;&#x5B9E;&#x73B0;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">serialize</span><span class="hljs-params">(data)</span> </span>{
+  <span class="hljs-keyword">if</span> (!data) <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>;
+  <span class="hljs-keyword">var</span> pairs = [];
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> name <span class="hljs-keyword">in</span> data) {
+    <span class="hljs-keyword">if</span> (!data.hasOwnProperty(name)) <span class="hljs-keyword">continue</span>;
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> data[name] === <span class="hljs-string">&apos;function&apos;</span>) <span class="hljs-keyword">continue</span>;
+    <span class="hljs-keyword">var</span> value = data[name].toString();
+    name = <span class="hljs-built_in">encodeURIComponent</span>(name);
+    value = <span class="hljs-built_in">encodeURIComponent</span>(value);
+    pairs.push(name + <span class="hljs-string">&apos;=&apos;</span> + value);
+  }
+  <span class="hljs-keyword">return</span> pairs.join(<span class="hljs-string">&apos;&amp;&apos;</span>);
+}
+</code></pre>
+<p><strong>GET &#x8BF7;&#x6C42;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> url = <span class="hljs-string">&apos;example.json?&apos;</span> + serialize(formData);
+xhr.open(<span class="hljs-string">&apos;get&apos;</span>, url, <span class="hljs-literal">true</span>);
+xhr.send(<span class="hljs-literal">null</span>);
+</code></pre>
+<p><strong>POST &#x8BF7;&#x6C42;</strong></p>
+<p>&#x67E5;&#x8BE2;&#x53C2;&#x6570;&#x9700;&#x8981;&#x4F5C;&#x4E3A; <code>send()</code> &#x7684;&#x5B58;&#x6570;&#x4F20;&#x5165;&#x3002;</p>
+<pre><code class="lang-javascript">xhr.open(<span class="hljs-string">&apos;get&apos;</span>, <span class="hljs-string">&apos;example.json&apos;</span>, <span class="hljs-literal">true</span>);
+xhr.send(serialize(formData));
+</code></pre>
+<h4 id="%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5">&#x540C;&#x6E90;&#x7B56;&#x7565;</h4>
+<p>&#x4E24;&#x4E2A;&#x9875;&#x9762;&#x62E5;&#x6709;&#x76F8;&#x540C;&#x7684;&#x534F;&#x8BAE;&#xFF08;Protocol&#xFF09;&#x3001;&#x7AEF;&#x53E3;&#xFF08;Port&#xFF09;&#x3001;&#x548C;&#x4E3B;&#x673A;&#xFF08;host&#xFF09;&#x90A3;&#x4E48;&#x8FD9;&#x4E24;&#x4E2A;&#x9875;&#x9762;&#x5C31;&#x662F;&#x5C5E;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x6E90;&#xFF08;Origin&#xFF09;&#x3002;</p>
+<pre><code class="lang-html">http://www.github.com:8080/index.html?user=li-xinyang&amp;lang=zh-CN#home
+  |          |          |       |                  |              |
+protocol     |          |       |                  |              |
+          hostname     port     |                  |              |
+              \        /    pathname             search          hash
+                 host
+|-----&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x5219;&#x540C;&#x6E90;------|
+</code></pre>
+<h4 id="%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE">&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x8BBF;&#x95EE;</h4>
+<p>&#x4E0D;&#x6EE1;&#x8DB3;&#x540C;&#x6E90;&#x7B56;&#x7565;&#x7684;&#x8D44;&#x6E90;&#x8BBF;&#x95EE;&#x5747;&#x5C5E;&#x4E8E;&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x8BBF;&#x95EE;&#xFF0C;W3C &#x5B9A;&#x4E49;&#x4E86; <a href="http://www.w3.org/TR/cors/" target="_blank"><strong>CORS</strong></a>&#x3002;&#x73B0;&#x4EE3;&#x6D4F;&#x89C8;&#x5668;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x4E86; CORS &#x7684;&#x652F;&#x6301;&#x3002;</p>
+<p><strong>CORS &#x539F;&#x7406;&#x5B9E;&#x73B0;&#x56FE;</strong></p>
+<p><img src="../img/C/cors.jpg" alt=""></p>
+<h5 id="%E5%85%B6%E4%BB%96%E8%B7%A8%E5%9F%9F%E6%8A%80%E6%9C%AF">&#x5176;&#x4ED6;&#x8DE8;&#x57DF;&#x6280;&#x672F;</h5>
+<ul>
+<li>Frame &#x4EE3;&#x7406;</li>
+<li>JSONP</li>
+<li>Comet</li>
+<li>Web Sockets</li>
+<li>...</li>
+</ul>
+<p><strong>Frame &#x4EE3;&#x7406;</strong></p>
+<p>&#x5173;&#x4E8E; Frame &#x4EE3;&#x7406;&#x7684;&#x66F4;&#x591A;&#x5185;&#x5BB9;&#x5728;<a href="https://github.com/genify/nej/blob/master/doc/AJAX.md" target="_blank">&#x8FD9;&#x91CC;</a>&#x3002;</p>
+<p><img src="../img/F/frame_proxy.jpg" alt=""></p>
+<p>&#x4F18;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x53C2;&#x7167; CORS &#x6807;&#x51C6;</li>
+<li>&#x652F;&#x6301;&#x5404;&#x79CD;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5; GET POST PUT DELETE</li>
+</ul>
+<p>&#x7F3A;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x9700;&#x8981;&#x5728;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x5668;&#x9632;&#x6B62;&#x4EE3;&#x7406;&#x6587;&#x4EF6;&#xFF08;&#x9020;&#x6210;&#x5EF6;&#x65F6;&#xFF09;</li>
+<li>&#x4F4E;&#x7248;&#x672C;&#x5728;&#x5927;&#x5E76;&#x53D1;&#x6D88;&#x606F;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x4F1A;&#x4EA7;&#x751F;&#x5EF6;&#x65F6;</li>
+</ul>
+<p><strong>JSONP</strong></p>
+<p>&#x5168;&#x7A0B;&#x4E3A; JSON with Padding&#xFF08;&#x586B;&#x5145;&#x5F0F; JSON&#xFF09;&#xFF0C;&#x5B83;&#x5229;&#x7528; <code>&lt;script&gt;</code> &#x53EF;&#x4EE5;&#x8DE8;&#x57DF;&#x7684;&#x539F;&#x7406;&#x3002;&#x8BF7;&#x6C42;&#x4E00;&#x6BB5; JavaScript &#x4EE3;&#x7801;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C; JavaScript &#x4EE3;&#x7801;&#x6765;&#x5B9E;&#x73B0;&#x8DE8;&#x57DF;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleResponse</span><span class="hljs-params">(response)</span> </span>{
+  alert(response.name);
+}
 
-background-origin: padding-box;
-background-origin: border-box;
-background-origin: content-box;
-</code></pre><p><img src="../img/B/background-origin.jpg" alt=""></p>
-<h4 id="background-clip">background-clip</h4>
-<p>&#x88C1;&#x526A;&#x80CC;&#x666F;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<code>border-box</code>&#x3002;</p>
-<pre><code>&lt;box&gt;[, &lt;box&gt;]*
-&lt;box&gt; = border-box | padding-box | content-box
-
-background-image: url(red.png);
-background-repeat: no-repeat;
-
-background-clip: border-box;
-background-clip: padding-box;
-background-clip: content-box;
-</code></pre><p><img src="../img/B/background-clip.jpg" alt=""></p>
-<h4 id="background-size">background-size</h4>
-<pre><code>&lt;bg-size&gt;[, &lt;bg-size&gt;]*
-&lt;bg-size&gt; = [&lt;length&gt; | &lt;percentage&gt; | auto] {1, 2} | cover | contain
-
-background-image: url(red.png);
-background-repeat: no-repeat;
-background-position: 50% 50%;
-
-background-size: auto;
-background-size: 20px 20px;
-/* % &#x53C2;&#x7167;&#x7269;&#x4E3A;&#x5BB9;&#x5668;*/
-background-size: 50% 50%;
-/* &#x5C3D;&#x53EF;&#x80FD;&#x5C0F;&#xFF0C;&#x4F46;&#x5BBD;&#x5EA6;&#x4E0E;&#x9AD8;&#x5EA6;&#x4E0D;&#x5C0F;&#x8FC7;&#x5BB9;&#x5668;&#xFF08;&#x5145;&#x6EE1;&#x5BB9;&#x5668;&#xFF09; */
-background-size: cover;
-/* &#x5C3D;&#x53EF;&#x80FD;&#x5927;&#xFF0C;&#x4F46;&#x5BBD;&#x5EA6;&#x4E0E;&#x9AD8;&#x5EA6;&#x4E0D;&#x8D85;&#x8FC7;&#x5BB9;&#x5668;&#xFF08;&#x6700;&#x5927;&#x5B8C;&#x5168;&#x663E;&#x793A;&#xFF09;*/
-background-size: contain;
-</code></pre><p><img src="../img/B/background-size.jpg" alt=""></p>
-<h4 id="background-shorthand">background shorthand</h4>
-<pre><code>[&lt;bg-layer,]* &lt;final-bg-layer&gt;
-&lt;bg-layer&gt; = &lt;bg-image&gt; || &lt;position&gt; [/ &lt;bg-size&gt;]? || &lt;repeat-style&gt; || &lt;attachment&gt; || &lt;box&gt; || &lt;box&gt;
-
-/* &#x4E24;&#x4E2A; &lt;box&gt; &#x7B2C;&#x4E00;&#x4E2A;&#x4E3A; background-origin */
-/* &#x4E24;&#x4E2A; &lt;box&gt; &#x7B2C;&#x4E8C;&#x4E2A;&#x4E3A; background-clip */
-/* &#x53EA;&#x51FA;&#x73B0;&#x4E00;&#x4E2A; &lt;box&gt; &#x5219;&#x5373;&#x662F; background-origin &#x4E5F;&#x662F; background-clip */
-
-&lt;final-bg-layer&gt; = &lt;bg-layer&gt; || &lt;&apos;background-color&apos;&gt;
-
-background: url(red.png) 0 0/20px 20px no-repeat, url(blue.png) 50% 50%/contain no-repeat content-box green;
-</code></pre><p><img src="../img/B/background-shorthand.png" alt=""></p>
+<span class="hljs-keyword">var</span> script = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;script&apos;</span>);
+script.src = <span class="hljs-string">&apos;http://localhost:3000/json?callback=handleResponse&apos;</span>;
+<span class="hljs-built_in">document</span>.body.insertBefore(script, <span class="hljs-built_in">document</span>.body.firstChild);
+</code></pre>
 
                     
                     </section>
@@ -1125,10 +1215,10 @@ background: url(red.png) 0 0/20px 20px no-repeat, url(blue.png) 50% 50%/contain 
         </div>
 
         
-        <a href="../chapter1/04_04_box_model.html" class="navigation navigation-prev " aria-label="Previous page: 盒模型"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter3/07_canvas.html" class="navigation navigation-prev " aria-label="Previous page: Canvas"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../chapter1/04_06_layout.html" class="navigation navigation-next " aria-label="Next page: 布局"><i class="fa fa-angle-right"></i></a>
+        <a href="../Booklist.html" class="navigation navigation-next " aria-label="Next page: 附录 A：书单"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
