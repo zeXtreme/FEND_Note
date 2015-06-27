@@ -1,3 +1,28 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [数据通信](#%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1)
+  - [HTTP](#http)
+    - [HTTP 事务](#http-%E4%BA%8B%E5%8A%A1)
+      - [HTTP 请求报文](#http-%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87)
+      - [HTTP 回复报文](#http-%E5%9B%9E%E5%A4%8D%E6%8A%A5%E6%96%87)
+    - [常用 HTTP 方法](#%E5%B8%B8%E7%94%A8-http-%E6%96%B9%E6%B3%95)
+    - [URL 构成](#url-%E6%9E%84%E6%88%90)
+    - [HTTP 版本](#http-%E7%89%88%E6%9C%AC)
+    - [常见 HTTP 状态码](#%E5%B8%B8%E8%A7%81-http-%E7%8A%B6%E6%80%81%E7%A0%81)
+  - [AJAX](#ajax)
+    - [AJAX 调用](#ajax-%E8%B0%83%E7%94%A8)
+      - [open](#open)
+      - [setRequestHeader](#setrequestheader)
+      - [send](#send)
+    - [请求参数序列化](#%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E5%BA%8F%E5%88%97%E5%8C%96)
+    - [同源策略](#%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5)
+    - [跨域资源访问](#%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE)
+      - [其他跨域技术](#%E5%85%B6%E4%BB%96%E8%B7%A8%E5%9F%9F%E6%8A%80%E6%9C%AF)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 数据通信
 
 ### HTTP

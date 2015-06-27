@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [BOM](#bom)
+  - [属性](#%E5%B1%9E%E6%80%A7)
+    - [navigator](#navigator)
+    - [location](#location)
+      - [方法](#%E6%96%B9%E6%B3%95)
+    - [history](#history)
+      - [方法](#%E6%96%B9%E6%B3%95-1)
+    - [screen](#screen)
+  - [Window 方法](#window-%E6%96%B9%E6%B3%95)
+  - [Window 事件](#window-%E4%BA%8B%E4%BB%B6)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## BOM
 
 ![](../img/B/bom-intro.jpg)

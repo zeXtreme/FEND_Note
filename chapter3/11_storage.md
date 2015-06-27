@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [数据存储](#%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8)
+  - [Cookie](#cookie)
+    - [属性](#%E5%B1%9E%E6%80%A7)
+    - [作用域](#%E4%BD%9C%E7%94%A8%E5%9F%9F)
+    - [读取](#%E8%AF%BB%E5%8F%96)
+    - [设置与修改](#%E8%AE%BE%E7%BD%AE%E4%B8%8E%E4%BF%AE%E6%94%B9)
+    - [Cookie 缺陷](#cookie-%E7%BC%BA%E9%99%B7)
+  - [Storage](#storage)
+    - [对象](#%E5%AF%B9%E8%B1%A1)
+    - [API](#api)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 数据存储
 
 ### Cookie
