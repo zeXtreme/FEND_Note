@@ -12,14 +12,20 @@
 
 ## 文档树
 
-Document Object Model (DOM) 既文档**对象**模型，其用对象的方式表示对应的文档结构及内容。
+Document Object Model (DOM) 为文档**对象**模型，
+它使用对象的表示方式来表示对应的文档结构及其中的内容。
 
 下面为一个样例 `p` 元素在文档中的对象所包含的所有属性。
+
+```html
+<p id="target">Hello, World!</p>
+```
 
 ```
 p#targetaccessKey: ""
 align: ""
-attributes: NamedNodeMapbaseURI: ""
+attributes: Named
+NodeMapbaseURI: ""
 childElementCount: 0
 childNodes: NodeList[1]
 children: HTMLCollection[0]
@@ -41,13 +47,21 @@ innerHTML: "Hello, World!"
 innerText: "Hello, World!"
 isContentEditable: false
 lang: ""
-lastChild: textlastElementChild: null
+lastChild: text
+lastElementChild: null
 localName: "p"
-namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: null
+namespaceURI: "http://www.w3.org/1999/xhtml"
+nextElementSibling: null
 nextSibling: null
-nodeName: "P"nodeType: 1nodeValue: null
-offsetHeight: 0offsetLeft: 0offsetParent: null
-offsetTop: 0offsetWidth: 0onabort: null
+nodeName: "P"
+nodeType: 1
+nodeValue: null
+offsetHeight: 0
+offsetLeft: 0
+offsetParent: null
+offsetTop: 0
+offsetWidth: 0
+onabort: null
 onautocomplete: null
 onautocompleteerror: null
 onbeforecopy: null
@@ -119,7 +133,10 @@ onwaiting: null
 onwebkitfullscreenchange: null
 onwebkitfullscreenerror: null
 onwheel: null
-outerHTML: "<p id="target">Hello, World!</p>"outerText: "Hello, World!"ownerDocument: documentparentElement: null
+outerHTML: "<p id="target">Hello, World!</p>"
+outerText: "Hello, World!"
+ownerDocument: document
+parentElement: null
 parentNode: null
 prefix: null
 previousElementSibling: null
@@ -140,7 +157,9 @@ webkitdropzone: ""
 __proto__: HTMLParagraphElement
 ```
 
-通过使用 DOM 提供的 API (Application Program Interface) 可以动态的修改节点（node），也就是对 DOM 树的直接操作。浏览器中通过使用 JavaScript 来实现对于 DOM 树的改动。
+通过使用 DOM 提供的 API (Application Program Interface)
+可以动态的修改节点（node），也就是对 DOM 树的直接操作。
+浏览器中通过使用 JavaScript 来实现对于 DOM 树的改动。
 
 **DOM 包含**
 
@@ -168,17 +187,23 @@ __proto__: HTMLParagraphElement
 
 ### 节点遍历
 
+在元素节点中提取自己所需的节点，并予以操作。
+
 ```Javascript
+// 找到目标节点
 var node = document.getElementsByTagName('h1')[0];
 
-node.parentNode; // body
+// 找到目标节点的父节点，此例中为 body 元素
+node.parentNode;
+// 找到目标节点的第一个子节点，此例中并不存在即为 null
 node.firstChild; // null
-
+// 找到目标节点的最后一个子节点，此例中并不存在即为 null
 node.lastChild;  // null
 
-node.previousBibling; // <a href="">My Link</a>
-node.nextSibling;     // null
-
+// 找到目标节点的前一个相邻节点，此例中为 a 元素（<a href="">My Link</a>）
+node.previousBibling;
+// 找到目标节点的下一个相邻节点，此例中并不存在即为 null
+node.nextSibling;
 ```
 
 ### 节点类型
@@ -196,6 +221,8 @@ node.nextSibling;     // null
 
 **不同节点对应的NodeType类型**
 
+此值可以通过 `element.nodeType` 来获取。
+
 |节点编号|节点名称|
 |--------|--------|
 |1|Element|
@@ -211,17 +238,29 @@ node.nextSibling;     // null
 |11|Document Fragment|
 |12|Notation|
 
-NOTE：要清楚`节点`和`元素`的区别。我们平常说的`元素`其实指的是节点中得`元素节点`，所以说`节点`包含`元素`，节点还包括文本节点、实体节点等。
+NOTE：此处需要清楚`节点`和`元素`的区别。我们平常说的`元素`其实指的是节点中得
+`元素节点`，
+所以说`节点`包含`元素`，节点还包括文本节点、实体节点等。
 
 ### 元素遍历
 
-元素节点符合 HTML DOM 树规则。
+元素节点符合 HTML DOM 树规则，所以它与 DOM 中存在的节点相似。
 
 ```
-<p>Hello, <em>Xinyang</em>! 回到<a href="http://li-xinyang.com">主页</a>。</p>
+<p>
+  Hello,
+    <em>Xinyang</em>!
+  回到
+    <a href="http://li-xinyang.com">
+      主页
+    </a>
+  。
+</p>
 ```
 
 ```
+// 在选取元素节点后
+
 p.firstElementChild; // <em>Xinyang</em>
 p.lastElementChild;  // <a href="http://li-xinyang.com">主页</a>
 
