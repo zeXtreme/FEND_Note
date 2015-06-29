@@ -190,19 +190,28 @@ __proto__: HTMLParagraphElement
 在元素节点中提取自己所需的节点，并予以操作。
 
 ```Javascript
-// 找到目标节点
+// Document.getElementsByTagName()
+// 更具标签名找到目标节点的集合
 var node = document.getElementsByTagName('h1')[0];
 
-// 找到目标节点的父节点，此例中为 body 元素
+// Node.parentNode;
+// 获得目标节点的父节点，此例中为 body 元素
 node.parentNode;
-// 找到目标节点的第一个子节点，此例中并不存在即为 null
+
+// Node.firstChild
+// 获得目标节点的第一个子节点，此例中并不存在即为 null
 node.firstChild; // null
-// 找到目标节点的最后一个子节点，此例中并不存在即为 null
+
+// Node.lastChild
+// 获得目标节点的最后一个子节点，此例中并不存在即为 null
 node.lastChild;  // null
 
-// 找到目标节点的前一个相邻节点，此例中为 a 元素（<a href="">My Link</a>）
+// Node.previousSibling;
+// 获得目标节点的前一个相邻节点，此例中为 a 元素（<a href="">My Link</a>）
 node.previousBibling;
-// 找到目标节点的下一个相邻节点，此例中并不存在即为 null
+
+// Node.nextSibling;
+// 获得目标节点的下一个相邻节点，此例中并不存在即为 null
 node.nextSibling;
 ```
 
@@ -210,8 +219,8 @@ node.nextSibling;
 
 **常用节点类型**
 
-- ELEMENT_NODE 可使用 `document.createElement('elementName');`创建
-- TEXT_NODE 可使用 `document.createTextNode('Text Value');` 创建
+- ELEMENT_NODE 可使用 `Document.createElement('elementName');`创建
+- TEXT_NODE 可使用 `Document.createTextNode('Text Value');` 创建
 
 **不常用节点类型**
 
@@ -221,7 +230,7 @@ node.nextSibling;
 
 **不同节点对应的NodeType类型**
 
-此值可以通过 `element.nodeType` 来获取。
+此值可以通过 `Node.nodeType` 来获取。
 
 |节点编号|节点名称|
 |--------|--------|
@@ -238,7 +247,8 @@ node.nextSibling;
 |11|Document Fragment|
 |12|Notation|
 
-NOTE：此处需要清楚`节点`和`元素`的区别。我们平常说的`元素`其实指的是节点中得
+NOTE：此处需要清楚`节点`和`元素`的区别。我们平常说的`元素`
+其实指的是节点中得
 `元素节点`，
 所以说`节点`包含`元素`，节点还包括文本节点、实体节点等。
 
@@ -261,9 +271,9 @@ NOTE：此处需要清楚`节点`和`元素`的区别。我们平常说的`元�
 ```
 // 在选取元素节点后
 
-p.firstElementChild; // <em>Xinyang</em>
-p.lastElementChild;  // <a href="http://li-xinyang.com">主页</a>
+p.firstElementChild;       // <em>Xinyang</em>
+p.lastElementChild;        // <a href="http://li-xinyang.com">主页</a>
 
-em.nextElementSibling; // <a href="http://li-xinyang.com">主页</a>
+em.nextElementSibling;     // <a href="http://li-xinyang.com">主页</a>
 em.previousElementSibling; // null
 ```

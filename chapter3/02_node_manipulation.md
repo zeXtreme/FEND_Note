@@ -4,7 +4,6 @@
 
   - [节点操作](#%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C)
     - [获取节点](#%E8%8E%B7%E5%8F%96%E8%8A%82%E7%82%B9)
-- [h1](#h1)
       - [接口获取节点](#%E6%8E%A5%E5%8F%A3%E8%8E%B7%E5%8F%96%E8%8A%82%E7%82%B9)
         - [getElementById](#getelementbyid)
         - [getElementsByTagName](#getelementsbytagname)
@@ -22,22 +21,25 @@
 
 ## 节点操作
 
-通过 JavaScript 来选取操作修改节点。
+因为 DOM 的存在，这使我们可以通过 JavaScript 来获取、创建、修改、或删除节点。
+
+NOTE：下面提供的例子中的 `element` 均为已经被去出的元素节点。
 
 ### 获取节点
 
 **父子关系**
 
-- `parentNode`
-- `firstChild`/`lastChild`
-- `childNodes`/`children`
+- `element.parentNode`
+- `element.firstChild`/`element.lastChild`
+- `element.childNodes`/`element.children`
 
 **兄弟关系**
 
-- `previousSibling`/`nextSibling`
-- `previousElementSibling`/`nextElementSibling`
+- `element.previousSibling`/`element.nextSibling`
+- `element.previousElementSibling`/`element.nextElementSibling`
 
-通过节点直接的关系获取节点会导致代码维护性大大降低（节点之间的关系变化会直接影响到获取节点）。通过接口则可以有效的解决此问题。
+通过节点直接的关系获取节点会导致代码维护性大大降低（节点之间的关系变化会直接影响到获取节点）。
+通过接口则可以有效的解决此问题。
 
 ```html
 <!DOCTYPE html>
