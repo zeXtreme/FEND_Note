@@ -52,7 +52,7 @@
   - [BOM](chapter3/10_bom.md)
 - [页面架构](chapter4/00_intro.md)
   - [CSS Reset](chapter4/01_CSS_Reset.md)
-  - [布局解决方案]()
+  - [布局解决方案](chapter4/02_layout.md)
   - [响应式布局]()
   - [页面优化]()
   - [规范与模块化]()
