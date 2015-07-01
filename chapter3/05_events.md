@@ -47,6 +47,77 @@ DOM 事件流为 DOM 事件的处理及执行的过程。下面以一个`<a>`元
 2. [红绿实线]Target Phase（事件触发过程）当事件被捕获之后就开始执行事件绑定的代码
 3. [绿虚线]Bubble Phase（冒泡过程）当事件代码执行完毕后，浏览器会从触发事件元素的父节点开始一直冒泡到window元素（**即元素的祖先元素也会触发这个元素所触发的事件**）
 
+**关于捕获过程的补充**
+
+如果有一个支持三个阶段的事件，它一定在触发时遵循下面的顺序：
+
+```
+Capture -> Target -> Bubbling
+```
+
+![](../img/E/event-phases.png)
+
+使用下面的代码来举例：
+
+```JavaScript
+// 添加Capture阶段事件
+docuemnt.addEventListener('click',function(){
+    alert('capture：'+1);
+},true);
+tableNode.addEventListener('click',function(){
+    alert('capture：'+2);
+},true);
+tdNode.addEventListener('click',function(){
+    alert('capture：'+3);
+},true);
+
+// 添加Bubbling阶段事件
+docuemnt.addEventListener('click',function(){
+    alert('bubble：'+1);
+});
+tableNode.addEventListener('click',function(){
+    alert('bubble：'+2);
+});
+tdNode.addEventListener('click',function(){
+    alert('bubble：'+3);
+});
+```
+
+输出结果为：
+
+```
+capture：1
+capture：2
+capture：3
+bubble：3
+bubble：2
+bubble：1
+```
+
+![](../img/E/event-apply.png)
+
+```javascript
+// 对document添加了三个bubbling阶段的事件
+document.addEventListener('click',function(){
+    alert(1);
+});
+document.addEventListener('click',function(){
+    alert(2);
+});
+document.addEventListener('click',function(){
+    alert(3);
+});
+```
+
+如上面的代码所示，其为同一节点添加了同一阶段的多个事件，那执行顺序如何呢？
+早期并没有规范定义，DOM 3 中规范已经明确规定
+同一节点同一阶段的事件应按照注册函数的顺序执行。
+
+> 在实际项目过程中，某些情况下比如若干的组件或者模块都需要监听某个节点的某个事件，但是组件或者模块的生成（即添加事件的时机）是不一定保证顺序的，所以这个情况下如果某个组件对这个节点的这个事件的优先级特别高（需要保证必须先触发这个组件里的这个事件）而这个平台又支持这个阶段事件的话可以添加capture阶段事件，用三阶段的顺序来保证，比如移动平台模拟手势的实现会添加document上touchXXX的capture阶段事件，以优先识别手势操作
+> 当然实践过程中考虑到不同浏览器对三阶段支持的情况的差异，大部分情况下都采用的是bubbling阶段的事件
+>
+> —— 蔡剑飞 网易前端工程师
+
 NOTE：低版本 IE 中并未实现捕获过程。也不是所有事件均存在这三个完整的过程（例如 `load` 没有冒泡事件）
 
 NOTE+：在这三个阶段中无论将**事件捕获**和**事件处理**注册到任意一个父或祖父节点上都会被触发事件。
