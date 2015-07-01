@@ -149,6 +149,8 @@ transform: rotateY(<angle>)
 
 ##### perspective
 
+![](../img/P/perspective-3d.PNG)
+
 其用于设置图片 Y 轴旋转后的透视效果。`<length>` 可以理解为人眼与元素之间的距离，越紧则效果越明显。
 
 ```
