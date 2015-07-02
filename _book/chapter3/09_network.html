@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="3.9" data-basepath=".." data-revision="Sat Jun 27 2015 22:03:06 GMT+0800 (SGT)">
+    <div class="book" data-level="3.9" data-basepath=".." data-revision="Thu Jul 02 2015 00:21:38 GMT+0800 (SGT)">
     
 
 <div class="book-summary">
@@ -858,17 +858,147 @@
             
         </li>
     
-        <li class="chapter " data-level="4" >
+        <li class="chapter " data-level="4" data-path="chapter4/00_intro.html">
             
-            <span><b>4.</b> 页面架构</span>
+                
+                    <a href="../chapter4/00_intro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        页面架构
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="chapter4/01_CSS_Reset.html">
+            
+                
+                    <a href="../chapter4/01_CSS_Reset.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        CSS Reset
+                    </a>
+                
             
             
         </li>
     
-        <li class="chapter " data-level="5" >
+        <li class="chapter " data-level="4.2" >
             
-            <span><b>5.</b> 产品前端架构</span>
+            <span><b>4.2.</b> 布局解决方案</span>
             
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" >
+            
+            <span><b>4.3.</b> 响应式布局</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" >
+            
+            <span><b>4.4.</b> 页面优化</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" >
+            
+            <span><b>4.5.</b> 规范与模块化</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter5/00_intro.html">
+            
+                
+                    <a href="../chapter5/00_intro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        产品前端架构
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="chapter5/01_collaboration.html">
+            
+                
+                    <a href="../chapter5/01_collaboration.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        协作流程
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="chapter5/02_design_api.html">
+            
+                
+                    <a href="../chapter5/02_design_api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        接口设计
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="chapter5/03_version_control.html">
+            
+                
+                    <a href="../chapter5/03_version_control.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        版本控制
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" >
+            
+            <span><b>5.4.</b> 技术选型</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" >
+            
+            <span><b>5.5.</b> 开发实践</span>
+            
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -1030,6 +1160,32 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <h2 id="%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1">&#x6570;&#x636E;&#x901A;&#x4FE1;</h2>
 <h3 id="http">HTTP</h3>
+<p>HTTP &#x4E3A;&#x4E00;&#x4E2A;&#x901A;&#x4FE1;&#x534F;&#x8BAE;&#x3002;HTTP &#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#x5E76;&#x521B;&#x5EFA;&#x7AEF;&#x53E3;&#x3002;HTTP &#x670D;&#x52A1;&#x5668;&#x5728;&#x7AEF;&#x53E3;&#x76D1;&#x542C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#x3002;
+HTTP &#x670D;&#x52A1;&#x5668;&#x5728;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x540E;&#x5219;&#x8FD4;&#x56DE;&#x72B6;&#x6001;&#x548C;&#x6240;&#x8BF7;&#x6C42;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p><strong>&#x7F51;&#x9875;&#x6D4F;&#x89C8;&#x5168;&#x8FC7;&#x7A0B;</strong> &#xFF08;&#x7C97;&#x6D45;&#x6D41;&#x7A0B;&#xFF09;</p>
+<ol>
+<li>&#x57DF;&#x540D;&#x89E3;&#x6790;<ol>
+<li>&#x641C;&#x7D22;&#x6D4F;&#x89C8;&#x5668;&#x81EA;&#x8EAB; DNS &#x7F13;&#x5B58;</li>
+<li>&#x641C;&#x7D22;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x81EA;&#x8EAB; DNS &#x7F13;&#x5B58;&#xFF08;&#x5982;&#x4E0A;&#x4E00;&#x7EA7;&#x672A;&#x627E;&#x5230;&#x6216;&#x5DF2;&#x5931;&#x6548;&#xFF09;</li>
+<li>&#x8BFB;&#x53D6;&#x672C;&#x5730; HOST &#x6587;&#x4EF6; &#xFF08;&#x5982;&#x4E0A;&#x4E00;&#x7EA7;&#x672A;&#x627E;&#x5230;&#x6216;&#x5DF2;&#x5931;&#x6548;&#xFF0C;<code>/etc/hosts</code>&#xFF09;</li>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x8D77; DNS &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x8BF7;&#x6C42;<ol>
+<li>ISP &#x670D;&#x52A1;&#x5668;&#x67E5;&#x627E;&#x81EA;&#x8EAB;&#x7F13;&#x5B58;</li>
+<li>ISP &#x670D;&#x52A1;&#x5668;&#x53D1;&#x8D77;&#x8FED;&#x4EE3;&#xFF08;&#x9010;&#x57DF;&#x5BFB;&#x627E;&#x9700;&#x8981;&#x7684;&#x5730;&#x5740;&#xFF09;&#x8BF7;&#x6C42;</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>&#x5F97;&#x5230;&#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#x7684; IP &#x5730;&#x5740;</li>
+<li>&#x53D1;&#x8D77; HTTP &#x201C;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#x201D;&#xFF08;&#x4E0B;&#x9762;&#x4E3A;&#x4E00;&#x4E2A;&#x8D85;&#x7EA7;&#x7B80;&#x5316;&#x7248;&#xFF09;<ol>
+<li>&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF0C;&#x7B49;&#x5F85;&#x670D;&#x52A1;&#x5668;&#x786E;&#x8BA4;</li>
+<li>&#x670D;&#x52A1;&#x5668;&#x63A5;&#x53D7;&#x8BF7;&#x6C42;&#xFF0C;&#x56DE;&#x590D;&#x5BA2;&#x6237;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#xFF08;TCP/IP &#x8FDE;&#x63A5;&#x6210;&#x529F;&#xFF09;</li>
+</ol>
+</li>
+<li>&#x5BA2;&#x6237;&#x6839;&#x636E;&#x534F;&#x8BAE;&#x53D1;&#x9001;&#x8BF7;&#x6C42;</li>
+<li>&#x670D;&#x52A1;&#x5668;&#x66F4;&#x5177;&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;&#x5BA2;&#x6237;&#x9700;&#x6C42;&#x8D44;&#x6E90;</li>
+<li>&#x5BA2;&#x6237;&#x83B7;&#x5F97;&#x8D44;&#x6E90;</li>
+</ol>
 <h4 id="http-%E4%BA%8B%E5%8A%A1">HTTP &#x4E8B;&#x52A1;</h4>
 <p><img src="../img/H/http-process.png" alt=""></p>
 <h5 id="http-%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87">HTTP &#x8BF7;&#x6C42;&#x62A5;&#x6587;</h5>
