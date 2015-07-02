@@ -84,6 +84,23 @@
 
 ### Git
 
+Git 是一个免费开源的分布式版本控制系统，它也一个基于内容寻址的存储系统。
+Git 是由 Linux 的创造者 Linus Torvalds。
+
+**优势**
+
+- 速度快，不依赖网络
+- 完全分布式
+- 轻量级分支操作
+- Git 为行业标准版本控制供给
+- 活跃和成熟的社区
+
+**安装**
+
+**Mac OS X** 下使用 `brew install git` 下载更新既可。
+
+**Linux Ubuntu** 下可使用 `apt-get install git` 既可。
+
 #### Git 介绍
 
 #### Git 命令
