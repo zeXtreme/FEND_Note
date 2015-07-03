@@ -104,3 +104,207 @@ Git 是由 Linux 的创造者 Linus Torvalds。
 #### Git 介绍
 
 #### Git 命令
+
+常用 Git 命令，当在命令行中键入 `git` 可以便可以在帮助信息中看到。
+
+![](../img/G/git_command.png)
+
+**获取帮助**
+
+`git help <command>` `git <command> -h` `git <command> --help` 还有
+`man git-<command>` 均可查询某个命令的帮助文档。
+
+**基本操作**
+
+配置 Git 使用 `git config` 此为创建 Git 仓库前必须完成的配置。
+
+```bash
+git config --global user.name "Li Xinyang"
+git config --global user.email "lixinyang1026@gmail.com"
+```
+
+- --local 默认 具有最高优先级 只影响本仓库 `.git/config`
+- --global 中级优先级 影响到所有当前用户的仓库 `~/.gitconfig`
+- --system 最低优先级 影响到全系统的仓库 `/etc/gitconfig`
+
+**初始化仓库**
+
+![](../img/G/git-init.png)
+
+初始化仓库，使用 `git status` 可以查询当前仓库的状态。
+如在*未初始化*仓库时查询状态会报出错误信息。
+
+```bash
+git init [path]
+git init [path] --bare
+```
+
+在初始化仓库后会出现一个隐藏的目录 `.git`
+其中包括了所有的当前仓库的版本信息和本地设置文件(`.git/config`)。
+
+![](../img/G/git-after-init.png)
+
+**查询状态**
+
+`git status` 此命令可以帮助开发者在下面三对关系中找出文件状态的变化。
+
+- 未跟踪   <--> 跟踪
+- 工作目录 <--> 暂存区
+- 暂存区   <--> 最新提交
+
+![](../img/G/git-status-kind.jpg)
+
+Git 中存在两种状态**内容状态**和**文件状态**。
+仓库中的文件均可以在状态和区域之间进行转换。
+
+![](../img/G/git-first-file.png)
+
+**添加文件到暂存区（同时跟踪文件）**
+
+`git add [file]`
+
+![](../img/G/git-add-file.png)
+
+上图所示，我们将 `README.md` 文件从工作区提交至暂存区，
+并将文件状态从未跟踪改变成已跟踪。
+
+![](../img/G/git-first-step.jpg)
+
+NOTE：批量增加当前目录下全部文件 `git add .`
+
+![](../img/G/git-add-multiple.png)
+
+**忽略文件**
+
+`.gitignore` 可以在添加至仓库时忽略匹配的文件，但仅作用于*未跟踪*的文件。
+
+![](../img/G/git-sample-gitignore.png)
+
+NOTE：GitHub 为各个类型项目和操作系统提供了忽略文件模板，
+可以在[这里](https://github.com/github/gitignore)找到。
+
+**暂存区删除文件**
+
+使用 `git rm` 可以做到从暂存区删除文件，下面提供几种常用的使用方法：
+
+- `git rm --cached` 仅存暂存区删除
+- `git rm` 才暂存区和工作区目录中删除
+- `git rm $(git ls-files --deleted)` 删除所有被跟踪但在工作区已经被删除的文件
+
+NOTE：`git-ls-files`
+- Show information about files in the index and the working tree
+
+**工作区与暂存区**
+
+不同的区域中可以存在文件的独立版本，如下图所示工作区和暂存区的文件为两个不同的版本。
+（之前上个例子中所创建的 `DummyFile` 文件已被删除）
+
+![](../img/G/git-file-multiple-version.png)
+
+**暂存区**
+
+我们可以把暂存区比作一个每类物品只能放置一次的购物车此外还具有下面的特质：
+
+- 货架和购物车可同时出现同种物品
+- 货架上的物品可以替换掉购物车的物品
+- 可以删除物品
+- 提交购物车完成购买并生成购买记录
+
+其中
+
+- 物品：文件
+- 货架：工作目录
+- 购物车：暂存区
+- 购买：提交内容
+
+**提交版本记录**
+
+![](../img/G/git-commit.png)
+
+`git commit` 可以根据暂存区的内容创建一个提交目录。
+
+![](../img/G/git-first-commit.png)
+
+NOTE：直接提交工作区的内容`git commit -a -m 'message'`，工作中不建议这样操作。
+
+**查询提交历史记录**
+
+`git log` 可以用来显示提交是记录信息。
+
+![](../img/G/git-log.png)
+
+其中包括：
+
+- 提交编号 SHA-1 编码的 HASH 标示符
+- git-config 配置的提交者信息
+- 提交日期
+- 提交描述信息
+
+工作中可使用下面简单的配置进行版本查询
+
+```bash
+git log --oneline
+
+
+# 较长的命令可以使用 alias 的方法简化
+git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+```
+
+**Git 中 alias 命令设置**
+
+配置 Git 中别名的方法 `git config alias.shortname <fullcommand>`。
+
+```bash
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+git lg
+```
+
+NOTE：如果你使用 Mac OS X 可以尝试使用 [Oh My Zsh](http://ohmyz.sh)
+其中已经预先设置好了非常多常用别名。
+
+**显示版本差异**
+
+![](../img/G/git-diff-terminal.png)
+
+`git diff` 用于显示版本差异，下面是几个常用的方法：
+
+- `git diff` 显示工作目录与暂存区的差异
+- `git diff -cached [<reference>]` 暂存区与某次提交的差异（默认为 HEAD）
+- `git diff <reference>` 工作目录和某次提交间的差异
+- `git diff <reference> <reference>` 查询两次提交直接的差别
+
+![](../img/G/git-diff-overview.png)
+
+**撤销工作区的修改**
+
+![](../img/G/git-checkout-file.jpg)
+
+`git checkout -- <file>...` 可用于撤销工作区的修改
+（此方法会丢弃工作区修改且**不可恢复**），下面是一些常用方法：
+
+- `git checkout -- <file>` 将文件从暂存区复制到工作目录
+
+![](../img/G/git-checkout-file-terminal.png)
+
+**撤销暂存区内容**
+
+![](../img/G/git-reset-head.jpg)
+
+使用 `git reset HEAD <file>...` 可用于撤销暂存区的修改，下面是一些常用操作：
+
+- `git reset HEAD <file>` 将文件内容存上次提交复制到暂存区。
+
+![](../img/G/git-reset-head-terminal.png)
+
+**撤销全部修改**
+
+![](../img/G/git-reset-everything.png)
+
+`git checkout HEAD -- <file>` 可以直接将内容从上次的提交复制到工作区。
+
+![](../img/G/git-reset-everything-terminal.png)
+
+**命令总结**
+
+![](../img/G/git-command-overview.jpg)
