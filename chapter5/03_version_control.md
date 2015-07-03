@@ -312,3 +312,114 @@ NOTE：使用 `--` 是为了避免路径和引用（或提交 ID）同名发生�
 ![](../img/G/git-command-overview.jpg)
 
 #### 分支操作
+
+**git branch**
+
+使用 `git branch` 可以对仓库分支进行增删查改的操作，下面列举了一下常用的操作方式：
+
+- `git branch <branchname>`，创建指定分支
+- `git branch -d <branchname>`，删除指定分支
+- `git branch -v`，显示所有分支信息
+
+> 一份分支的引用只是一个文本文件，里面只有一个 SHA 编码。它保存于 `.get/refs/heads/master` 中。
+>
+> —— 郑海波 网易工程师
+
+```bash
+git branch next
+```
+
+![](../img/G/git-brnach-next.png)
+
+```bash
+git commit -m 'message'
+```
+
+![](../img/G/git-commit-after-next.png)
+
+**切换至目标分支**
+
+`git checkout` 它可以本枝上根据通过移动 HEAD（指向当前的提交） 检测出版本，
+也可用于切换分支。（其会把当前的工作目录和暂存区移动到提出分支的版本）
+常用命令有：
+
+- `git checkout <branchname>`，使指针指向目标分支
+- `git checkout -b <branchname>`，创建目标分支并切换分支
+- `git checkout <reference>`，可以指向任何一个版本
+
+```bash
+git checkout next
+```
+
+![](../img/G/git-checkout-next-head.png)
+
+NOTE：所有提交是更具 HEAD 向前进的，所以前后分支后则会跟着 Next 分支进行开发。
+
+```bash
+git commit -m 'message'
+```
+
+![](../img/G/git-next-first-commit.png)
+
+```bash
+# -- 为短名与 cd 类似
+git checkout --
+
+# 或者使用
+# git checkout master
+```
+
+![](../img/G/git-next-back-master.png)
+
+```bash
+git checkout -b Issue-26
+```
+
+![](../img/G/git-new-b-branch.png)
+
+NOTE：使用 `git branch -v` 可以列出全部分支，带 `*`
+表示当前所属分支（HEAD 指向分支）。
+
+```bash
+git checkout c4006ec
+```
+
+![](../img/G/git-checkout-reference.png)
+
+当 HEAD 指针与具体的分支分离时，我们将其称之为 `detached head`。
+如果 HEAD 在分离状态则因尽量避免在此状态下进行提交，只做内容的查看。
+
+![](../img/G/git-checkout-reference-view.png)
+
+**完全回退**
+
+![](../img/G/git-reset-current.jpg)
+
+使用`git reset`可以将当前分支回退到历史中的某个版本，
+下面为常用的三种方式（三种的区别是恢复的内容时候同时会恢复的工作区或暂存区）：
+
+- `git reset --mixed <commit>` 默认方式，内容存入暂存区
+- `git reset --soft <commit>` 内容存入暂存区和工作区
+- `git reset --hard <commit>` 暂存区和工作区保留现有状态
+
+```bash
+git reset --mixed e390b3
+```
+
+![](../img/G/git-reset-mixed.jpg)
+
+**如果上一个命令如果使用 hard**
+
+```bash
+git reset --hard e390b3
+```
+
+![](../img/G/git-reset-hard.jpg)
+
+**如果上一个命令如果使用 hard**
+
+```bash
+get reset --soft e390b3
+```
+
+![](../img/G/git-reset-soft.jpg)
