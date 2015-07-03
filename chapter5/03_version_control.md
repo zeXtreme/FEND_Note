@@ -101,7 +101,7 @@ Git 是由 Linux 的创造者 Linus Torvalds。
 
 **Linux Ubuntu** 下可使用 `apt-get install git` 既可。
 
-#### Git 介绍
+### Git 介绍
 
 #### Git 命令
 
@@ -287,6 +287,8 @@ NOTE：如果你使用 Mac OS X 可以尝试使用 [Oh My Zsh](http://ohmyz.sh)
 
 ![](../img/G/git-checkout-file-terminal.png)
 
+NOTE：使用 `--` 是为了避免路径和引用（或提交 ID）同名发生的冲突。
+
 **撤销暂存区内容**
 
 ![](../img/G/git-reset-head.jpg)
@@ -308,3 +310,5 @@ NOTE：如果你使用 Mac OS X 可以尝试使用 [Oh My Zsh](http://ohmyz.sh)
 **命令总结**
 
 ![](../img/G/git-command-overview.jpg)
+
+#### 分支操作
