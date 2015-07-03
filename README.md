@@ -24,6 +24,29 @@
 |第四章|页面构架|![](http://progressed.io/bar/50)|
 |第五章|前端产品构架|![](http://progressed.io/bar/50)|
 
+### 写作进程贡献者列表
+
+```
+project  : FEND_Note
+repo age : 6 weeks
+active   : 33 days
+commits  : 301
+files    : 551
+authors  :
+  269	Li Xinyang         89.4%
+    8	rwang23            2.7%
+    5	hcy003             1.7%
+    4	Fred.W.            1.3%
+    4	tinglin92          1.3%
+    3	Tinglin            1.0%
+    2	leikn              0.7%
+    2	Sylvia Zhang       0.7%
+    1	Chenyu             0.3%
+    1	The Gitter Badger  0.3%
+    1	nifanle            0.3%
+    1	Osub               0.3%
+```
+
 ### 相关链接
 
 - [NEC](http://nec.netease.com/) {N: nice, E: easy, C: css;}
