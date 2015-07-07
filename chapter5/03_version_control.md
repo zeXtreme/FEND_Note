@@ -567,10 +567,39 @@ git checkout v0.1
 
 #### 远程操作
 
-远程操作可以将本地仓库推送至远程仓库服务器。**Git** 支持许多主流的通信协议，其中包括 `Local`、`HTTP`、`SSH`、还有`Git`。
+远程操作可以将本地仓库推送至远程仓库服务器。**Git** 支持许多主流的通信协议，其中包括 `Local`、`HTTP`、`SSH`、还有`Git`。服务器只应该是作为同步之用（被动接受既可）。
 
 **初始化一个本地的远程服务器**
 
 ```bash
 git init ~/git-server --bare
 ```
+
+![](../img/G/git-local-server.png)
+
+**推送**
+
+`git push` 可以将当期的全部版本提交提交推送至远程仓库，其完成了提交历史的完全不复制并同时移动复制版本的 HEAD 与 Branch。
+
+![](../img/G/git-push.png)
+
+**添加远程仓库别名**
+
+`git remote` 可用于添加远程仓库的别名。
+
+![](../img/G/git-remote.png)
+
+```bash
+# 更改仓库 url 地址
+git remote set-url origin 'https://github.com/li-xinyang/FEND_Note.git'
+```
+
+**远程 push 冲突**
+
+可以先使用 `git fetch` + `git merge` 来解决冲突的问题。`git pull` 就等同于 `fetch` 与 `merge` 的合并。
+
+**克隆远程仓库**
+
+使用 `git clone` 可以克隆远程仓库，并将克隆地址默认设为 `origin`。
+
+![](../img/G/git-clone.png)

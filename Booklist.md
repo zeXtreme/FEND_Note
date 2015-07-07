@@ -25,3 +25,8 @@ N/A
 - DOM Scripting: Web Design with JavaScript and the Document Object Model
 - AdvancED DOM Scripting: Dynamic Web Design Techniques
 - JavaScript: The Definitive Guide
+
+## Version Control
+
+- [Git 简明指南](http://rogerdudler.github.io/git-guide/index.zh.html)
+- [Git Pro](https://git-scm.com/book/en/v2)
