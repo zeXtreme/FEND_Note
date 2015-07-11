@@ -89,7 +89,7 @@ NOTE：使用它来实现动画与 `setTimeout` 类似，需要每次每帧结�
 下面的例子为以 px 为单位的动画代码
 
 ```javascript
-var animation = function(ele, attr, fram, to) {
+var animation = function(ele, attr, from, to) {
   var distance = Math.abs(to - from);
   var stepLength = distance/100;
   var sign = (to - from)/distance;
