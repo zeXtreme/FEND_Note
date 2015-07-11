@@ -123,6 +123,8 @@ NOTE：此文写于2015年6月。
 |404|未找到资源，可以设置个性“404页面”|Not Found|
 |500|服务器内部错误|Internal Server Error|
 
+![](../img/H/http-state-code.jpg)
+
 ### AJAX
 
 AJAX（Asynchronous JavaScript and HTML）异步获取数据的概念，由 Jesse James Garrett 在2005年提出。
