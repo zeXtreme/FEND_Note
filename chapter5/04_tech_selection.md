@@ -390,3 +390,185 @@ SystemJS 是一个动态模块加载器，下面是它的一下特性：
 使用插件工具，可以将后三种模块管理系统进行相互转换。
 
 ### 框架
+
+NOTE：以下讨论都是基于 JavaScript 的框架。
+
+
+#### 库（Library）与框架（Framework）的区别
+
+![](../img/T/tech_lib_and_frame.png)
+
+**库** 为针对特定问题的解答具有专业性，不控制应用的流程且被动调用。**框架** 具有*控制翻转*，决定应用的生命周期，于是便集成了大量的库。
+
+#### 解决方案
+
+常见的解决方案针对的方面：
+
+- DOM
+- Communication
+- Utility
+- Templating
+- Component
+- Routing（单页系统中尤其重要）
+- Architecture
+
+**使用外部专业解决方案的原因** 可以提高开发效率，可靠性高（浏览器兼容，测试覆盖），也配备优良的配套（文档及工具）。如果外部框架的质量可可靠性无法保证或无法满足业务学期时则不应该选择外部的框架。
+
+**实际项目中的使用**
+
+- 开发式：基于外部模块系统自由组合
+- 半开放：基于一个定制的模块系统，内部外部解决方案共存
+- 封闭式：深度定制的模块系统不引入外部模块
+
+##### DOM
+
+与其相关的有 *Selector*、*Manipulation*、*Event（DOM）*、*Animation*。
+它的主要职责则为为下面的这些：
+
+- 提供便利的 DOM 查询、操作、移动等操作
+- 提供事件绑定及事件代理支持
+- 提供浏览器特性检测及 UserAgent 侦测
+- 提供节点属性、样式、类名的操作
+- 保证目标平台的跨浏览器支持
+
+常用的 DOM 库有 **jQuery**（使用链式接口），**zepto.JS**，**MOOTOO.JS**（使用原生 DOM 对象，通过直接跨站了 DOM 原生对象）。
+
+**基础领域**
+
+|库名|大小|兼容性|优点|缺点|
+|----|----|------|----|----|
+|MOOTOO.JS|96KB|IE6+|概念清晰、无包装对象、接口设计优秀、源码清晰易懂、不局限于 DOM 与 AJAX|扩展原生对象（致命）、社区衰弱|
+|jQuery|94KB|IE6+|社区强大普及率高、包装对象、专注于 DOM|包装对象（容易混淆）|
+|zepto.JS|25KB|IE10+|小且启动快、接口与 jQuery 兼容、提供简单手势操作|无法与 jQuery 100% 对于、支持浏览器少、功能弱|
+
+**专业领域**
+
+|领域|库名|大小|描述|
+|----|----|----|----|
+|手势|Hammer.JS|12KB|常见手势封装（Tab、Hold、Transform、Swifp）并支持自定义|
+|高级动画|Velocity.JS|12KB|复杂动画序列实现，不仅局限于 DOM|
+|视频播放|Video.JS|101KB|类似原生 video 标签的使用方式，对低级浏览器使用 flash 播放器|
+|局部滚动|isscroll.JS|13KB|移动端`position:fix` + `overflow:scroll`的救星|
+
+##### Communication
+
+与其相关的有 *XMLHttpRequest*、*Form*、*JSONP*、*Socket*。
+它的主要职责则为为下面的这些：
+
+- 处理与服务器的请求与相应
+- 预处理请求数据与响应数据 Error/Success 的判断封装
+- 多类型请求，统一接口（XMLHttpRequest1/2、JSONP、iFrame）
+- 处理浏览器兼容性
+
+|库名|大小|支持|
+|----|----|----|
+|Reqwest|3.4KB|JSONP支持、稳定 IE6+支持、CORS 跨域、Promise/A 支持|
+|qwest|2.5KB|代码少、支持XMLHttpRequest2、CORS 跨域、支持高级数据类型（ArrayBuffer、Blob、FormData）|
+
+**实时性要求高的需求**
+
+|库名|支持|
+|----|----|
+|socket.io|实时性、支持二进制数据流、智能自动回退支持、支持多种后端语言（NodeJS 最为稳妥）|
+
+##### Utility（Lang）
+
+与其相关的有 *函数增强 & Shim（保证实现与规范一致）*、*Flow Control*。
+它的主要职责则为为下面的这些：
+
+- 提供 JavaScript 原生不提供的功能
+- 方法门面包装使其便于使用
+- 异步列队及流程控制
+
+|库名|大小|描述|
+|----|----|----|
+|es5-shim|53KB|提供 ES3 环境下的 ES5 支持|
+|es6-shim|38KB|
+|underscore|16.5KB|兼容 IE6+ 的扩展功能函数|
+|Lodash|50KB|其为 underscore 的高性能版本，方法多为 runtime 编译出来的|
+
+##### Templating
+
+与其相关的有 *String-based*、*DOM-based*、*Living Template*。
+
+**基于字符串**的模板
+
+![](../img/T/tech_template0.jpg)
+
+之后的数据修改展现不会进行变化，如果重新绘制（性能低）页面则会去除已有的 DOM 事件。
+
+**基于 DOM** 的模板
+
+![](../img/T/tech-template1.jpg)
+
+修改数据可以改变显示（性能更好）也会保留 DOM 中的已有事件，最终导致 DOM 树与数据模型相联系。
+
+**Living-Template**
+
+![](../img/T/tech_template0.jpg)
+
+其拼接了字符串模板和 DOM 模板的技术（类似 Knockout.JS 注释的实现），最终导致 DOM 树与数据模型相联系。
+
+| |String-based|DOM-based|Living-Template|
+|-|------------|---------|---------------|
+|好处|可以服务器端运行|||
+|解决方案|dust.JS、hogan、dot.JS|Angular.JS、Vue.JS、Knockout|Regular.JS、Ractive.JS、htmlbar|
+|初始化时间|☆☆☆|☆|☆☆|
+|动态更新|无|☆☆☆|☆☆☆|
+|DOM 无关|☆☆☆|无|☆☆|
+|语法|☆☆☆|☆|☆☆|
+|学习成本|☆|☆☆☆|☆☆|
+|SVG 支持|无|☆☆|☆☆|
+|安全性|☆|☆|☆☆☆|
+
+##### Component
+
+与其相关的有 *Modal*、*Slider*、*DatePicker*、*Tabs*、*Editor*（其为产品开发中最耗时也是最必要的一部分）。它的主要职责则为为下面的这些：
+
+- 提供基础的 CSS 支持
+- 提供常见的组件
+- 提供声明式的调用方式（类似 Bootstrap）
+
+|组件库名|版本|特定|支持|
+|--------|----|----|----|
+|Bootstrap|3.x|Mobile First 流式栅格，基于 LESS与 SASS 组织可定制 UI，提供大量组件|IE8+|
+|Foundation|5.x|Mobile First 流式栅格，基于 SASS 组织，可定制 UI，提供大量组件|IE9+|
+
+NOTE：有存在不使用 jQuery 版本的 Bootstrap 可供使用。
+
+##### Router
+
+与其相关的有 *Client Side*、*Server Side*。它的主要职责则为为下面的这些：
+
+- 监听 URL 变化，并通知注册的模块
+- 通过 JavaScript 进行主动跳转
+- 历史管理
+- 对目标浏览器的兼容性支持
+
+|路由库名|大小|特定|支持|
+|--------|----|----|----|
+|page.JS|6.2KB|类似 Express.Router 的路由规则的前端路由库|IE8+|
+|Director.JS|10KB|可以前后端使用同一套规则定义路由|IE6+|
+|Stateman|10KB|处理深层复杂路由的独立路优库|IE6+|
+|crossroad.JS|7.5KB|老牌路由库，API 功能较为繁琐|
+
+##### Architecture（解耦）
+
+与其相关的有 *MVC*、*MVVC*、*MV\**，解耦又可以通过很多方式来实现（例如事件、分层）。它的主要职责则为为下面的这些：
+
+- 提供一种凡是帮助（强制）开发者进行模块解耦
+- 视图与模型分离
+- 容易进行单元测试
+- 容易实现应用扩展
+
+**下面以 MVVM**为例：
+
+![](../img/T/tech_mvvm.png)
+
+- Model 数据实体用于记录应用程序的数据
+- View 友好的界面其为数据定制的反映，它包含样式结构定义以及 VM 享有的声明式数据以及数据绑定
+- ViewModel 其为 View 与 Model 的粘合，它通过绑定事件与 View 交互并可以调用 Service 处理数据持久化，也可以通过数据绑定将 Model 的变动反映到 View 中
+
+NOTE：MV* 不等同于 SPA，路由是 MV* 系统的课定位状态信息来源。
+NOTE+：单页系统的普世法则为*可定位的*应用程序状态都应该统一由路由系统进入，以避免网状的信息流。
+NOTE++：库与框架选择站点[microjs](http://microjs.com/#) [javascriptOO](http://www.javascriptoo.com/) [JavaScripting](https://www.javascripting.com/)
