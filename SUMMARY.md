@@ -60,6 +60,6 @@
   - [协作流程](chapter5/01_collaboration.md)
   - [接口设计](chapter5/02_design_api.md)
   - [版本控制](chapter5/03_version_control.md)
-  - [技术选型]()
+  - [技术选型](chapter5/04_tech_selection.md)
   - [开发实践]()
 - [附录 A：书单](Booklist.md)

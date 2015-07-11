@@ -24,7 +24,7 @@
 |第二章|JavaScript 程序设计|![](http://progressed.io/bar/100)|
 |第三章|DOM 编程|![](http://progressed.io/bar/100)|
 |第四章|页面构架|![](http://progressed.io/bar/50)|
-|第五章|前端产品构架|![](http://progressed.io/bar/50)|
+|第五章|前端产品构架|![](http://progressed.io/bar/80)|
 
 ### 写作进程贡献者列表
 
