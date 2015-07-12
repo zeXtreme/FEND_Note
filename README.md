@@ -2,7 +2,7 @@
 
 [![Join the chat at https://gitter.im/li-xinyang/FEND_Note](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/li-xinyang/FEND_Note?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-现在就加入 [**FrontSeat**](http://frontseat.io) 一个专注前端的开源中文论坛！
+现在就加入 [**FrontSeat**](http://frontseat.io) 一个专注前端的开源中文社区！
 
 点击[这里](https://www.gitbook.com/read/book/li-xinyang/frontend-notebook)开始阅读！
 
