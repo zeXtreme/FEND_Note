@@ -581,11 +581,130 @@ form.addEventListener(
 - iframe
 
 ```html
-<iframe name="targetFrame" class="f-hidden">
+<iframe name="targetFrame" class="f-hidden" style="display:none" id="result">
 
 <form action="./api" method="post" target="targetFrame">
   <input name="isindex">
   <input name="a">
   <button>submit</button>
 </form>
+```
+
+```javascript
+var frame = document.getElementById('result');
+frame.addEventListener(
+  'load', function(event) {
+    try {
+      var result = JSON.parse(
+        frame.contentWindow.document.body.textContent
+      );
+
+      // 还原登陆按钮状态
+      disabledSubmit(false);
+
+      // 识别登陆结果
+      if (result.code === 200) {
+        showMessage('j-suc', 'success');
+        form.reset();
+      }
+    } catch(ex) {
+      // 忽略操作
+    }
+  }
+)
+```
+
+### 表单应用
+
+首先需要知道服务器端登陆接口的相关信息，如下所示：
+
+|描述|数据信息|
+|----|--------|
+|请求地址|/api/login|
+|请求参数|`telephone` 手机号码; `password` 密码 MD5 加密|
+|返回结果|`code` 请求状态; `result` 请求数据结果|
+
+![](../img/F/form_app_code.png)
+
+```javascript
+var form = document.forms.loginForm;
+
+var message = document.getElementById('message');
+
+// 通用逻辑封装
+function showMessage(class, message) {
+  if(!class) {
+    message.innerHTML = "";
+    message.classList.remove('j-suc');
+    message.classList.remove('j-err');
+  } else {
+    message.innerHTML = message;
+    message.classList.add(class);
+  }
+}
+
+function invalidInput (node, message) {
+  showMessage('j-err', message);
+  node.classList.add('j-err');
+  node.focus();
+}
+
+function clearInvalid(node){
+  showMessage();
+  node.classList.remove('j-err');
+}
+
+function disabledSubmit(disabled) {
+  form.loginBtn.disabled = !!disabled;
+  var method = !disabled ? 'remove' : 'add';
+  form.loginBtn.classList[method]('j-disabled');
+}
+
+// 验证手机号码（系统自带方法）
+form.telephone.addEventListener(
+  'invalid', function(event) {
+    event.preventDefault();
+    invalidInput(form.telephone, 'invalid mobile number');
+  }
+);
+
+// 验证密码
+form.addEventListener(
+  'submit', function(event) {
+    var input = form.password;
+    var password = input.value;
+    errorMessage = '';
+    if (password.length < 6) {
+      errorMessage = 'password less than 6 char';
+    } else if (!/\d./test(password) || !/[a-z]/i.test(password)) {
+      errorMessage = 'password must contains number and letter'
+    }
+
+    if (!!errorMessage) {
+      event.preventDefault();
+      invalidInput(input, errorMessage);
+      return;
+    }
+    // 提交表单代码
+    // ...
+  }
+);
+
+// 提交表单
+form.addEventListener(
+  'submit', function(event){
+    input.value = md5(password);
+    disabledSubmit(true);
+  }
+);
+
+// 状态恢复
+form.addEventListener(
+  'focus', function(event) {
+    // 错误还原
+    clearInvalid(event.target);
+    // 还原登陆按钮状态
+    disabledSubmit(false);
+  }
+)
 ```
