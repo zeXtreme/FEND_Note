@@ -50,6 +50,8 @@
   - [数据通信](chapter3/09_network.md)
   - [数据存储](chapter3/11_storage.md)
   - [动画](chapter3/06_animation.md)
+  - [表单操作](chapter3/12_form_manipulation.md)
+  - [列表操作](chapter3/13_list_manipulation.md)
 - [页面架构](chapter4/00_intro.md)
   - [CSS Reset](chapter4/01_CSS_Reset.md)
   - [布局解决方案](chapter4/02_layout.md)
