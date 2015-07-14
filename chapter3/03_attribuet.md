@@ -92,7 +92,7 @@ element.setAttribute('attributeName', value);
 
 #### dataset
 
-自定义属性，其为 `HTMLElement` 上的属性也是 `data-*` 的属性集。主要用于在元素上保存数据。获取的均为**属性字符串**。数据通常使用 JAXA 获取并存储在节点之上。
+自定义属性，其为 `HTMLElement` 上的属性也是 `data-*` 的属性集。主要用于在元素上保存数据。获取的均为**属性字符串**。数据通常使用 AJAX 获取并存储在节点之上。
 
 ```html
 <div id='user' data-id='1234' data-username='x' data-email='mail@gmail.com'></div>

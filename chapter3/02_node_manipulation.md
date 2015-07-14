@@ -23,7 +23,7 @@
 
 因为 DOM 的存在，这使我们可以通过 JavaScript 来获取、创建、修改、或删除节点。
 
-NOTE：下面提供的例子中的 `element` 均为已经被去出的元素节点。
+NOTE：下面提供的例子中的 `element` 均为元素节点。
 
 ### 获取节点
 
@@ -38,8 +38,7 @@ NOTE：下面提供的例子中的 `element` 均为已经被去出的元素节�
 - `element.previousSibling`/`element.nextSibling`
 - `element.previousElementSibling`/`element.nextElementSibling`
 
-通过节点直接的关系获取节点会导致代码维护性大大降低（节点之间的关系变化会直接影响到获取节点）。
-通过接口则可以有效的解决此问题。
+通过节点直接的关系获取节点会导致代码维护性大大降低（节点之间的关系变化会直接影响到获取节点），而通过接口则可以有效的解决此问题。
 
 ```html
 <!DOCTYPE html>
@@ -118,9 +117,9 @@ NTOE：细心地人会发现，在节点遍历的例子中，body、ul、li、p�
 </html>
 ```
 
-NOTE：初稿，还未进行兼容性测试。
+NOTE：此兼容方法为初稿，还未进行兼容性测试。
 
-#### 接口获取节点
+#### 接口获取元素节点
 
 - `getElementById`
 - `getElementsByTagName`
@@ -134,7 +133,7 @@ NOTE：初稿，还未进行兼容性测试。
 |getElementsByTagName|||√|
 |getElementsByClassName|||√|
 |querySelectorAll||||
-|querySelector||√||
+|querySelector||√|||
 
 ##### getElementById
 

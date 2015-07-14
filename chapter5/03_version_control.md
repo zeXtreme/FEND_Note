@@ -245,7 +245,6 @@ NOTE：直接提交工作区的内容`git commit -a -m 'message'`，工作中不
 ```bash
 git log --oneline
 
-
 # 较长的命令可以使用 alias 的方法简化
 git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 ```
@@ -443,3 +442,164 @@ get reset --soft e390b3
 
 两种方法都有两个作用范围，一个是分支操作（commit 操作），
 另一个是文件操作（file 操作）。
+
+|命令|范例|移动 HEAD/Branch |注释|
+|----|----|-----------------|----|
+|`git reset [commit]`|`git reset HEAD^ --soft`|是/是|完全回退到某个提交（之前所在的位置将失去索）|
+|`git reset [file]`|`git reset README.md`|否/否|恢复**暂存区**到某个提交状态（不移动指针）|
+|`git checkout [commit]`|`git checkout master`|是/否|移动当前指针 HEAD 到某个提交（并复制内容到工作目录）|
+|`git checkout [file]`|`git checkout -- README.md` `git checkout HEAD -- xx.log`|否/否|恢复**工作目录**到某个状态|
+
+##### stash 的作用
+
+```bash
+git checkout next
+
+# error: Your local change to the following files whould be overwritten by checkout:
+#       README.md
+# Please, commit your changes or stash them before you can switch branches.
+# Aborting...
+```
+
+突然需要切换到其他分支，工作区和暂存区还有在当前分支没完成的任务。那么 `stash` 就使用 `.git` 中的特殊区（Stash 区）来帮你解决这个问题（因为强切回丢失当前的工作区和暂存区的内容）。
+
+![](../img/G/git-stash-overview.png)
+
+![](../img/G/git-stash-terminal.png)
+
+`stash` 可以把当前工作区和暂存区的状态以栈（Stack）的形式保存起来（每次保存都会推一个内容到 `stash` 栈中），并返回一个干净的工作空间（工作区和暂存区）。
+
+NOTE：`stash pop = stash apply + stash drop` 类似于 JavaScript 中的 `pop` 操作。
+
+NOTE+：什么是栈？可以把栈想象成一摞盘子堆（一个叠一个）。具体关于堆栈的信息可以在[这里](https://zh.wikipedia.org/zh-sg/堆栈)找到。如果还看不懂，建议完成哈佛大学在线计算机入门课程 `CS50`，可以在[这里](http://open.163.com/movie/2010/3/U/R/M6U6LS8CV_M6U6MHDUR.html)找到。
+
+##### merge
+
+![](../img/G/git-merge-overview.jpg)
+
+使用 `git merge` 可用于合并分支。下面的例子是将 `next` 分支合并到 `master` 分支中去。
+
+![](../img/G/git-merge-detail.jpg)
+
+![](../img/G/git-merge-detail-after.jpg)
+
+![](../img/G/git-merge-detail-terminal.png)
+
+###### 解决 merge 冲突
+
+当一个文件被同时修改时（更多情况为同时修改相同的一行代码时）则极有可能产生合并冲突。
+
+```bash
+git merge next master
+# Autom-merging README.md
+# CONFLICT (content): Merge confilict in README.md
+# Automatic merge failed; fix confilict and then commit the result
+
+git status
+# On branch master
+# You have unmerged paths.
+#   (fix confilict and run 'git commit')
+# ...
+#   both:modified: README.md
+# no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+![](../img/G/git-merge-conflic-code-sample.png)
+
+在解决完合并冲突后可以使用 `git add .` 然后 `git commit -m 'resove merge confilict'` 来完成合并冲突解决并提交一个新的版本。
+
+NOTE：`git cat-file -p HEAD` 可用于显示 `git` 中某个对象的具体信息。
+NOTE+：`<<<<<<<< HEAD` 与 `=========` 之间为 HEAD 所在的内容。
+
+###### merge fast-forward
+
+也并不是所有的合并操作都会造成合并从图（merge confilic)。最简单的一种合并是 `fast-forward` 仅仅只是变化 HEAD 指向的位置（**不产生**新的合并节点）。
+
+![](../img/G/git-fast-forward0.png)
+
+如果需要生成新的合并节点可以使用 `git merge next --no-ff` 意思是合并但不使用 `fast-forward`。
+
+![](../img/G/git-fast-forward-no-ff.jpg)
+
+###### merge 不足
+
+![](../img/G/git-merge-bad.jpg)
+
+当参与的人阅读分支越多其分支结构就越复杂和难以被理解。如何实现在任何状态下的**线性提交**？
+
+如需完成线性提交可以使用 `git rebase`，其可以修剪提交历史的基线。它会将不同分支的提交在**所选节点**上进行**重演**（重演并重新创造新节点）这里 HEAD/Branch 均会发生移动。
+
+```bash
+git rebase master
+```
+
+![](../img/G/git-rebase-0.jpg)
+
+但有时并不需要将其他分支上的全部提交节点统统进行重演。则可以使用 `git rebase --onto` 来选择需要重演的提交节点。
+
+```bash
+git rebase --onto master 5751363
+```
+
+![](../img/G/git-rebase-onto.jpg)
+
+NOTE：上面的红色的节点，未被重建（被丢弃）。
+
+###### rebase 与 merge 区别
+
+![](../img/G/git-mergerebase.png)
+
+`rebase` 会产生线性的提交历史，`merge` 则会产生多个不同分支的合并节点。所以具体没有好坏之分，可根据使用的需求来决定。
+
+注意！不要在共有分支上使用 `rebase`（例如 `master` 分支）这会导致其他开发者在进行拉取（Pull）时，必须进行合并且合并中包含重复的提交。
+
+##### tag
+
+不论是 Branch 还是 HEAD 它们均为动态指针，如果想定义一个静止的标示则可以使用 `git tag` ，它将给发布的**提交版本**设置一个别名。在设置了标签后就可以直接使用标签名来代替它所指代的版本提交了。
+
+```bash
+git tag v0.1 e39d9b2
+
+git checkout v0.1
+```
+
+![](../img/G/git-tag.jpg)
+
+#### 远程操作
+
+远程操作可以将本地仓库推送至远程仓库服务器。**Git** 支持许多主流的通信协议，其中包括 `Local`、`HTTP`、`SSH`、还有`Git`。服务器只应该是作为同步之用（被动接受既可）。
+
+**初始化一个本地的远程服务器**
+
+```bash
+git init ~/git-server --bare
+```
+
+![](../img/G/git-local-server.png)
+
+**推送**
+
+`git push` 可以将当期的全部版本提交提交推送至远程仓库，其完成了提交历史的完全不复制并同时移动复制版本的 HEAD 与 Branch。
+
+![](../img/G/git-push.png)
+
+**添加远程仓库别名**
+
+`git remote` 可用于添加远程仓库的别名。
+
+![](../img/G/git-remote.png)
+
+```bash
+# 更改仓库 url 地址
+git remote set-url origin 'https://github.com/li-xinyang/FEND_Note.git'
+```
+
+**远程 push 冲突**
+
+可以先使用 `git fetch` + `git merge` 来解决冲突的问题。`git pull` 就等同于 `fetch` 与 `merge` 的合并。
+
+**克隆远程仓库**
+
+使用 `git clone` 可以克隆远程仓库，并将克隆地址默认设为 `origin`。
+
+![](../img/G/git-clone.png)

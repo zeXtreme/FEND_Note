@@ -54,7 +54,7 @@ function getcookie() {
   var all = document.cookie;
   if (all === '') return cookie;
   var list = all.split('; ');
-  var (var i = 0, len = list.length; i < len; i++) {
+  for (var i = 0, len = list.length; i < len; i++) {
     var item = list[i];
     var p = item.indexOf('=');
     var name = item.substring(0, p);

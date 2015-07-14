@@ -137,7 +137,6 @@ element.style.cssText = 'color: red; background: black';
 element.className += ' angry';
 ```
 
-
 增加样式后得到的结果
 
 ```html
@@ -170,7 +169,7 @@ element.setAttribute('href', 'style2.css');
 ```javascript
 element.style.color; // ""
 ```
-
+line-height: 200px
 #### window.getComputedStyle()
 
 将需要取出样式的目标元素传入 `window.getComputedStyle()` 函数中，即可得到对应元素的实际样式。注意的是这里获取到的样式值为**只读**属性不可修改！

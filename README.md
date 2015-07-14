@@ -2,6 +2,8 @@
 
 [![Join the chat at https://gitter.im/li-xinyang/FEND_Note](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/li-xinyang/FEND_Note?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+现在就加入 [**FrontSeat**](http://frontseat.io) 一个专注前端的开源中文社区！
+
 点击[这里](https://www.gitbook.com/read/book/li-xinyang/frontend-notebook)开始阅读！
 
 前端开发笔记本的 GitHub 地址在[这里](https://github.com/li-xinyang/FEND_Note)。如果你觉得这个项目不错，请点击 Star 一下，您的支持是我最大的动力。
@@ -22,7 +24,7 @@
 |第二章|JavaScript 程序设计|![](http://progressed.io/bar/100)|
 |第三章|DOM 编程|![](http://progressed.io/bar/100)|
 |第四章|页面构架|![](http://progressed.io/bar/50)|
-|第五章|前端产品构架|![](http://progressed.io/bar/50)|
+|第五章|前端产品构架|![](http://progressed.io/bar/80)|
 
 ### 写作进程贡献者列表
 
