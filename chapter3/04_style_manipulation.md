@@ -178,7 +178,7 @@ line-height: 200px
 将需要取出样式的目标元素传入 `window.getComputedStyle()` 函数中，即可得到对应元素的实际样式。注意的是这里获取到的样式值为**只读**属性不可修改！
 
 NOTE：获取的实际为 `CSSStyleDeclaration` 的实例对象。
-NOTE+：此方法不支持 IE9 一下版本，IE9 中需使用 `element.currentStyle` 来做兼容。
+NOTE+：此方法不支持 IE9 以下版本，IE9 中需使用 `element.currentStyle` 来做兼容。
 
 ```javascript
 var style = window.getComputedStyle(element[, pseudoEle]);
