@@ -27,6 +27,7 @@
 
 ```html
 <link rel="stylesheet" type="text/css" href="sample.css">
+// var element = document.querySelector('link');
 // 对应于 element.sheet
 
 <style type="text/css" media="screen">
@@ -34,12 +35,14 @@
     margin: 30px
   }
 </style>
+// var element = document.querySelector('style');
 // 对应于 element.sheet
 
 // 整个页面的全部样式（不包括行内样式）
 document.styleSheets
 
 <p style="color:red">Text Color</p>
+// var element = document.querySelector('p');
 // 对应于 element.style
 ```
 
