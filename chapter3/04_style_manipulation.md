@@ -102,11 +102,11 @@ element.style.background = 'black';
 **缺点**
 
 - 每个属性的更新都需要一个命令
-- 命名异常（不为常规 CSS 命运）
+- 命名异常（以驼峰命名法命名属性）
 
 #### element.style.cssText
 
-一次同时设置多个行间样式，其结果同 `element.style` 单独设置相同。
+一次同时设置多个行内样式，其结果同 `element.style` 单独设置相同。
 
 ```javascript
 element.style.cssText = 'color: red; background: black';
@@ -118,7 +118,7 @@ element.style.cssText = 'color: red; background: black';
 <div style="color: red; background: black;"></div>
 ```
 
-**以上两种方式均将样式混合在逻辑当中。
+**以上两种方式均将样式混合在逻辑当中。**
 
 #### 更新 class
 
@@ -145,7 +145,7 @@ element.className += ' angry';
 
 #### 统一更新多个元素样式
 
-以上方法均布适合同时更新多个样式，通过更好样式表的方式则可同时更改多个页面中的样式。将需要的大量样式也在一个**皮肤样式**表中，通过 JavaScript 来直接更换样式表来进行样式改变。（此方法也可用于批量删除样式）
+以上方法均不适合同时更新多个样式，通过更换样式表的方式则可同时更改多个页面中的样式。将需要的大量样式也在一个**皮肤样式**表中，通过 JavaScript 来直接更换样式表来进行样式改变。（此方法也可用于批量删除样式）
 
 ```html
 <link rel="stylesheet" type="text/css" href="base.css">
