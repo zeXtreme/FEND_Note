@@ -10,6 +10,29 @@
 
 ![](../img/F/form_sample_form.png)
 
+```HTML
+<form>
+  <p><label>姓名：<input></label></p>
+  <p><label>电话：<input type="tel"></label></p>
+  <p><label>邮箱：<input type="email"></label></p>
+  <fieldset>
+    <legend> 披萨大小 </legend>
+    <label><input type="radio" name="size"> 小 </label>
+    <label><input type="radio" name="size"> 中 </label>
+    <label><input type="radio" name="size"> 大 </label>
+  </fieldset>
+  <fieldset>
+    <legend> 披萨配料 </legend>
+    <label><input type="checkbox"> 熏肉 </input></label>
+    <label><input type="checkbox"> 奶酪 </input></label>
+    <label><input type="checkbox"> 洋葱 </input></label>
+    <label><input type="checkbox"> 蘑菇 </input></label>
+  </fieldset>
+  <p><label>配送时间：<input type="time" min="11:00" max="2100" step="900"></label></p>
+  <p><button>提交订单</button></p>
+</form>
+```
+
 **服务器处理**
 
 提供接口地址（例如，`https://pizza.example.com/order`，数据格式(`application/x-www-form-urlencoded`)，还是接受的参数信息(custname、custtel、custemail、size、topping、delivery)。
@@ -19,6 +42,29 @@
 **配置表单**
 
 ![](../img/F/form_data_receive.png)
+
+```HTML
+<form action="https://pizza.example.com/order" method="post" enctype="application/x-www-form-urlencoded">
+  <p><label>姓名：<input name="custname"></label></p>
+  <p><label>电话：<input type="tel" name="custtel"></label></p>
+  <p><label>邮箱：<input type="email" name="custemail"></label></p>
+  <fieldset>
+    <legend> 披萨大小 </legend>
+    <label><input type="radio" name="size" value="small"> 小 </label>
+    <label><input type="radio" name="size" value="medium"> 中 </label>
+    <label><input type="radio" name="size" value="large"> 大 </label>
+  </fieldset>
+  <fieldset>
+    <legend> 披萨配料 </legend>
+    <label><input type="checkbox"> 熏肉 </input></label>
+    <label><input type="checkbox"> 奶酪 </input></label>
+    <label><input type="checkbox"> 洋葱 </input></label>
+    <label><input type="checkbox"> 蘑菇 </input></label>
+  </fieldset>
+  <p><label>配送时间：<input type="time" min="11:00" max="2100" step="900"></label></p>
+  <p><button>提交订单</button></p>
+</form>
+```
 
 用户所有提交的信息需在提交服务器前对其进行验证从而提高用户体验。
 
@@ -38,34 +84,34 @@ NOTE：**表单验证** 使用 `require` 来强制用户填写相应的信息。
 
 其对应的信息则可以视为
 
-|字段|值|
-|----|--|
-|noValidate|true|
-|target|abc|
-|method|post|
-|acceptCharset|utf-8|
-|action|http://pizza.example.com/order|
-|enctype|application/x-www-form-urlencoded|
-|name|pizza|
-|autocomplete|off|
+| 字段          | 值                                |
+| ------------- | --------------------------------- |
+| noValidate    | true                              |
+| target        | abc                               |
+| method        | post                              |
+| acceptCharset | utf-8                             |
+| action        | http://pizza.example.com/order    |
+| enctype       | application/x-www-form-urlencoded |
+| name          | pizza                             |
+| autocomplete  | off                               |
 
 NOTE：前六项为表单提交相关的信息。
 
 ###### 属性
 
-`name` 属性可以用于获取表单节点元素。
+- `name` 属性可以用于获取表单节点元素。
 
 ```javascript
 var pizzaForm = document.forms.pizza;
 ```
 
-`autocomplete` 有两个值 `on` 与 `off`，在设置为 `on` 时，可以自动对输入框进行补全（之前提交过的输入值，下图左）。
+- `autocomplete` 有两个值 `on` 与 `off`，在设置为 `on` 时，可以自动对输入框进行补全（之前提交过的输入值，下图左）。
 
 ![](../img/F/form-auto-complete.png)
 
 NOTE：在已经设置 `autocomplete="off"` 时依然出现提示框，大多数情况为浏览器设置的自动补全（可以强制关闭，需要时请搜索对应的解决方案）。
 
-`elements` 为一个**动态节点集合**（更具 DOM 的变化进行变化），其用于归结该表单的子孙表单控件（除图标按钮外 `<input type="image>"`）:
+- `elements` 为一个**动态节点集合**（更具 DOM 的变化进行变化），其用于归结该表单的子孙表单控件（除图标按钮外 `<input type="image>"`）:
 
 - button
 - fieldset
@@ -84,7 +130,7 @@ NOTE：在已经设置 `autocomplete="off"` 时依然出现提示框，大多数
 <label><input name="null" form="a"></label>
 ```
 
-`length` 等价于 `elements.length` 来用于描述表单内节点集合的个数。
+- `length` 等价于 `elements.length` 来用于描述表单内节点集合的个数。
 
 ###### 选取表单空间元素
 
@@ -106,12 +152,12 @@ testForm[0];
 testForm['a'];
 ```
 
-`form[name]` 通过名称作为索引时有如下特点：
+- `form[name]` 通过名称作为索引时有如下特点：
 
-- 返回 `id` 或者 `name` 为制定名称的表单空间（图标按键除外）
-- 如果结果为空，则返回`id` 为指定名称的 `img` 元素（入下面代码所示）
-- 如果有多个同名元素，则返回的元素为动态节点集合
-- 一旦用指定名称取过改元素，之后则不论该元素的 `id` 或者 `name` 如何变化，只有节点存在则均可使用**原名称**来继续获取改节点。
+  - 返回 `id` 或者 `name` 为制定名称的表单空间（图标按键除外）
+  - 如果结果为空，则返回`id` 为指定名称的 `img` 元素（入下面代码所示）
+  - 如果有多个同名元素，则返回的元素为动态节点集合
+  - 一旦用指定名称取过改元素，之后则不论该元素的 `id` 或者 `name` 如何变化，只有节点存在则均可使用**原名称**来继续获取改节点。
 
 *无指定名称索引范例*
 
@@ -125,7 +171,7 @@ testForm['a'];
 testForm['a']; // 取得的便是 id 为 a 的图片元素
 ```
 
-*更新名称，依然可以获取节点范例**
+*更新名称，依然可以获取节点范例*
 
 ```html
 <form name="test">
@@ -167,11 +213,11 @@ testForm['a'].name = 'b';
 <label for="textId" form="formId">
 ```
 
-|字段|值|
-|----|--|
-|htmlFor|textId|
-|control|HTMLElement#textId|
-|form|HTMLFormElement#formId|
+| 字段    | 值                     |
+| ------- | ---------------------- |
+| htmlFor | textId                 |
+| control | HTMLElement#textId     |
+| form    | HTMLFormElement#formId |
 
 `htmlFor` 用于关联表单控件的激活行为（可使点击 `label` 与点击表单控件的行为一致），可关联的元素有下列（`hidden` 除外）：
 
