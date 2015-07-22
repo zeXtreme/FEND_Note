@@ -23,30 +23,31 @@
 |第一章|页面制作|![](http://progressed.io/bar/100)|
 |第二章|JavaScript 程序设计|![](http://progressed.io/bar/100)|
 |第三章|DOM 编程|![](http://progressed.io/bar/100)|
-|第四章|页面构架|![](http://progressed.io/bar/50)|
+|第四章|页面构架|![](http://progressed.io/bar/100)|
 |第五章|前端产品构架|![](http://progressed.io/bar/80)|
 
 ### 写作进程贡献者列表
 
 ```
 project  : FEND_Note
-repo age : 6 weeks
-active   : 33 days
-commits  : 301
-files    : 551
+repo age : 8 weeks
+active   : 46 days
+commits  : 347
+files    : 372
 authors  :
-  269	Li Xinyang         89.4%
-    8	rwang23            2.7%
-    5	hcy003             1.7%
-    4	Fred.W.            1.3%
-    4	tinglin92          1.3%
-    3	Tinglin            1.0%
-    2	leikn              0.7%
-    2	Sylvia Zhang       0.7%
-    1	Chenyu             0.3%
+  308	Li Xinyang         88.8%
+    9	Fred.W.            2.6%
+    8	rwang23            2.3%
+    5	hcy003             1.4%
+    4	tinglin92          1.2%
+    3	Tinglin            0.9%
+    3	leikn              0.9%
+    2	Sylvia Zhang       0.6%
     1	The Gitter Badger  0.3%
-    1	nifanle            0.3%
     1	Osub               0.3%
+    1	nifanle            0.3%
+    1	rccoder            0.3%
+    1	Chenyu             0.3%
 ```
 
 ### 相关链接
