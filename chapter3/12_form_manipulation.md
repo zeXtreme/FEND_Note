@@ -99,28 +99,28 @@ NOTE：前六项为表单提交相关的信息。
 
 ###### 属性
 
-- `name` 属性可以用于获取表单节点元素。
+- `name` 属性：可以用于获取表单节点元素。
 
 ```javascript
 var pizzaForm = document.forms.pizza;
 ```
 
-- `autocomplete` 有两个值 `on` 与 `off`，在设置为 `on` 时，可以自动对输入框进行补全（之前提交过的输入值，下图左）。
+- `autocomplete` 属性：有两个值 `on` 与 `off`，在设置为 `on` 时，可以自动对输入框进行补全（之前提交过的输入值，下图左）。
 
 ![](../img/F/form-auto-complete.png)
 
 NOTE：在已经设置 `autocomplete="off"` 时依然出现提示框，大多数情况为浏览器设置的自动补全（可以强制关闭，需要时请搜索对应的解决方案）。
 
-- `elements` 为一个**动态节点集合**（更具 DOM 的变化进行变化），其用于归结该表单的子孙表单控件（除图标按钮外 `<input type="image>"`）:
+- `elements` 属性：为一个**动态节点集合**（更具 DOM 的变化进行变化），其用于归结该表单的子孙表单控件（除图标按钮外 `<input type="image>"`）:
 
-- button
-- fieldset
-- input
-- keygen
-- object
-- output
-- select
-- textarea
+  - button
+  - fieldset
+  - input
+  - keygen
+  - object
+  - output
+  - select
+  - textarea
 
 此外还有归属于该表单的空间（依旧图片按键除外）代码如下所示。
 
@@ -130,7 +130,7 @@ NOTE：在已经设置 `autocomplete="off"` 时依然出现提示框，大多数
 <label><input name="null" form="a"></label>
 ```
 
-- `length` 等价于 `elements.length` 来用于描述表单内节点集合的个数。
+- `length` 属性：等价于 `elements.length` 来用于描述表单内节点集合的个数。
 
 ###### 选取表单空间元素
 
@@ -219,41 +219,41 @@ testForm['a'].name = 'b';
 | control | HTMLElement#textId     |
 | form    | HTMLFormElement#formId |
 
-`htmlFor` 用于关联表单控件的激活行为（可使点击 `label` 与点击表单控件的行为一致），可关联的元素有下列（`hidden` 除外）：
+- `htmlFor` 属性：用于关联表单控件的激活行为（可使点击 `label` 与点击表单控件的行为一致），可关联的元素有下列（`hidden` 除外）：
 
-- button
-- input
-- keygen
-- meter
-- output
-- progress
-- select
-- textarea
+  - button
+  - input
+  - keygen
+  - meter
+  - output
+  - progress
+  - select
+  - textarea
 
 *自定义文件提交控件样式*
 
 ![](../img/F/form_file_upload.png)
 
-`control` 如果指定了 `for` 属性则制定该`for` 属性对于 `id` 的可关联元素。如果没有指定 `for` 属性则为第一个可关联的子孙元素。
+- `control` 属性：如果指定了 `for` 属性则指定该`for` 属性对于 `id` 的可关联元素。如果没有指定 `for` 属性则为第一个可关联的子孙元素。
 
 ![](../img/F/for_label.png)
 
-**可关联的元素** （只读属性不可在程序中修改）
+**可关联的元素** （只读属性不可在程序中直接赋值修改）
 
-- button
-- fieldset
-- input
-- keygen
-- label
-- object
-- output
-- select
-- textarea
+  - button
+  - fieldset
+  - input
+  - keygen
+  - label
+  - object
+  - output
+  - select
+  - textarea
 
-NOTE：修改关联元素所归属的表单则可以修改元素的 `form` 属性从而调试元素所归属的表单（元素中对于的`for`属性也将被对于的调成）。
+－ `form` 属性：修改关联元素所归属的表单则可以修改元素的 `form` 属性为带关联表单Id（元素中对于的`for`属性也应该做对应的修改）。//这里有一点小问题，更改form属性之后label并不能自动绑定到新表单对应的元素上
 
 ```javascript
-label.setAttribute('form', 'newForm');
+label.setAttribute('form', 'newFormId');
 ```
 
 ##### input 元素
@@ -262,16 +262,16 @@ label.setAttribute('form', 'newForm');
 <input type="text">
 ```
 
-`type` 可用于控制控件的*外观*以及*数据类型*（默认为 `text`），在不同的浏览器不同数据类型有不同的战士效果。
+- `type` 属性：可用于控制控件的*外观*以及*数据类型*（默认为 `text`），在不同的浏览器不同数据类型有不同的战士效果。
 
 *本地图片预览示例*
 
-所需技术点
+所需技术点（HTMLInputElement属性）
 
-- onchange
-- accept
-- multiple
-- files
+  - onchange
+  - accept
+  - multiple
+  - files
 
 ```html
 <input type="file" accept="image/*" multiple>
@@ -302,33 +302,33 @@ NOTE：`accept` 所支持的格式有 `audio/*` `video/*` `image/*` 以及不带
 
 指定选项列表中选择需要的选项。
 
-主要的三个标签 `select`、`optgroup`（用于选项分组）、`option`。
+主要的三个子标签 `select`、`optgroup`（用于选项分组）、`option`。
 
-`select` 具有的属性和方法如下：
+- `select` 具有的属性和方法如下：
 
-- name
-- value
-- multiple
-- options（动态节点集合）
-- selectedOptions（动态节点集合）
-- selectedIndex
-- add(element[, before])（无指定参照物则添加至最末端）
-- remove([index])
+  - name
+  - value
+  - multiple
+  - options（动态节点集合）
+  - selectedOptions（动态节点集合）
+  - selectedIndex
+  - add(element[, before])（无指定参照物则添加至最末端）
+  - remove([index])
 
-`optgroup` 所具有的属性和方法：
+- `optgroup` 所具有的属性和方法：
 
-- disabled （分组选项不可选）
-- label（分组说明）
+  - disabled （分组选项不可选）
+  - label（分组说明）
 
-`option` 所具有的属性和方法：
+- `option` 所具有的属性和方法：
 
-- disabled
-- label（描述信息）
-- value（提交表单时的数据信息）
-- text（用户看到的文字）
-- index
-- selected
-- defaultSelected
+  - disabled
+  - label（描述信息）
+  - value（提交表单时的数据信息）
+  - text（用户看到的文字）
+  - index
+  - selected
+  - defaultSelected
 
 ###### 选项操作
 
