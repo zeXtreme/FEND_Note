@@ -41,7 +41,7 @@
 - [DOM 编程](chapter3/00_intro.md)
   - [文档树（DOM Tree）](chapter3/01_dom_tree.md)
   - [节点操作](chapter3/02_node_manipulation.md)
-  - [属性操作](chapter3/03_attribuet.md)
+  - [操作属性](chapter3/03_attribute.md)
   - [样式操作](chapter3/04_style_manipulation.md)
   - [事件](chapter3/05_events.md)
   - [多媒体（视频与音频）](chapter3/08_multimedia.md)
