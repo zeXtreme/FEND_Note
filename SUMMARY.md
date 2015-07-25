@@ -63,5 +63,5 @@
   - [接口设计](chapter5/02_design_api.md)
   - [版本控制](chapter5/03_version_control.md)
   - [技术选型](chapter5/04_tech_selection.md)
-  - [开发实践]()
+  - [开发实践](chapter5/05_development.md)
 - [附录 A：书单](Booklist.md)
