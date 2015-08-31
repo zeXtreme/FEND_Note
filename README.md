@@ -58,9 +58,8 @@ authors  :
 
 **1508311803**
 
-100 🌟 Thank you @dszls
+100 Stars: [@dszls](https://github.com/dszls), thank you! 🌟🌟🌟🌟🌟�
 
-![](./100star.png)
 
 ### 相关链接
 
