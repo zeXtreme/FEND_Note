@@ -58,8 +58,8 @@ authors  :
 
 **1508311803**
 
-100 Stars: [@dszls](https://github.com/dszls), thank you! 🌟🌟🌟�
-
+100 Stars: [@dszls](https://github.com/dszls), thank you! 🌟
+�
 ### 相关链接
 
 - [NEC](http://nec.netease.com/) {N: nice, E: easy, C: css;}
