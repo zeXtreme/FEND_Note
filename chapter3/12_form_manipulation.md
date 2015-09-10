@@ -262,7 +262,7 @@ label.setAttribute('form', 'newFormId');
 <input type="text">
 ```
 
-- `type` 属性：可用于控制控件的*外观*以及*数据类型*（默认为 `text`），在不同的浏览器不同数据类型有不同的战士效果。
+- `type` 属性：可用于控制控件的*外观*以及*数据类型*（默认为 `text`），在不同的浏览器不同数据类型有不同的展示效果。
 
 *本地图片预览示例*
 
@@ -349,7 +349,7 @@ opt.insertAdjacentElement(option, '参照元素');
 select.add(option, '参照元素')
 ```
 
-**顺出选项**
+**删除选项**
 
 ```javascript
 opt.parentNode.removeChild(option);
