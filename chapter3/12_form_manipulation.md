@@ -284,14 +284,24 @@ file.addEventListener(
         event.target.files, 0
       );
       files.forEach(function(item){
-        files2dataurl(item. function(url){
+        files2dataurl(item,function(url){
           var image = new Image();
           parent.appendChild(image);
-          Image.src = url;
+          image.src = url;
         });
       });
   }
 );
+function file2dataurl(file, callback) {
+	if (!window.FileReader) {
+		throw 'Browser not support File API !';
+	}
+	var reader = new FileReader();
+	reader.readAsDataURL(file);
+	reader.onload = function(event) {
+		callback(event.target.result);
+	};
+}
 ```
 
 NOTE：`accept` 所支持的格式有 `audio/*` `video/*` `image/*` 以及不带`;`的 MINE Type 类型和 `.` 开头的文件名后缀的文件。多个文件类型可以使用`,`分隔。
